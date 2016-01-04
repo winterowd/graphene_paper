@@ -26,6 +26,7 @@
 \usepackage{dcolumn}   % needed for some tables
 \usepackage{bm}        % for math
 \usepackage{amssymb}   % for math
+\usepackage{xcolor}
 
 % avoids incorrect hyphenation, added Nov/08 by SSR
 \hyphenation{ALPGEN}
@@ -82,7 +83,7 @@
 \begin{abstract}
 We discuss the simulation of the low energy effective field theory (EFT) for graphene in the presence of an external magnetic field. Our fully non-perturbative calculation 
 uses methods of lattice gauge theory to study the theory using a Hybrid Monte Carlo approach. We investigate the phenomenon of magnetic catalysis in the context of graphene by studying
-the chiral condensate which is the order parameter for the symmetry breaking pattern $U(4) \to U(2) \otimes U(2)$. We also present results for a time-reversal odd condensate characterizing the ground state in the presence of a magnetic field.
+the chiral condensate which is the order parameter characterizing the spontaneous breaking of chiral symmetry. In the EFT, the symmetry breaking pattern is given by $U(4) \to U(2) \otimes U(2)$. We also present results for a time-reversal odd condensate characterizing the ground state in the presence of a magnetic field.
 Finally, we study the mass spectrum of the theory, in particular the Nambu-Goldstone (NG) mode as well as the Dirac quasiparticle, which is predicted to obtain a dynamical mass. 
 \end{abstract}
 
@@ -93,12 +94,12 @@ Finally, we study the mass spectrum of the theory, in particular the Nambu-Golds
 % sections are not used for PRL papers
 
 The experimental verification of graphene counts as one of the most important discoveries in recent years \cite{Novoselov}. The field has seen tremendous growth
-in part due to the novel many-body and electronic properties of graphene \cite{CastroNeto}. In particular, a host of developments have appeared in studying graphene
-in the presence of a magnetic field \cite{Goerbig}.
+in part due to the novel many-body and electronic properties of graphene \cite{CastroNeto}. In particular, a plethora of developments have appeared in studying graphene
+in the presence of an external magnetic field \cite{Goerbig}.
 
-Graphene, a two-dimensional hexagonal lattice of Carbon atoms, has an unusual band structure consisting of a conduction and valence band that come together at two inequivalent points 
-in the Brillouin zone. At these so called ``Dirac points'', the two bands take the shape of cones. The consequence of this band structure is that the low energy excitations are described by massless Dirac fermions.
-These Dirac fermions have a Fermi velocity that satisfies $v_F/c \approx 1/300$, and thus one does not have Lorentz invariance. Furthermore, this small velocity renders the interaction between the Dirac quasiparticles 
+Graphene, a two-dimensional hexagonal lattice of Carbon atoms, has an unusual band structure consisting of a conduction and a valence band that come together at two inequivalent points 
+of the Brillouin zone. At these valleys, or so called ``Dirac points'', the two bands take the shape of cones. The consequence of this band structure is that the low energy excitations are described by massless Dirac fermions which have linear dispersion.
+These Dirac fermions have a Fermi velocity that satisfies $v_F/c \approx 1/300$, and thus one does not have Lorentz invariance. Furthermore, this small Fermi velocity renders the interaction between the Dirac quasiparticles 
 to be essentially Coulombic.
 
 The strength of the interaction between the quasiparticles is affected by the substrate on which the graphene layer sits. For suspended graphene, the Coulomb interaction is unscreened
@@ -106,17 +107,22 @@ and the analogue of the fine structure constant for graphene satisfies $\alpha_g
 several previous studies \cite{Drut1, Drut2, Hands1, Hands2}. This transition is characterized by the appearance of a nonzero value of the condensate, $\vev{\Bpsi \Psi}$, as well as a dynamic mass
 for the fermion.
 
-In the presence of an external magnetic field, many field theories are thought to undergo spontaneous symmetry breaking. This phenomenon is known as magnetic catalysis and is posited to be universal. In the context of the graphene EFT, the magnetic
+In the presence of an external magnetic field, many field theories are thought to undergo spontaneous symmetry breaking. This phenomenon is known as magnetic catalysis and is hypothesized to be universal. In the context of the graphene EFT, the magnetic
 catalysis scenario leads to the appearance of a dynamically generated Dirac mass and is proposed to account for several of the quantum Hall plateaus that appear at large magnetic field \cite{ZhangQHE,JiangQHE}.
 
+Magnetic catalysis has also been the focus of recent interest in lattice quantum chromodynamics (LQCD). Several studies have confirmed, that at zero temperature, the chiral condensate
+increases with magnetic field ($m_{\pi} = 200-400 ~\text{MeV}$, $eB$ up to $1 ~\text{GeV}^2$) \cite{Buividovich,Braguta}. This confirms the idea that the background magnetic field aids chiral symmetry breaking in the vacuum.
+Moreover, it was also discovered that with $T \geq 140 ~\text{MeV}$, the chiral condensate decreases with the external magnetic field. This phenomenon is known as inverse magnetic catalysis \cite{Bali1,Bali2}.
+
 The layout of this article is the following. In section \ref{sec:GrapheneEFT} we discuss the continuum EFT, its symmetries, as well as our lattice setup.
-In section \ref{sec:Catalysis} we discuss the physics mechanism behind magnetic catalysis and review the results that apply to graphene. In section \ref{sec:Simulation} we review the methods used to numerically sample the Feynman path integral. Section \ref{sec:Results} contains our results for the various condensate as well as the mass spectrum of the EFT.
+In section \ref{sec:Catalysis} we discuss the physics mechanism behind magnetic catalysis and review the results that apply to graphene. In section \ref{sec:Simulation} we review the methods used to numerically sample the Feynman path integral. Section \ref{sec:Results} contains our results for the various condensates as well as the mass spectrum of the EFT.
 Finally, in Section \ref{sec:Conclusion}, we conclude and discuss the interpretation of these results. Some preliminary results of this article first appeared in the proceedings of the DPF 2015 Meeting of the American Physical Society Division of Particles and Fields \cite{DPF2015}.
  
 \section{\label{sec:GrapheneEFT}Graphene EFT}
 \subsection{\label{sec:ContEFT}Continuum}
-The continuum EFT describing the low energy properties of monolyaer graphene contains $N_f=2$ species of four-component Dirac spinors in $(2+1)$ dimensions interacting via a Coulomb interaction.
-The counting of the fermionic degrees of freedom is as follows: $2$ sublattices $+ 2$ Dirac points $+ 2$ spin projections of the electrons. The interaction is introduced via a scalar potential which lives in $(3+1)$ dimensions. The continuum action is given by 
+The continuum EFT describing the low energy properties of monolyaer graphene contains two species of four-component Dirac spinors in $(2+1)$ dimensions interacting via a Coulomb interaction.
+The counting of the fermionic degrees of freedom is as follows: $2$ sublattices $+ 2$ Dirac points $+ 2$ spin projections of the electrons. The sublattice degree of freedom appears due to the fact that the hexagonal lattice consists of two inequivalent triangular sublattices.
+The interaction is introduced via a scalar potential which lives in $(3+1)$ dimensions. The continuum Euclidean action is given by 
 \beq
 \label{ContinuumEFT}
 \nn
@@ -138,7 +144,7 @@ Here we use a reducible representation of the gamma matrices in $(2+1)$ dimensio
 \gamma_{\mu} = \left(\begin{array}{cc} \sigma_{\mu} & 0 \\ 0 & -\sigma_{\mu} \end{array}\right), ~~~ \mu = 0, 1, 2,
 \eeq
 where $\sigma_0 \equiv \sigma_3$. In $(3+1)$ dimensions, there exists a similarity transformation, $S^{\dagger} \gamma_{\mu} S = - \gamma_{\mu}$, which relates the two representations with $S = \gamma_5$.
-Here, in $(2+1)$ dimensions, $\gamma_5$ nor chirality exist as $\displaystyle \prod^{2}_{\mu=0} \sigma_{\mu} \propto  \bm 1$. One can define a set of matrices which generate flavor transformations in the graphene EFT
+In $(2+1)$ dimensions, neither $\gamma_5$ nor chirality exist as $\displaystyle \prod^{2}_{\mu=0} \sigma_{\mu} \propto  \bm 1$. One can define a set of matrices which generate flavor transformations in the graphene EFT
 \beq
 \label{Gammas2}
 &&\tilde{\gamma}_{4} = \left(\begin{array}{cc} 0 & \bm 1 \\ \bm 1 & 0 \end{array}\right), ~~~ \tilde{\gamma}_{5} = \left(\begin{array}{cc} 0 & \bm 1 \\ -\bm 1 & 0 \end{array}\right), \\
@@ -164,7 +170,7 @@ Although our lattice simulations do not take this into account, in real graphene
 \mathcal{H}_Z = -\int d\vec{r} \mu_B \Psi^{\dagger} \sigma_3 \Psi,
 \eeq
 where $\sigma_3$ acts in spin space.
-This term breaks the $U(4)$ symmetry down to $U(2)_{\uparrow} \times U(2)_{\downarrow}$ where the generators of $U(2)_{\sigma}$ are given by
+This term breaks the $U(4)$ symmetry down to $U(2)_{\uparrow} \times U(2)_{\downarrow}$ with the generators of $U(2)_{\sigma}$ given by
 \beq
 \label{U2Generators}
 \bm 1 \otimes P_{\sigma}, \quad \tilde{\gamma}_4 \otimes P_{\sigma}, \quad i \tilde{\gamma}_5 \otimes P_{\sigma}, \quad \tilde{\gamma}_{4,5} \otimes P_{\sigma},
@@ -190,7 +196,7 @@ the links to quadratic order in the potential to obtain the so-called non-compac
 \label{NCGaugeAction1}
 S^{(NC)}_G = a^3_s a_t \frac{\beta}{2} \sum_n \sum^{3}_{i=1} \frac{1}{a^2_s}\left(\theta(n) - \theta(n+\hat{i})\right)^2,
 \eeq
-where $\beta = 1/g^2$. Using the dimensionless field $\hat{\theta}(n) = a_t \theta(n)$, we write the above action as
+where $\beta = 1/g^2$ and $a_s$ and $a_t$ are the lattices spacings in the spatial and temporal directions respectively. Using the dimensionless field $\hat{\theta}(n) = a_t \theta(n)$, we write the above action as
 \beq
 \label{NCGaugeAction2}
 S^{(NC)}_G = \xi \frac{\beta}{2} \sum_n \sum^{3}_{i=1} \left(\hat{\theta}(n) - \hat{\theta}(n+\hat{i})\right)^2,
@@ -199,8 +205,7 @@ where $\xi \equiv a_s/a_t$ is known as the anisotropy parameter, which controls 
 In our simulations we have taken $\xi = 3 v_F$
 
 The discretization of the fermions has well-known complications encoded in the Nielsen-Ninomiya no-go theorem \cite{NielsenNinomiya}. Namely, one wants to remove unphysical ``doubler'' modes while still preserving some part of the continuum $U(4)$
-flavor symmetry. The method we use in this study employs the staggered fermion formulation \cite{KogutSusskind}, which eliminates some of the doublers while preserving a remnant of $U(4)$. The staggered fermion action is 
-as follows
+flavor symmetry. The method we use in this study employs the staggered fermion formulation \cite{KogutSusskind}, which eliminates some of the doublers while preserving a remnant of $U(4)$. The staggered fermion action reads
 \beq
 \label{GrapheneFermLattice}
 \nn
@@ -218,10 +223,21 @@ S_F &=& \sum_{n} \bigg[ \frac{1}{2} \hat{\chib}_n \left(U_0(n)\hat{\chi}_{n + \h
 \eeq
 In $(2+1)$ dimensions, each flavor of staggered fermions represents two identical four-component Dirac spinors. In lattice QCD simulations, this degree of freedom, commonly referred to as ``taste'',
 is unwanted and considerable effort goes into eliminating it. In our case, the taste degree of freedom is desirable as we are attempting to simulate two identical species of Dirac fermions representing the low energy excitations of graphene.
-The taste degree of freedom becomes more apparent once one performs a change of basis, the details of which are relegated to Appendix \ref{sec:SpinTasteAppendix}. The action in (\ref{GrapheneFermLatticeDimensionless}) retains a remnant $U(1) \otimes U(1)_{\epsilon}$ symmetry,
-where the $U(1)_{\epsilon}$ symmetry is broken with the appearance of a nonzero value of the condensate, $\vev{\chib \chi}$. Thus on the lattice, one expects there to be a single NG boson as a result of this type of spontaneous symmetry breaking.
+The taste degree of freedom becomes more apparent once one performs a change of basis, the details of which are relegated to Appendix \ref{sec:SpinTasteAppendix}. At zero mass, the action in (\ref{GrapheneFermLatticeDimensionless}) retains a remnant $U(1) \otimes U(1)_{\epsilon}$ symmetry.
+The $U(1)$ symmetry corresponds to fermion number and is given by
+\beq
+\label{U1Staggered}
+\chi(x) &\to& \exp \left(i\alpha \right) \chi(x) \nn \\
+\chib(x) &\to& \chib(x) \exp \left(-i \alpha \right).
+\eeq
+The $U(1)_{\epsilon}$ symmetry, or the ``even-odd'' symmetry, is given by 
+\beq
+\chi(x) &\to& \exp \left(i\beta \epsilon(x) \right) \chi(x) \nn \\
+\chib(x) &\to& \chib(x) \exp \left(i \beta \epsilon(x) \right),
+\eeq
+where $\epsilon(x) \equiv \left( -1 \right)^{x_0 + x_1 + x_2}$. The $U(1)_{\epsilon}$ symmetry is broken with the appearance of a nonzero value of the condensate, $\vev{\chib \chi}$. Thus, on the lattice, one expects there to be a single NG boson as a result of this type of spontaneous symmetry breaking.
 
-Although staggered fermions have some advantages in that they are cheap to simulate and retain a remnant chiral symmetry, it is known that at finite lattice spacing the violation
+Although staggered fermions have some advantages, being cost effective in numerical simulations and retaining a remnant chiral symmetry, it is known that at finite lattice spacing the violations
 of taste symmetry can be significant. In the case of QCD, for example, simulations with unimproved staggered fermions on fine lattices ($a=0.05$ fm) obtain splittings within the pion taste-multiplet ($O(100 \text{MeV})$)
 which are on the order of the physical pion mass \cite{MILCStaggeredReview}. It was found that taste violations are a result of the exchange of high-momentum gluons \cite{Orginos}.
 These couplings are eliminated by a process of link ``fattening'', which replaces the links $U_{\mu}(n)$ with a combination of other paths that connect the site $n$ with $n+\hat{\mu}$. 
@@ -273,15 +289,15 @@ reduction, $D \to D-2$, due to the magnetic field \cite{Shovkovy}. The Dirac equ
 \label{DiracEqn}
 (i\gamma^{\mu}\D_{\mu} - m)\Psi = 0,
 \eeq
-where $\D_{\mu} = \partial_{\mu} - ieA_{\mu}$ and the gauge field is in Landau gauge.
+where $\D_{\mu} = \partial_{\mu} - ieA_{\mu}$.
 Solving (\ref{DiracEqn}), one finds that the energy levels are given by 
 \beq
 \label{DiracEnergyLevels}
 E_n = \pm \sqrt{2|eB|n + m^2},
 \eeq
 where $n=0,1,2,\cdots$ is the Landau level index and is given by a combination of orbital and spin contributions, $n \equiv k + s_z + 1/2$. The Landau levels 
-are highly degenerate, with a degeneracy per unit area of $|eB|/2\pi$ for $n=0$, and $|eB|/\pi$ for $n>0$. When the Dirac mass is smuch smaller than the magnetic scale, $m \ll \sqrt{|eB|}$, the low energy sector 
-is completely dominated by the lowest Landau level. Furthermore, the levels at $E_0 = \pm m$ do no disperse which confirms the kinematic aspect of the reduction, $(2+1) \to (0+1)$, due to the presence of the magnetic field.
+are highly degenerate, with a degeneracy per unit area of $|eB|/2\pi$ for $n=0$, and $|eB|/\pi$ for $n>0$. When the Dirac mass is much smaller than the magnetic scale, $m \ll \sqrt{|eB|}$, the low energy sector 
+is completely dominated by the lowest Landau level. Furthermore, the levels at $E_0 = \pm m$ do not disperse which confirms the kinematic aspect of the reduction, $(2+1) \to (0+1)$, due to the presence of the magnetic field.
 
 An interesting consequence of an external field on Dirac fermions in $(2+1)$ dimensions is spontaneous symmetry breaking characterized by the appearance of a nonzero value for the condensate, $\vev{\bpsi \psi}$.
 One can calculate the fermion propagator in the presence of an external field \cite{Schwinger}, and use the result to arrive at \cite{DittrichGies, DittrichReuter}
@@ -294,7 +310,7 @@ where $\zeta(s,a)$ is the Hurwitz zeta function. Taking the limit $m \to 0$ of (
 \label{PBP2+1Final}
 \lim_{m \to 0_+} \vev{\Bpsi \Psi}(B,m) = -\frac{eB}{2\pi}.
 \eeq
-Of course, by introducing interactions among the fermions, this result will be modified. Extending the idea of dimensional reduction and recalling the dependence of the bound state energy in one dimensions on the coupling \cite{LandauLifschitzQM}, one expects
+Of course, by introducing interactions among the fermions, this result will be modified. Extending the idea of dimensional reduction and recalling the dependence of the bound state energy in one dimension on the coupling \cite{LandauLifschitzQM}, one expects
 \beq
 \label{DynamicalMass}
 m_{dyn} \propto \alpha_g \sqrt{eB}.
@@ -302,10 +318,10 @@ m_{dyn} \propto \alpha_g \sqrt{eB}.
 
 The idea of dimensional reduction and the associated spontaneous symmetry breaking which occurs in magnetic catalysis seems at odds with the Mermin-Wagner-Coleman (MWC) theorem \cite{MerminWagner,Coleman}. The MWC theorem
 states that spontaneous symmetry breaking is not possible in less than $(2+1)$ dimensions. Thus, a reduction $(2+1) \to (0+1)$ would seem to preclude the possibility of spontaneous symmetry breaking. The resolution of
-this apparent contradiction is that the NG bosons, which are a consequence of spontaneous symmetry breaking due to Goldstone's theorem, are charge neutral and thus are not subject to the reduction. This is 
-contrast to the fermions and antifermions which are charged and thus have their motion in the plane perpendicular to the magnetic field constrained.
+this apparent contradiction is that the NG bosons, which are a consequence of spontaneous symmetry breaking due to Goldstone's theorem, are charge neutral and thus are not subject to the reduction. This is in sharp
+contrast to the fermions and antifermions, being charged and having their motion in the plane perpendicular to the magnetic field constrained.
 
-In addition to the condensate that one normally considers when discussing chiral symmetry breaking, there are other condensates which can describe the ground state of the graphene EFT
+In addition to the condensate that one normally considers when discussing spontaneous chiral symmetry breaking, there are other condensates which can describe the ground state of the graphene EFT
 in the presence of a magnetic field. In our study we also consider a time-reversal odd condensate, $\Delta_H \equiv \vev{ \Bpsi \tilde{\gamma}_{4,5} \Psi}$. While the former condensate leads to a Dirac
 mass in the graphene EFT, the latter condensate gives rise to a Haldane mass \cite{Haldane}. The ground state at filling factor $\nu=0$, corresponding to a half-filled lowest Landau level and which is analogous to the vacuum in particle physics, is posited to support a nonzero value for both condensates. In this work
 we study the flux dependence of both condensates in the chiral and zero-temperature limits.
@@ -316,7 +332,7 @@ hybrid Monte Carlo (HMC) \cite{KogutDuane}. This procedure introduces a fictitio
 \label{HMCHamiltonian}
 \mathcal{H}^{(MD)} = \frac{1}{2} \sum_n \pi^2_n + S_E,
 \eeq
-where the momentum term is a gaussian weight which factors out during the calculation of expectation values. The equations of motion are then derived which follow from conservation of the Hamiltonian in molecular dynamics time
+where the momentum term is a Gaussian weight which factors out during the calculation of expectation values. The equations of motion are then derived which follow from conservation of the Hamiltonian in molecular dynamics time
 \beq
 \label{ThetaEOM}
 \dot{\theta}_n &\equiv& \frac{d\theta_n}{d\tau} = \pi_n, \\
@@ -352,7 +368,7 @@ The gauge force has a concise expression which can be obtained by differentiatin
 F^{(g)}_n = -\beta \sum_i \left( 2\theta(n) - \theta(n+\hat{i}) - \theta(n-\hat{i}) \right).
 \eeq
 After each trajectory, the pseudofermion field $\phi$ and the gauge momenta are refreshed. This strategy has been known to improve the amount of phase space explored by the algorithm and goes
-under the name of refereshed HMC.
+under the name of refreshed HMC.
 
 In our simulations we have taken the trajectory length to be $1$ and varied the step size for a given ensemble in order to obtain an acceptance rate of $70 \%$. We have
 taken measurements every $10$ trajectories with approximately $200-250$ trajectories needed for each ensemble to equilibrate. For ensembles where we were interested in the mass spectrum of the theory,
@@ -360,10 +376,10 @@ we have generated roughly $200$ configurations. For those where we were only int
 \section{\label{sec:Results}Results}
 
 In this section we will discuss the results of our calculations regarding magnetic catalysis in the graphene EFT. Using the lattice methods described above, we will attempt to characterize the symmetry breaking using various observables.
-Apart from the condensates defined above, we will also investigate the quasiparticle and pseudoscalar mass as well as the spectrum of the Dirac operator. Thus, using diverse methods which have been used to study chiral symmetry breaking in the
+Apart from the condensates defined above, we will also investigate the quasiparticle and pseudoscalar mass. Thus, using diverse methods which have been used to study chiral symmetry breaking in the
 context of QCD can be applied to the graphene EFT.
 
-In the absence of an external magnetic field, the graphene EFT is known to contain two phases: a semimetal phase at weak coupling (large dielectric constant $\epsilon$) and an insulating phase at strong coupling (small $\epsilon$). 
+In the absence of an external magnetic field, the graphene EFT is known to exhibit two phases: a semimetal phase at weak coupling (large dielectric constant $\epsilon$) and an insulating phase at strong coupling (small $\epsilon$). 
 In the language of chiral symmetry breaking, the semimetal phase corresponds to the chirally symmetric phase while the insulating phase corresponds to the broken phase.
 Various aspects of this transition were studied previously using lattice methods \cite{Drut1, Drut2, Hands1, Giedt}. The transition is believed to be of second order as indicated by the results in \cite{Drut2}. 
 
@@ -374,14 +390,14 @@ We began our calculations be identifying the semimetal phase through a scan in $
 One can compare this with the behavior of $\vev{\Bpsi \Psi}$ as a function of the bare mass when the external magnetic field is turned on. This is illustrated in Fig. \ref{PBPComparison} where one sees a strongly nonlinear behavior of the condensate as a function of $m$ for the magnetic flux $\Phi_B = 0.125$.
 
 However, just like the case at zero magnetic field, as the explicit symmetry breaking parameter is taken to zero, the condensate also goes to zero in the presence of an external magnetic field. Usually, this signals that the symmetry is being restored due to the finite spatial extent of the box. Referring to Fig. \ref{PBPVolume}, one can see that this is not the
-case. For several spatial exents $N_s$, the condensate shows little variation. This can be explained by noting that the magnetic length, $l_B \equiv \sqrt{\hbar c/eB}$, which characterizes the quasiparticle's cyclotron orbit, satisfies $1 < l_B < L_s$, in units of $a_s$. We have also confirmed this indepedently by calculating the screening
+case. For several spatial extents $N_s$, the condensate shows little variation. This can be explained by noting that the magnetic length, $l_B \equiv \sqrt{\hbar c/eB}$, which characterizes the quasiparticle's cyclotron orbit, satisfies $1 < l_B < L_s$, in units of $a_s$. We have also confirmed this indepedently by calculating the screening
 masses for the fermion quasiparticle and the pseudoscalar, which satisfy $M_s L_s > 1$. 
  
-Thermal effects are also known to play a role in lattice simulations due to the finite extent of the box. The temperature of the system is related to the temporal extent of the lattice, $T = 1/N_{\tau}a_t$. We have investigated the effects of finite temperature on the condensate which is illustrated in Fig. \ref{PBPvsTdivM}, where $\sigma(T/m)$ is plotted. When the temperature is large 
+Thermal effects are also known to play a role in lattice simulations due to the finite extent of the box. The temperature of the system is related to the temporal extent of the lattice, $T = 1/N_{\tau}a_t$. We have investigated the effects of finite temperature on the condensate which are illustrated in Fig. \ref{PBPvsTdivM}, where $\sigma(T/m)$ is plotted. When the temperature is large 
 compared to the fermion mass, one can see that the condensate tends towards zero. On the other hand, when the temperature is small compared to the fermion mass, one can see that the condensate increases and tends asymptotically towards a nonzero value. The fact that magnetic catalysis is a property of the ground state of the Hamiltonian suggests that we first take the limit $T \to 0$, followed
 by the limit $m \to 0$. Using this strategy we have first extrapolated to zero temperature at a fixed bare fermion mass. We then use these points for our chiral extrapolation. This is illustrated in Fig. \ref{PBPzeroTChiral}, where we plot the chiral limit of the $T=0$ extrapolated points.
 
-Proceeding in an analogous manner for three over fluxes, we were able to obtain the behavior of the zero temperature, chirally extrapolated condensate as a function of the magnetic flux, $\Phi_B$. These results are shown in Fig. (\ref{PBPzeroTChiralvseB}).
+Proceeding in an analogous manner for three other fluxes, we were able to obtain the behavior of the zero temperature, chirally extrapolated condensate as a function of the magnetic flux, $\Phi_B$. These results are shown in Fig. (\ref{PBPzeroTChiralvseB}).
 The relationship between the condensate and the magnetic flux appears to be linear, as indicated by the fit line that is included in the figure. One would naturally expect the fit line to pass through the origin, as we have previously shown the theory to be in the semimetal phase in the absence of the external field.
 This discrepancy can possibly be attributed to systematic errors occuring in the zero temperature and chiral extrapolations (need to discuss this with DeTar). These results overwhelmingly support the scenario of magnetic catalysis in the graphene EFT.
 
@@ -938,6 +954,18 @@ Y.~Zhang \etal, Phys.\ Rev.\ Lett.\ {\bf 96}, 136806 (2006)
 
 \bibitem{JiangQHE}
 Z.~Jiang, Y.~Zhang, H.~L.~Stormer, and P.~Kim, Phys.\ Rev.\ Lett.\ {\bf 99}, 106802 (2007)
+
+\bibitem{Buividovich}
+P.~Buividovich, M.~Chernodub, E.~V.~Luschevskaya, and M.~I.~Polikarpov, Phys.\ Lett.\ B {\bf 682}, 484 (2010)
+
+\bibitem{Braguta}
+V.~V.~Braguta, P.~V.~Buividovich, T.~Kalaydzhyan, S.~V.~Kuznetsov, and M.~I.~Polikarpov, PoS LATTICE2010, 190 (2010), [arXiv:1011.3795 [hep-lat]]
+
+\bibitem{Bali1}
+G.~S.~Bali, F.~Bruckmann, G.~Endrodi, Z.~Fodor, and S.~D.~Katz, J.\ High Energy Phys.\ {\bf 1202}, 044 (2012)
+
+\bibitem{Bali2}
+G.~S.~Bali, F.~Bruckmann, G.~Endrodi, Z.~Fodor, and S.~D.~Katz, PoS LATTICE2011, 192 (2011), [arXiv:1111.5155 [hep-lat]]
 
 \bibitem{DPF2015}
 C.~Winterowd, C.~DeTar, and S.~Zafeiropoulos, [arXiv:1509.06432 [hep-lat]]
