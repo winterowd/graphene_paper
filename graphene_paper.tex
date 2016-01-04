@@ -92,7 +92,6 @@ Finally, we study the mass spectrum of the theory, in particular the Nambu-Golds
 
 \section{\label{sec:Intro}Introduction}
 % sections are not used for PRL papers
-
 The experimental verification of graphene counts as one of the most important discoveries in recent years \cite{Novoselov}. The field has seen tremendous growth
 in part due to the novel many-body and electronic properties of graphene \cite{CastroNeto}. In particular, a plethora of developments have appeared in studying graphene
 in the presence of an external magnetic field \cite{Goerbig}.
@@ -117,7 +116,6 @@ Moreover, it was also discovered that with $T \geq 140 ~\text{MeV}$, the chiral 
 The layout of this article is the following. In section \ref{sec:GrapheneEFT} we discuss the continuum EFT, its symmetries, as well as our lattice setup.
 In section \ref{sec:Catalysis} we discuss the physics mechanism behind magnetic catalysis and review the results that apply to graphene. In section \ref{sec:Simulation} we review the methods used to numerically sample the Feynman path integral. Section \ref{sec:Results} contains our results for the various condensates as well as the mass spectrum of the EFT.
 Finally, in Section \ref{sec:Conclusion}, we conclude and discuss the interpretation of these results. Some preliminary results of this article first appeared in the proceedings of the DPF 2015 Meeting of the American Physical Society Division of Particles and Fields \cite{DPF2015}.
- 
 \section{\label{sec:GrapheneEFT}Graphene EFT}
 \subsection{\label{sec:ContEFT}Continuum}
 The continuum EFT describing the low energy properties of monolyaer graphene contains two species of four-component Dirac spinors in $(2+1)$ dimensions interacting via a Coulomb interaction.
@@ -176,9 +174,10 @@ This term breaks the $U(4)$ symmetry down to $U(2)_{\uparrow} \times U(2)_{\down
 \bm 1 \otimes P_{\sigma}, \quad \tilde{\gamma}_4 \otimes P_{\sigma}, \quad i \tilde{\gamma}_5 \otimes P_{\sigma}, \quad \tilde{\gamma}_{4,5} \otimes P_{\sigma},
 \eeq
 where we have introduced the spin projection operator, $P_{\sigma} \equiv \frac{1}{2}( 1 \pm \sigma_3 )$.  Apart from the long-range Coulomb interaction present in (\ref{ContinuumEFT}), in the complete lattice
-theory there are numerous short-range interactions which can have a decisive effect on the selection of the ground state \cite{Aleiner}. Renormalization effects can strengthen these short-range interactions so that they become 
-much stronger than the Zeeman term. In our lattice gauge model, we only consider a long-range Coulomb interaction mediated by a scalar potential and ignore the Zeeman interaction as well as 
-other lattice-scale interactions.
+theory there are numerous short-range electron-electron interactions. These lattice scale interaction terms are consisten with the symmetry of the underlying hexagonal lattice \textcolor{red}{($C_{3v}$?)} \cite{Aleiner}.
+Thus, these terms break the $U(4)$ symmetry present in our continuum EFT. The couplings associated with these terms can very in sign and are strongly renormalized at energies on the order of the bandwidth, $v_F/a_{hex}$ \cite{Kharitonov}.
+Taking this into account can have a decisive effect on the selection of the ground state of the full theory. In our lattice gauge model, we only consider a long-range Coulomb interaction mediated by a scalar potential and ignore the Zeeman interaction as well as 
+other lattice-scale interactions. 
 \subsection{\label{sec:Lattice}Lattice}
 Taking the continuum EFT, (\ref{ContinuumEFT}), which is valid up to some cutoff $\Lambda$, we now discretize it on a cubic lattice. It is important to emphasize that this lattice is not 
 directly related to the original honeycomb lattice of graphene. Lattice methods in gauge theories have shown to be useful in elucidating the non-perturbative aspects of strongly interacting theories such as quantum chromodynamics (QCD) \cite{DeGrandDeTar}.
@@ -471,7 +470,7 @@ this quantity is UV divergent.}
 \acknowledgements
 This work was in part based on a variant of the MILC collaboration's public lattice gauge theory code. See {\bf http://physics.utah.edu/~detar/milc.html}.
 Calculations were performed at the Center for High Performance Computing at the University of Utah, Fermi National Accelerator Laboratory, the LOEWE-CSC high performance
-computer of Johann Wolfgang Goethe-University Frankfurt, and (need info for occigen).
+computer of Johann Wolfgang Goethe-University Frankfurt, and \textcolor{red}{need info for occigen}.
 SZ would like to acknowledge the support of the Alexander von Humboldt foundation. CW and CD were supported by the US NSF grant PHY10-034278 and US DOE grant DOE DE-FC02-12ER41879.
 
 \appendix
@@ -972,6 +971,9 @@ C.~Winterowd, C.~DeTar, and S.~Zafeiropoulos, [arXiv:1509.06432 [hep-lat]]
 
 \bibitem{Aleiner}
 I.~L.~Aleiner, D.~E.~Kharzeev, and A.~M.~Tsvelik, Phys.\ Rev.\ B{\bf 76}, 195415 (2007)
+
+\bibitem{Kharitonov}
+M.~Kharitonov, Phys.\ Rev.\ B{\bf 85}, 155439 (2012)
 
 \bibitem{DeGrandDeTar}
 T.~DeGrand and C.~DeTar, {\it Lattice Methods for Quantum Chromodynamics}, World Scientific (2006)

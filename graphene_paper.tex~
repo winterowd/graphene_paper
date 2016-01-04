@@ -92,7 +92,6 @@ Finally, we study the mass spectrum of the theory, in particular the Nambu-Golds
 
 \section{\label{sec:Intro}Introduction}
 % sections are not used for PRL papers
-
 The experimental verification of graphene counts as one of the most important discoveries in recent years \cite{Novoselov}. The field has seen tremendous growth
 in part due to the novel many-body and electronic properties of graphene \cite{CastroNeto}. In particular, a plethora of developments have appeared in studying graphene
 in the presence of an external magnetic field \cite{Goerbig}.
@@ -117,7 +116,6 @@ Moreover, it was also discovered that with $T \geq 140 ~\text{MeV}$, the chiral 
 The layout of this article is the following. In section \ref{sec:GrapheneEFT} we discuss the continuum EFT, its symmetries, as well as our lattice setup.
 In section \ref{sec:Catalysis} we discuss the physics mechanism behind magnetic catalysis and review the results that apply to graphene. In section \ref{sec:Simulation} we review the methods used to numerically sample the Feynman path integral. Section \ref{sec:Results} contains our results for the various condensates as well as the mass spectrum of the EFT.
 Finally, in Section \ref{sec:Conclusion}, we conclude and discuss the interpretation of these results. Some preliminary results of this article first appeared in the proceedings of the DPF 2015 Meeting of the American Physical Society Division of Particles and Fields \cite{DPF2015}.
- 
 \section{\label{sec:GrapheneEFT}Graphene EFT}
 \subsection{\label{sec:ContEFT}Continuum}
 The continuum EFT describing the low energy properties of monolyaer graphene contains two species of four-component Dirac spinors in $(2+1)$ dimensions interacting via a Coulomb interaction.
@@ -176,9 +174,10 @@ This term breaks the $U(4)$ symmetry down to $U(2)_{\uparrow} \times U(2)_{\down
 \bm 1 \otimes P_{\sigma}, \quad \tilde{\gamma}_4 \otimes P_{\sigma}, \quad i \tilde{\gamma}_5 \otimes P_{\sigma}, \quad \tilde{\gamma}_{4,5} \otimes P_{\sigma},
 \eeq
 where we have introduced the spin projection operator, $P_{\sigma} \equiv \frac{1}{2}( 1 \pm \sigma_3 )$.  Apart from the long-range Coulomb interaction present in (\ref{ContinuumEFT}), in the complete lattice
-theory there are numerous short-range interactions which can have a decisive effect on the selection of the ground state \cite{Aleiner}. Renormalization effects can strengthen these short-range interactions so that they become 
-much stronger than the Zeeman term. In our lattice gauge model, we only consider a long-range Coulomb interaction mediated by a scalar potential and ignore the Zeeman interaction as well as 
-other lattice-scale interactions.
+theory there are numerous short-range electron-electron interactions. These lattice scale interaction terms are consisten with the symmetry of the underlying hexagonal lattice \textcolor{red}{($C_{3v}$?)} \cite{Aleiner}.
+Thus, these terms break the $U(4)$ symmetry present in our continuum EFT. The couplings associated with these terms can very in sign and are strongly renormalized at energies on the order of the bandwidth, $v_F/a_{hex}$ \cite{Kharitonov}.
+Taking this into account can have a decisive effect on the selection of the ground state of the full theory. In our lattice gauge model, we only consider a long-range Coulomb interaction mediated by a scalar potential and ignore the Zeeman interaction as well as 
+other lattice-scale interactions. 
 \subsection{\label{sec:Lattice}Lattice}
 Taking the continuum EFT, (\ref{ContinuumEFT}), which is valid up to some cutoff $\Lambda$, we now discretize it on a cubic lattice. It is important to emphasize that this lattice is not 
 directly related to the original honeycomb lattice of graphene. Lattice methods in gauge theories have shown to be useful in elucidating the non-perturbative aspects of strongly interacting theories such as quantum chromodynamics (QCD) \cite{DeGrandDeTar}.
@@ -415,7 +414,7 @@ electron-electron interactions in graphene.
 
 On the lattice, there does not exist a remant of the continuum $SU(2)_{\sigma}$ symmetry under which the Haldane mass is invariant (see Appendix \ref{sec:FermionAppendix}). Thus, discretization effects are expected to be present in the lattice calculation. In order to investigate the continuum limit, where one would restore the $SU(2)_{\sigma}$, we first fixed the ratio $eB/m^2$. This sets the mass in units of the magnetic length, $l_B$. We then extrapolated the Haldane mass to $T=0$. Finally, we investigated the behavior of the lattice spacing independent quantity $\Delta_H/eB$, in the limit of $\hat{m} = m a_t \to 0$. 
 In Fig. \ref{HaldanediveBvsm}, the continuum limit is shown. From the plot, one can see that a UV divergence $\sim 1/a$ is present. This makes it difficult to extract any continuum physics from this quantity. One would need a way of renormalizing this quantity in order to obtain information in the limit $a \to 0$.
-(Need a better way to tie a bow around this section. Maybe also include $\sigma/eB$ vs $\hat{m}$?)
+\textcolor{red}{Need a better way to tie a bow around this section. Maybe also include $\sigma/eB$ vs $\hat{m}$?}
 \begin{figure}
 \includegraphics[height=8cm,width=8cm]{pbp_vs_m_compare_graphene_paper.pdf} \hspace{-1cm}
 \caption{$\sigma \equiv \vev{\Bpsi \Psi}$ as a function of the bare fermion mass at zero field (black points) and at magnetic flux $\Phi_B=0.125$ (blue points), where flux is measured in units of $a^2_s$. One can note that $\sigma$ vanishes with $m$ at zero field as well as at nonzero external field. The vanishing of the condensate in the presence of the magnetic field is argued to be a thermal effect.}
@@ -972,6 +971,9 @@ C.~Winterowd, C.~DeTar, and S.~Zafeiropoulos, [arXiv:1509.06432 [hep-lat]]
 
 \bibitem{Aleiner}
 I.~L.~Aleiner, D.~E.~Kharzeev, and A.~M.~Tsvelik, Phys.\ Rev.\ B{\bf 76}, 195415 (2007)
+
+\bibitem{Kharitonov}
+M.~Kharitonov, Phys.\ Rev.\ B{\bf 85}, 155439 (2012)
 
 \bibitem{DeGrandDeTar}
 T.~DeGrand and C.~DeTar, {\it Lattice Methods for Quantum Chromodynamics}, World Scientific (2006)
