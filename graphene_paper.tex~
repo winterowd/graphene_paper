@@ -174,9 +174,9 @@ This term breaks the $U(4)$ symmetry down to $U(2)_{\uparrow} \times U(2)_{\down
 \bm 1 \otimes P_{\sigma}, \quad \tilde{\gamma}_4 \otimes P_{\sigma}, \quad i \tilde{\gamma}_5 \otimes P_{\sigma}, \quad \tilde{\gamma}_{4,5} \otimes P_{\sigma},
 \eeq
 where we have introduced the spin projection operator, $P_{\sigma} \equiv \frac{1}{2}( 1 \pm \sigma_3 )$.  Apart from the long-range Coulomb interaction present in (\ref{ContinuumEFT}), in the complete lattice
-theory there are numerous short-range electron-electron interactions. These lattice scale interaction terms are allowed by the symmetry of the underlying hexagonal lattice \textcolor{red}{($C_{3v}$?)} \cite{Aleiner}.
+theory there are numerous short-range electron-electron interactions. These lattice-scale interaction terms are allowed by the point group symmetry of the underlying hexagonal lattice, $C_{6v}$ \cite{Aleiner}.
 As a result, these terms break the much larger $U(4)$ symmetry present in our continuum EFT. The couplings associated with these terms can very in sign and are strongly renormalized at energies on the order of the bandwidth, $v_F/a$, where $a$ is the spacing of the hexagonal lattice \cite{Kharitonov}.
-Taking these renormalized couplings into account can have a decisive effect on the selection of the ground state of the full theory. In our lattice gauge model, we only consider a long-range Coulomb interaction mediated by a scalar potential and ignore the Zeeman interaction as well as 
+Taking these renormalized couplings into account can have a decisive effect on the selection of the ground state in the full theory. In our lattice gauge model, we only consider a long-range Coulomb interaction mediated by a scalar potential and ignore the Zeeman interaction as well as 
 other lattice-scale interactions. 
 \subsection{\label{sec:Lattice}Lattice}
 Taking the continuum EFT, (\ref{ContinuumEFT}), which is valid up to some cutoff $\Lambda$, we now discretize it on a cubic lattice. It is important to emphasize that this lattice is not 
@@ -415,6 +415,45 @@ electron-electron interactions in graphene.
 On the lattice, there does not exist a remant of the continuum $SU(2)_{\sigma}$ symmetry under which the Haldane mass is invariant (see Appendix \ref{sec:FermionAppendix}). Thus, discretization effects are expected to be present in the lattice calculation. In order to investigate the continuum limit, where one would restore the $SU(2)_{\sigma}$, we first fixed the ratio $eB/m^2$. This sets the mass in units of the magnetic length, $l_B$. We then extrapolated the Haldane mass to $T=0$. Finally, we investigated the behavior of the lattice spacing independent quantity $\Delta_H/eB$, in the limit of $\hat{m} = m a_t \to 0$. 
 In Fig. \ref{HaldanediveBvsm}, the continuum limit is shown. From the plot, one can see that a UV divergence $\sim 1/a$ is present. This makes it difficult to extract any continuum physics from this quantity. One would need a way of renormalizing this quantity in order to obtain information in the limit $a \to 0$.
 \textcolor{red}{Need a better way to tie a bow around this section. Maybe also include $\sigma/eB$ vs $\hat{m}$?}
+
+As a consequence of the spontaneous chiral symmetry breaking, one expects the appearance of a NG boson. Like QCD, this mode is a pseudoscalar whose mass vanishes as the fermion mass goes to zero.
+We have studied the mass of the pseudoscalar mode by computing the following zero-momentum, two-point correlator in Euclidean time
+\beq
+\label{PS2Point}
+\vev{ \mathcal{O}_{PS}(\tau) \mathcal{O}_{PS}(0) } = A\left( e^{-m_{\pi}\tau} + e^{-m_{\pi}(N_{\tau} - \tau)} \right),
+\eeq
+where $\mathcal{O}_{PS}$ is a staggered bilinear operator with pseudoscalar quantum numbers. In the spin-taste basis, the operator we have used reads
+\beq
+\label{PSSpinTaste}
+\mathcal{O}_{PS}(y) = \Bpsi(y) \left(\tilde{\gamma}_4 \otimes \bm 1 \right)\Psi(y).
+\eeq
+In the one-component basis, this operator reads
+\beq
+\label{PS1Comp}
+\mathcal{O}_{PS}(y) = \sum_{\eta} \epsilon(x) \chib_{\eta}(y) \chi_{\eta}(y),
+\eeq
+where $x_{\mu} = 2y_{\mu} + \eta_{\mu}$, $\epsilon(x) = (-1)^{\eta_0 + \eta_1 + \eta_2}$, and the sum runs over the sites of the cube labeled by $y$. The details of the transformations connecting (\ref{PSSpinTaste}) and (\ref{PS1Comp}) are given in Appendix \ref{sec:SpinTasteAppendix}.
+In Fig. \ref{MPSvsm}, we see the ground state mass in the pseudoscalar channel, $m_{\pi}$, plotted as a function of the fermion mass for the various magnetic fluxes.  
+We notice that the pseudoscalar mass is unaffected by the change in flux. This is in contrast with QCD, where there exist electrically charged  pions which couple to the 
+external magnetic field \cite{SmilgaShushpanov}. We also have determined that the pseudoscalar mode is indeed a bound state. This can be seen by referring to Fig. \ref{MFvsm} where the pole
+of the quasiparticle propagator is plotted as a function of the bare mass.  
+
+The quasiparticle propagator is interesting in its own right as one can obtain information the dynamically generated mass induced by the spontaneous breaking of the chiral symmetry. The zero-momentum quasiparticle propagator is defined 
+as follows 
+\beq
+\label{FermProp}
+G_F(\tau) = \sum_{x,y} \vev{ \chi(x,y,\tau) \chib(0) }.
+\eeq
+Although the propagator itself is gauge variant, the pole of the propagator is gauge-invariant and thus one can extract physically useful information from it. To do so, we fit to the following form
+\beq
+\label{FermFitForm}
+G_F(\tau) &=& \frac{A_e}{2}\left(1+(-)^{\tau}\right) \left( e^{-m_F\tau} + e^{-m_F(N_{\tau} - \tau)} \right) \\ \nn
+&+&  \frac{A_o}{2}\left(1-(-)^{\tau}\right) \left( e^{-m-F\tau} - e^{-m_F(N_{\tau} - \tau)} \right),
+\eeq
+where $m_F$ is the pole of the propagator. Due to the appearance of a nonzero value for the condensate $\vev{\Bpsi \Psi}$, one expects that $m_F$ is remains finite in the limit that the bare mass vanishes, $m_F = C\sqrt{\Delta^2 + m^2}$ \textcolor{red}{is this formula needed here?}. In Fig. \ref{MFvsm}, one can see
+the pole reach a plateau as the bare mass goes to zero. This result confirms our hypothesis regarding the generation of a dynamical mass for the fermion. We were not, however, able to obtain a clear 
+dependence of $m_F$ on the external magnetic field. For a given bare mass, $m_F$ did not display a monotonic dependence on the magnetic flux. One would expect that the dynamical mass increases with the external magnetic field, just as is 
+observed with the condensate. \textcolor{red}{need to discuss with DeTar a possible explanation for this and how to present it in order to conclude this paragraph}.
 \begin{figure}
 \includegraphics[height=8cm,width=8cm]{pbp_vs_m_compare_graphene_paper.pdf} \hspace{-1cm}
 \caption{$\sigma \equiv \vev{\Bpsi \Psi}$ as a function of the bare fermion mass at zero field (black points) and at magnetic flux $\Phi_B=0.125$ (blue points), where flux is measured in units of $a^2_s$. One can note that $\sigma$ vanishes with $m$ at zero field as well as at nonzero external field. The vanishing of the condensate in the presence of the magnetic field is argued to be a thermal effect.}
@@ -1067,6 +1106,9 @@ D.~L.~Boyda, V.~V.~Braguta, S.~N.~Valgushev, M.~I.~Polikarpov, and M.~V.~Ulybysh
 
 \bibitem{Yang}
 K.~Yang, [arXiv:cond-mat/0703757]
+
+\bibitem{SmilgaShushpanov}
+I.~A.~Shushpanov and A.~V.~Smilga, Phys.\ Lett.\ B{\bf 402}, 351 (1997)
 
 \bibitem{Burkitt}
 C.~Burden and A.~N.~Burkitt, Eur.\ Phys.\ Lett.\ {\bf 3}, 545 (1987)
