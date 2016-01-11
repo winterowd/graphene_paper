@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.8.11)  11 JAN 2016 14:29
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.8.11)  11 JAN 2016 15:26
 entering extended mode
  %&-line parsing enabled.
 **graphene_paper.tex
@@ -232,34 +232,34 @@ LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
  on input line 523.
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 526--530
+Underfull \hbox (badness 1137) in paragraph at lines 526--531
 \OT1/cmr/m/n/10 per-for-mance com-puter of Jo-hann Wolf-gang Goethe-
  []
 
 [9 <./haldanediveB_vs_m_zeroT_graphene_paper.pdf, page is rotated 90 degrees> <
 ./ps_mt_vs_m_2exp_graphene_paper.pdf, page is rotated 90 degrees> <./ferm_mt_vs
 _m_graphene_paper.pdf, page is rotated 90 degrees>]
-Overfull \hbox (16.20865pt too wide) in alignment at lines 567--572
+Overfull \hbox (16.20865pt too wide) in alignment at lines 568--573
  [][][] []
  []
 
 [10] [11]
-Underfull \hbox (badness 1009) in paragraph at lines 1021--1022
+Underfull \hbox (badness 1009) in paragraph at lines 1022--1023
  []\OT1/cmr/m/n/9 G. S. Bali, F. Bruck-mann, G. En-drodi, Z. Fodor,
  []
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 1021--1022
+Underfull \hbox (badness 1931) in paragraph at lines 1022--1023
  \OT1/cmr/m/n/9 and S. D. Katz, PoS LAT-TICE2011, 192 (2011),
  []
 
 
-Underfull \hbox (badness 4805) in paragraph at lines 1024--1025
+Underfull \hbox (badness 4805) in paragraph at lines 1025--1026
  []\OT1/cmr/m/n/9 C. Win-terowd, C. De-Tar, and S. Zafeiropou-los,
  []
 
 
-Underfull \hbox (badness 8038) in paragraph at lines 1060--1061
+Underfull \hbox (badness 8038) in paragraph at lines 1061--1062
  []\OT1/cmr/m/n/9 J. E. Drut, T. A. Lahde, and L. Suo-ranta,
  []
 
@@ -275,7 +275,7 @@ Here is how much of TeX's memory you used:
  6422 multiletter control sequences out of 10000+200000
  14651 words of font info for 54 fonts, out of 1200000 for 2000
  648 hyphenation exceptions out of 8191
- 29i,14n,35p,652b,278s stack positions out of 5000i,500n,6000p,200000b,15000s
+ 29i,14n,35p,692b,278s stack positions out of 5000i,500n,6000p,200000b,15000s
 </usr/share/texmf/fonts/type1/bluesky/cm/cmbx10.pf
 b></usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/t
 ype1/bluesky/cm/cmbx9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmex10.pfb><
@@ -291,7 +291,7 @@ type1/bluesky/cm/cmsy5.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy7.pfb><
 /usr/share/texmf/fonts/type1/bluesky/cm/cmsy9.pfb></usr/share/texmf/fonts/type1
 /bluesky/cm/cmti7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti9.pfb></usr/
 share/texmf/fonts/type1/bluesky/ams/msbm10.pfb>
-Output written on graphene_paper.pdf (12 pages, 239580 bytes).
+Output written on graphene_paper.pdf (12 pages, 239707 bytes).
 PDF statistics:
  185 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
