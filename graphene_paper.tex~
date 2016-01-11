@@ -396,7 +396,7 @@ G_F(x;\omega_0=\pi T) = \sum_{y,\tau} e^{i\omega_o \tau} \vev{ \chi(x,y,\tau) \c
 G_{PS}(x; \omega_0=0) = \sum_{y,\tau} \vev{ \mathcal{O}_{PS}(x,y,\tau) \mathcal{O}_{PS}(0,0,0) },
 \eeq
 where $\mathcal{O}_{PS}$ is the pseudoscalar interpolating operator.  In (\ref{FermSpatialCorr}) and (\ref{PSSpatialCorr}), we project to the lowest Matsubara modes, $\omega_o = \pi T$ and $\omega_0 = 0$ respectively.
-What we find from these calculations is that masses characterizing the decay in space satisfy $M_s L_s > 1$, where $L_s = N_s a_s$ is the  lattice extent in the spatial direction. This is further proof that the corrections arising from the finite spatial extent of the box 
+What we find from these calculations is that the masses characterizing the decay of the above correlation functions in space satisfy $M_s L_s > 1$, where $L_s = N_s a_s$ is the  lattice extent in the spatial direction. This is further proof that the corrections arising from the finite spatial extent of the box 
 are well under control.
  
 Thermal effects are also known to play a role in lattice simulations due to the finite extent of the box. The temperature of the system is related to the temporal extent of the lattice, $T = 1/N_{\tau}a_t$. We have investigated the effects of finite temperature on the condensate which are illustrated in Fig. \ref{PBPvsTdivM}, where $\sigma(T/m)$ is plotted. When the temperature is large 
@@ -445,7 +445,7 @@ We notice that the pseudoscalar mass is unaffected by the change in flux. This i
 external magnetic field \cite{SmilgaShushpanov}. We also have determined that the pseudoscalar mode is indeed a bound state. This can be seen by referring to Fig. \ref{MFvsm} where the pole
 of the quasiparticle propagator is plotted as a function of the bare mass.  
 
-The quasiparticle propagator is interesting in its own right as one can obtain information the dynamically generated mass induced by the spontaneous breaking of the chiral symmetry. The zero-momentum quasiparticle propagator is defined 
+The quasiparticle propagator is interesting in its own right as one can obtain information the dynamically generated mass induced by the spontaneous breaking of the chiral symmetry. The zero-momentum quasiparticle propagator in temporal direction is defined 
 as follows 
 \beq
 \label{FermProp}
@@ -457,7 +457,7 @@ Although the propagator itself is gauge variant, the pole of the propagator is g
 G_F(\tau) &=& \frac{A_e}{2}\left(1+(-)^{\tau}\right) \left( e^{-m_F\tau} + e^{-m_F(N_{\tau} - \tau)} \right) \\ \nn
 &+&  \frac{A_o}{2}\left(1-(-)^{\tau}\right) \left( e^{-m_F\tau} - e^{-m_F(N_{\tau} - \tau)} \right),
 \eeq
-where $m_F$ is the pole of the propagator. Due to the appearance of a nonzero value for the condensate $\vev{\Bpsi \Psi}$, one expects that $m_F$ is remains finite in the limit that the bare mass vanishes, $m_F = C\sqrt{\Delta^2 + m^2}$ where $C$ is a constant \textcolor{red}{is this formula needed here?}. In Fig. \ref{MFvsm}, one can see
+where $m_F$ is the pole of the propagator. Due to the appearance of a nonzero value for the condensate $\vev{\Bpsi \Psi}$, one expects that $m_F$ is remains finite in the limit that the bare mass vanishes, $m_F = C\sqrt{\Delta^2 + m^2}$, where $C$ is a dimensionless constant. In Fig. \ref{MFvsm}, one can see
 the pole reach a plateau as the bare mass goes to zero. This result confirms our hypothesis regarding the generation of a dynamical mass for the fermion. We were not, however, able to obtain a clear 
 dependence of $m_F$ on the external magnetic field. For a given bare mass, $m_F$ did not display a monotonic dependence on the magnetic flux. One would expect that the dynamical mass increases with the external magnetic field, just as is 
 observed with the condensate. \textcolor{red}{need to discuss with DeTar a possible explanation for this and how to present it in order to conclude this paragraph}.
@@ -515,7 +515,11 @@ this quantity is UV divergent.}
 
 Through a thorough, fully non-perturbative study of the graphene EFT, we have shown the existence of spontaneous symmetry breaking due to an external magnetic field.
 We have characterized the ground state of the system by performing a zero temperature extrapolation of our observables. Furthermore, ours is the first lattice study to present results 
-for the Haldane mass. 
+for the Haldane mass. The evidence for a dynamically generated Dirac mass for the quasiparticle as well as the nonzero value for the chirally extrapolated, $T=0$ chiral condensate shows
+that indeed, magnetic catalysis is occuring in the graphene EFT. Further studies of magnetic catalysis in the graphene EFT could address other questions, such as how the phase diagram presented in \cite{Polikarpov} changes as one varies the temperature.
+This would nececssarily involve a scan in $\beta$ which differs from our current study which was performed at fixed $\beta=0.80$. Another direction one could pursue would be to 
+study the valley $\otimes$ sublattice and spin densities which are order parameters for Quantum Hall ferromagnetism (QHF). In a study of the Schwinger-Dyson gap equations, it was found that 
+the appearance of the condensates associated with magnetic catalysis and those associated with QHF shared the same dynamical origin \cite{MiranskyGraphene4}.
 
 
 \acknowledgements
