@@ -383,8 +383,21 @@ We began our calculations be identifying the semimetal phase through a scan in $
 One can compare this with the behavior of $\vev{\Bpsi \Psi}$ as a function of the bare mass when the external magnetic field is turned on. This is illustrated in Fig. \ref{PBPComparison} where one sees a strongly nonlinear behavior of the condensate as a function of $m$ for the magnetic flux $\Phi_B = 0.125$.
 
 However, just like the case at zero magnetic field, as the explicit symmetry breaking parameter is taken to zero, the condensate also goes to zero in the presence of an external magnetic field. Usually, this signals that the symmetry is being restored due to the finite spatial extent of the box. Referring to Fig. \ref{PBPVolume}, one can see that this is not the
-case. For several spatial extents $N_s$, the condensate shows little variation. This can be explained by noting that the magnetic length, $l_B \equiv \sqrt{\hbar c/eB}$, which characterizes the quasiparticle's cyclotron orbit, satisfies $1 < l_B < L_s$, in units of $a_s$. We have also confirmed this indepedently by calculating the screening
-masses for the fermion quasiparticle and the pseudoscalar, which satisfy $M_s L_s > 1$. 
+case. For several spatial extents $N_s$, the condensate shows little variation. This can be explained by noting that the magnetic length, $l_B \equiv \sqrt{\hbar c/eB}$, which characterizes the quasiparticle's cyclotron orbit, satisfies $1 < l_B < L_s$, in units of $a_s$. 
+
+We have also confirmed the independence of the results on the finite spatial size of the box by indepedently by calculating the screening
+masses for the fermion quasiparticle and the pseudoscalar. The screening masses are obtained from the following correlation functions
+\beq
+\label{FermSpatialCorr}
+G_F(x;\omega_0=\pi T) = \sum_{y,\tau} e^{i\omega_o \tau} \vev{ \chi(x,y,\tau) \chib(0,0,0) }, 
+\eeq
+\beq
+\label{PSSpatialCorr}
+G_{PS}(x; \omega_0=0) = \sum_{y,\tau} \vev{ \mathcal{O}_{PS}(x,y,\tau) \mathcal{O}_{PS}(0,0,0) },
+\eeq
+where $\mathcal{O}_{PS}$ is the pseudoscalar interpolating operator.  In (\ref{FermSpatialCorr}) and (\ref{PSSpatialCorr}), we project to the lowest Matsubara modes, $\omega_o = \pi T$ and $\omega_0 = 0$ respectively.
+What we find from these calculations is that the masses characterizing the decay of the above correlation functions in space satisfy $M_s L_s > 1$, where $L_s = N_s a_s$ is the  lattice extent in the spatial direction. This is further proof that the corrections arising from the finite spatial extent of the box 
+are well under control.
  
 Thermal effects are also known to play a role in lattice simulations due to the finite extent of the box. The temperature of the system is related to the temporal extent of the lattice, $T = 1/N_{\tau}a_t$. We have investigated the effects of finite temperature on the condensate which are illustrated in Fig. \ref{PBPvsTdivM}, where $\sigma(T/m)$ is plotted. When the temperature is large 
 compared to the fermion mass, one can see that the condensate tends towards zero. On the other hand, when the temperature is small compared to the fermion mass, one can see that the condensate increases and tends asymptotically towards a nonzero value. The fact that magnetic catalysis is a property of the ground state of the Hamiltonian suggests that we first take the limit $T \to 0$, followed
@@ -448,6 +461,7 @@ where $m_F$ is the pole of the propagator. Due to the appearance of a nonzero va
 the pole reach a plateau as the bare mass goes to zero. This result confirms our hypothesis regarding the generation of a dynamical mass for the fermion. We were not, however, able to obtain a clear 
 dependence of $m_F$ on the external magnetic field. For a given bare mass, $m_F$ did not display a monotonic dependence on the magnetic flux. One would expect that the dynamical mass increases with the external magnetic field, just as is 
 observed with the condensate. \textcolor{red}{need to discuss with DeTar a possible explanation for this and how to present it in order to conclude this paragraph}.
+
 \begin{figure}
 \includegraphics[height=8cm,width=8cm]{pbp_vs_m_compare_graphene_paper.pdf} \hspace{-1cm}
 \caption{$\sigma \equiv \vev{\Bpsi \Psi}$ as a function of the bare fermion mass at zero field (black points) and at magnetic flux $\Phi_B=0.125$ (blue points), where flux is measured in units of $a^2_s$. One can note that $\sigma$ vanishes with $m$ at zero field as well as at nonzero external field. The vanishing of the condensate in the presence of the magnetic field is argued to be a thermal effect.}

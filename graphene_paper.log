@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.8.11)  6 JAN 2016 10:25
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.8.11)  11 JAN 2016 14:12
 entering extended mode
  %&-line parsing enabled.
 **graphene_paper.tex
@@ -217,15 +217,16 @@ File: ps_mt_vs_m_2exp_graphene_paper.pdf Graphic file (type pdf)
 <ferm_mt_vs_m_graphene_paper.pdf, id=47, 794.97pt x 614.295pt>
 File: ferm_mt_vs_m_graphene_paper.pdf Graphic file (type pdf)
 
-<use ferm_mt_vs_m_graphene_paper.pdf>
-Underfull \hbox (badness 1137) in paragraph at lines 508--512
-\OT1/cmr/m/n/10 per-for-mance com-puter of Jo-hann Wolf-gang Goethe-
- []
-
-[7 <./pbp_vs_m_compare_graphene_paper.pdf, page is rotated 90 degrees>]
+<use ferm_mt_vs_m_graphene_paper.pdf> [7 <./pbp_vs_m_compare_graphene_paper.pdf
+, page is rotated 90 degrees>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 512.
+ on input line 519.
+
+
+Underfull \hbox (badness 1137) in paragraph at lines 522--526
+\OT1/cmr/m/n/10 per-for-mance com-puter of Jo-hann Wolf-gang Goethe-
+ []
 
 [8 <./pbp_vs_m_PHI0125_volcompare_3_graphene_paper.pdf, page is rotated 90 degr
 ees> <./pbp_vs_TdivM_PHI0125_zoom_graphene_paper.pdf, page is rotated 90 degree
@@ -233,49 +234,48 @@ s> <./pbp_vs_m_zeroT_PHI0125_lin_graphene_paper.pdf, page is rotated 90 degrees
 > <./pbp_vs_PHI_NL_graphene_paper.pdf, page is rotated 90 degrees>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 521.
+ on input line 526.
 
 [9 <./haldanediveB_vs_m_zeroT_graphene_paper.pdf, page is rotated 90 degrees> <
 ./ps_mt_vs_m_2exp_graphene_paper.pdf, page is rotated 90 degrees> <./ferm_mt_vs
 _m_graphene_paper.pdf, page is rotated 90 degrees>]
-Overfull \hbox (16.20865pt too wide) in alignment at lines 549--554
+Overfull \hbox (16.20865pt too wide) in alignment at lines 563--568
  [][][] []
  []
 
 [10]
-Underfull \hbox (badness 1009) in paragraph at lines 1003--1004
+Underfull \hbox (badness 1009) in paragraph at lines 1017--1018
  []\OT1/cmr/m/n/9 G. S. Bali, F. Bruck-mann, G. En-drodi, Z. Fodor,
  []
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 1003--1004
+Underfull \hbox (badness 1931) in paragraph at lines 1017--1018
  \OT1/cmr/m/n/9 and S. D. Katz, PoS LAT-TICE2011, 192 (2011),
  []
 
 
-Underfull \hbox (badness 4805) in paragraph at lines 1006--1007
+Underfull \hbox (badness 4805) in paragraph at lines 1020--1021
  []\OT1/cmr/m/n/9 C. Win-terowd, C. De-Tar, and S. Zafeiropou-los,
  []
 
-
-Underfull \hbox (badness 8038) in paragraph at lines 1042--1043
+[11]
+Underfull \hbox (badness 8038) in paragraph at lines 1056--1057
  []\OT1/cmr/m/n/9 J. E. Drut, T. A. Lahde, and L. Suo-ranta,
  []
 
-[11]
 
 Class revtex4 Warning: Environment acknowledgements is obsolete;
 Use acknowledgments instead.
 
 [12] (./graphene_paper.aux) ) 
 Here is how much of TeX's memory you used:
- 3164 strings out of 256216
- 38665 string characters out of 1917072
- 113791 words of memory out of 1500000
- 6420 multiletter control sequences out of 10000+200000
+ 3167 strings out of 256216
+ 38708 string characters out of 1917072
+ 118791 words of memory out of 1500000
+ 6423 multiletter control sequences out of 10000+200000
  14651 words of font info for 54 fonts, out of 1200000 for 2000
  648 hyphenation exceptions out of 8191
- 29i,14n,35p,652b,315s stack positions out of 5000i,500n,6000p,200000b,15000s
+ 29i,14n,35p,652b,279s stack positions out of 5000i,500n,6000p,200000b,15000s
 </usr/share/texmf/fonts/type1/bluesky/cm/cmbx10.pf
 b></usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/t
 ype1/bluesky/cm/cmbx9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmex10.pfb><
@@ -291,7 +291,7 @@ type1/bluesky/cm/cmsy5.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy7.pfb><
 /usr/share/texmf/fonts/type1/bluesky/cm/cmsy9.pfb></usr/share/texmf/fonts/type1
 /bluesky/cm/cmti7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti9.pfb></usr/
 share/texmf/fonts/type1/bluesky/ams/msbm10.pfb>
-Output written on graphene_paper.pdf (12 pages, 237188 bytes).
+Output written on graphene_paper.pdf (12 pages, 238885 bytes).
 PDF statistics:
  185 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
