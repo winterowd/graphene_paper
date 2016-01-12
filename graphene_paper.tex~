@@ -87,7 +87,7 @@ the chiral condensate which is the order parameter characterizing the spontaneou
 Finally, we study the mass spectrum of the theory, in particular the Nambu-Goldstone (NG) mode as well as the Dirac quasiparticle, which is predicted to obtain a dynamical mass. 
 \end{abstract}
 
-\pacs{11.15.Ha, 73.22.Pr, }
+\pacs{11.15.Ha, 73.22.Pr, 71.70.Di}
 \maketitle
 
 \section{\label{sec:Intro}Introduction}
@@ -462,9 +462,10 @@ G_F(\tau) &=& \frac{A_e}{2}\left(1+(-)^{\tau}\right) \left( e^{-m_F\tau} + e^{-m
 &+&  \frac{A_o}{2}\left(1-(-)^{\tau}\right) \left( e^{-m_F\tau} - e^{-m_F(N_{\tau} - \tau)} \right),
 \eeq
 where $m_F$ is the pole of the propagator. Due to the appearance of a nonzero value for the condensate $\vev{\Bpsi \Psi}$, one expects that $m_F$ is remains finite in the limit that the bare mass vanishes, $m_F = C\sqrt{\Delta^2 + m^2}$, where $C$ is a dimensionless constant. In Fig. \ref{MFvsm}, one can see
-the pole reach a plateau as the bare mass goes to zero. This result confirms our hypothesis regarding the generation of a dynamical mass for the fermion. We were not, however, able to obtain a clear 
+the pole reach a plateau as the bare mass goes to zero for the ensembles with nonzero magnetic flux. This result confirms our hypothesis regarding the generation of a dynamical mass for the fermion. We were not, however, able to obtain a clear 
 dependence of $m_F$ on the external magnetic field. For a given bare mass, $m_F$ did not display a monotonic dependence on the magnetic flux. One would expect that the dynamical mass increases with the external magnetic field, just as is 
 observed with the condensate. \textcolor{red}{need to discuss with DeTar a possible explanation for this and how to present it in order to conclude this paragraph}.
+On the other hand, in the absence of an external magnetic field, $m_F$ appears to vanish with the bare mass as one would expect in the semimetal phase.
 
 \begin{figure}
 \includegraphics[height=8cm,width=8cm]{pbp_vs_m_compare_graphene_paper.pdf} \hspace{-1cm}
@@ -511,7 +512,7 @@ this quantity is UV divergent.}
 
 \begin{figure}
   \includegraphics[height=8cm,width=8cm]{ferm_mt_vs_m_graphene_paper.pdf} \hspace{-1cm}
-\caption{The pole of the fermion propagator as a function of the bare fermion mass for all four magnetic fluxes.}
+\caption{The pole of the fermion propagator as a function of the bare fermion mass for all four magnetic fluxes as well as at zero magnetic flux.}
 \label{MFvsm}
 \end{figure}
 
@@ -528,8 +529,8 @@ the appearance of the condensates associated with magnetic catalysis and those a
 
 \acknowledgements
 This work was in part based on a variant of the MILC collaboration's public lattice gauge theory code. See {\bf http://physics.utah.edu/~detar/milc.html}.
-Calculations were performed at the Center for High Performance Computing at the University of Utah, Fermi National Accelerator Laboratory, the LOEWE-CSC high performance
-computer of Johann Wolfgang Goethe-University Frankfurt, and \textcolor{red}{need info for occigen}. The authors would like to acknowledge discussions with Maksim Ulybyshev. SZ would like to
+Calculations were performed at the Center for High Performance Computing at the University of Utah, Fermi National Accelerator Laboratory, and the LOEWE-CSC high performance
+computer of Johann Wolfgang Goethe-University Frankfurt. The authors would like to acknowledge discussions with Maksim Ulybyshev. SZ would like to
 acknowledge discussions with Wolfgang Unger.
 SZ would like to acknowledge the support of the Alexander von Humboldt foundation. CW and CD were supported by the US NSF grant PHY10-034278 and US DOE grant DOE DE-FC02-12ER41879.
 
