@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.8.11)  11 JAN 2016 15:26
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.8.11)  12 JAN 2016 10:44
 entering extended mode
  %&-line parsing enabled.
 **graphene_paper.tex
@@ -217,49 +217,49 @@ File: ps_mt_vs_m_2exp_graphene_paper.pdf Graphic file (type pdf)
 <ferm_mt_vs_m_graphene_paper.pdf, id=47, 794.97pt x 614.295pt>
 File: ferm_mt_vs_m_graphene_paper.pdf Graphic file (type pdf)
 
-<use ferm_mt_vs_m_graphene_paper.pdf> [7 <./pbp_vs_m_compare_graphene_paper.pdf
-, page is rotated 90 degrees>]
+<use ferm_mt_vs_m_graphene_paper.pdf> [7]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 523.
-
-[8 <./pbp_vs_m_PHI0125_volcompare_3_graphene_paper.pdf, page is rotated 90 degr
-ees> <./pbp_vs_TdivM_PHI0125_zoom_graphene_paper.pdf, page is rotated 90 degree
-s> <./pbp_vs_m_zeroT_PHI0125_lin_graphene_paper.pdf, page is rotated 90 degrees
-> <./pbp_vs_PHI_NL_graphene_paper.pdf, page is rotated 90 degrees>]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 523.
+ on input line 527.
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 526--531
+Underfull \hbox (badness 1137) in paragraph at lines 530--535
 \OT1/cmr/m/n/10 per-for-mance com-puter of Jo-hann Wolf-gang Goethe-
  []
 
-[9 <./haldanediveB_vs_m_zeroT_graphene_paper.pdf, page is rotated 90 degrees> <
-./ps_mt_vs_m_2exp_graphene_paper.pdf, page is rotated 90 degrees> <./ferm_mt_vs
-_m_graphene_paper.pdf, page is rotated 90 degrees>]
-Overfull \hbox (16.20865pt too wide) in alignment at lines 568--573
+[8 <./pbp_vs_m_compare_graphene_paper.pdf, page is rotated 90 degrees> <./pbp_v
+s_m_PHI0125_volcompare_3_graphene_paper.pdf, page is rotated 90 degrees> <./pbp
+_vs_TdivM_PHI0125_zoom_graphene_paper.pdf, page is rotated 90 degrees> <./pbp_v
+s_m_zeroT_PHI0125_lin_graphene_paper.pdf, page is rotated 90 degrees>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 535.
+
+[9 <./pbp_vs_PHI_NL_graphene_paper.pdf, page is rotated 90 degrees> <./haldaned
+iveB_vs_m_zeroT_graphene_paper.pdf, page is rotated 90 degrees> <./ps_mt_vs_m_2
+exp_graphene_paper.pdf, page is rotated 90 degrees> <./ferm_mt_vs_m_graphene_pa
+per.pdf, page is rotated 90 degrees>]
+Overfull \hbox (16.20865pt too wide) in alignment at lines 572--577
  [][][] []
  []
 
 [10] [11]
-Underfull \hbox (badness 1009) in paragraph at lines 1022--1023
+Underfull \hbox (badness 1009) in paragraph at lines 1026--1027
  []\OT1/cmr/m/n/9 G. S. Bali, F. Bruck-mann, G. En-drodi, Z. Fodor,
  []
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 1022--1023
+Underfull \hbox (badness 1931) in paragraph at lines 1026--1027
  \OT1/cmr/m/n/9 and S. D. Katz, PoS LAT-TICE2011, 192 (2011),
  []
 
 
-Underfull \hbox (badness 4805) in paragraph at lines 1025--1026
+Underfull \hbox (badness 4805) in paragraph at lines 1029--1030
  []\OT1/cmr/m/n/9 C. Win-terowd, C. De-Tar, and S. Zafeiropou-los,
  []
 
 
-Underfull \hbox (badness 8038) in paragraph at lines 1061--1062
+Underfull \hbox (badness 8038) in paragraph at lines 1065--1066
  []\OT1/cmr/m/n/9 J. E. Drut, T. A. Lahde, and L. Suo-ranta,
  []
 
@@ -271,7 +271,7 @@ Use acknowledgments instead.
 Here is how much of TeX's memory you used:
  3166 strings out of 256216
  38696 string characters out of 1917072
- 125791 words of memory out of 1500000
+ 130411 words of memory out of 1500000
  6422 multiletter control sequences out of 10000+200000
  14651 words of font info for 54 fonts, out of 1200000 for 2000
  648 hyphenation exceptions out of 8191
@@ -291,7 +291,7 @@ type1/bluesky/cm/cmsy5.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy7.pfb><
 /usr/share/texmf/fonts/type1/bluesky/cm/cmsy9.pfb></usr/share/texmf/fonts/type1
 /bluesky/cm/cmti7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti9.pfb></usr/
 share/texmf/fonts/type1/bluesky/ams/msbm10.pfb>
-Output written on graphene_paper.pdf (12 pages, 239707 bytes).
+Output written on graphene_paper.pdf (12 pages, 241085 bytes).
 PDF statistics:
  185 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
