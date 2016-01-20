@@ -440,12 +440,12 @@ the pion in QCD. As in QCD, one expects this state to become massless as the bar
 \label{PionTemporal}
 G^{(\tau)}_{PS}(\tau; \vec{p}) = \sum_{x,y} e^{i \vec{p} \cdot \vec{x}} \vev{ \mathcal{O}_{PS}(x,y,\tau) \mathcal{O}_{PS}(0,0,0) },
 \eeq
-where $\mathcal{O}_{PS}$ is a staggered bilinear operator with pseudoscalar quantum numbers. In the spin-taste basis, the operator we have used reads
+where $\mathcal{O}_{PS}$ is a staggered bilinear operator with pseudoscalar quantum numbers. In the spin-taste basis, the operator we have used is
 \beq
 \label{PSSpinTaste}
 \mathcal{O}_{PS}(y) = \Bpsi(y) \left(\tilde{\gamma}_4 \otimes \bm 1 \right)\Psi(y).
 \eeq
-In the one-component basis, this operator reads
+In the one-component basis, this operator becomes
 \beq
 \label{PS1Comp}
 \mathcal{O}_{PS}(y) = \sum_{\eta} \epsilon(x) \chib_{\eta}(y) \chi_{\eta}(y),
@@ -500,81 +500,62 @@ The appearance of anomalous QHE states in graphene at previously unknown filling
 Although there are several scenarios to explain these states, (see \cite{Yang} for a nice discussion), the authors of \cite{MiranskyGraphene2, MiranskyGraphene3} advocate the magnetic catalysis scenario whereby a Dirac mass as well as possibly a Haldane mass are generated due to the strong, weakly screened
 electron-electron interactions in graphene.
 
-On the lattice, the continuum $SU(2)_{\sigma}$ symmetry under which the Haldane mass is invariant does not exist (see Appendix \ref{sec:FermionAppendix}). Thus, discretization effects are expected to be present in the lattice calculation of the corresponding Haldane condensate. In order to investigate the continuum limit, where one would restore the $SU(2)_{\sigma}$, we first fixed the ratio $eB/m^2$. This sets the mass in units of the magnetic length, $l_B$. We then extrapolated the Haldane mass to $T=0$. Finally, we investigated the behavior of the lattice spacing independent quantity $\Delta_H/eB$, in the limit of $\hat{m} = m a_t \to 0$. 
+Within our lattice EFT, there is no continuum $SU(2)_{\sigma}$ symmetry under which the Haldane mass is invariant (see Appendix \ref{sec:FermionAppendix}). Thus, discretization effects are expected to be present in the lattice calculation of the corresponding Haldane condensate. In order to investigate the continuum limit, where one would restore the $SU(2)_{\sigma}$, we first fixed the ratio $eB/m^2$. This sets the mass in units of the magnetic length, $l_B$. We then extrapolated the Haldane mass to $T=0$. Finally, we investigated the behavior of the lattice spacing independent quantity $\Delta_H/eB$, in the limit of $\hat{m} = m a_t \to 0$. 
 In Fig.~\ref{HaldanediveBvsm}, the continuum limit is shown. From the plot, one can see that a UV divergence $\sim 1/a$ is present. This makes it difficult to extract any continuum physics from this quantity. One would need a way of renormalizing this quantity in order to obtain information in the limit $a \to 0$.
-\textcolor{red}{Need a better way to tie a bow around this section. Maybe also include $\sigma/eB$ vs $\hat{m}$?}
 
-As a consequence of the spontaneous chiral symmetry breaking, one expects the appearance of a NG boson. Like QCD, this mode is a pseudoscalar whose mass vanishes as the fermion mass goes to zero.
-We have studied the mass of the pseudoscalar mode by computing the following zero-momentum, two-point correlator in Euclidean time
-\beq
-\label{PS2Point}
-\vev{ \mathcal{O}_{PS}(\tau) \mathcal{O}_{PS}(0) } = A\left( e^{-m_{\pi}\tau} + e^{-m_{\pi}(N_{\tau} - \tau)} \right),
-\eeq
-where $\mathcal{O}_{PS}$ is a staggered bilinear operator with pseudoscalar quantum numbers. In the spin-taste basis, the operator we have used reads
-\beq
-\label{PSSpinTaste}
-\mathcal{O}_{PS}(y) = \Bpsi(y) \left(\tilde{\gamma}_4 \otimes \bm 1 \right)\Psi(y).
-\eeq
-In the one-component basis, this operator reads
-\beq
-\label{PS1Comp}
-\mathcal{O}_{PS}(y) = \sum_{\eta} \epsilon(x) \chib_{\eta}(y) \chi_{\eta}(y),
-\eeq
-where $x_{\mu} = 2y_{\mu} + \eta_{\mu}$, $\epsilon(x) = (-1)^{\eta_0 + \eta_1 + \eta_2}$, and the sum runs over the sites of the cube labeled by $y$. The details of the transformations connecting (\ref{PSSpinTaste}) and (\ref{PS1Comp}) are given in Appendix \ref{sec:SpinTasteAppendix}.
-In Fig.~\ref{MPSvsm}, we see the ground state mass in the pseudoscalar channel, $m_{\pi}$, plotted as a function of the fermion mass for the various magnetic fluxes.  
-We notice that the pseudoscalar mass is unaffected by the change in flux. This is in contrast with QCD, where there exist electrically charged  pions which couple to the 
-external magnetic field \cite{SmilgaShushpanov}. We also have determined that the pseudoscalar mode is indeed a bound state. This can be seen by referring to Fig.~\ref{MFvsm} where the pole
-of the quasiparticle propagator is plotted as a function of the bare mass.  
-
-The quasiparticle propagator is interesting in its own right as one can obtain information regarding the dynamically generated mass induced by the spontaneous breaking of chiral symmetry. The zero-momentum quasiparticle propagator in the temporal direction is defined 
-as follows 
-\beq
-\label{FermProp}
-G_F(\tau) = \sum_{x,y} \vev{ \chi(x,y,\tau) \chib(0) }.
-\eeq
-Although the propagator itself is gauge variant, the pole of the propagator is gauge invariant and thus one can extract physically useful information from it. Our gauge fixing procedure involved ssetting the average value of the potential on a given time slice to zero, 
+The quasiparticle propagator is interesting in its own right as one can obtain information regarding the dynamically generated mass induced by the spontaneous breaking of chiral symmetry. 
+Although the propagator itself is gauge variant, the pole of the propagator is gauge invariant and thus one can extract physically useful information from it. Our gauge fixing procedure involved setting the average value of the potential on a given time slice to zero, 
 \beq
 \sum_{x,y} \theta(x,y,\tau) = 0.
 \eeq
-To do determine the pole of the propagator, we fit to the following form
+To do determine the dynamical fermion mass, we fit the propagator in (\ref{QuasiparticlePropagatorTemporal}) to the following form
 \beq
-\label{FermFitForm}
-G_F(\tau) &=& \frac{A_e}{2}\left(1+(-)^{\tau}\right) \left( e^{-m_F\tau} + e^{-m_F(N_{\tau} - \tau)} \right) \\ \nn
+\label{FermFitForm} \nn
+G_F(\tau, \vec{p} = {\bf 0}) &=& \frac{A_e}{2}\left(1+(-)^{\tau}\right) \left( e^{-m_F\tau} + e^{-m_F(N_{\tau} - \tau)} \right) \\ 
 &+&  \frac{A_o}{2}\left(1-(-)^{\tau}\right) \left( e^{-m_F\tau} - e^{-m_F(N_{\tau} - \tau)} \right),
 \eeq
-where $m_F$ is the pole of the propagator. Due to the appearance of a nonzero value for the condensate $\vev{\Bpsi \Psi}$, one expects that $m_F$ is remains finite in the limit that the bare mass vanishes, $m_F = C\sqrt{\Delta^2 + m^2}$, where $C$ is a dimensionless constant. In Fig.~\ref{MFvsm}, one can see
-the pole reach a plateau as the bare mass goes to zero for the ensembles with nonzero magnetic flux. This result confirms our hypothesis regarding the generation of a dynamical mass for the fermion. We were not, however, able to obtain a clear 
+where $m_F$ is the dynamical fermion mass. Due to the appearance of a nonzero value for the condensate $\vev{\Bpsi \Psi}$, one expects that $m_F$ remains finite in the limit that the bare mass vanishes. In Fig.~\ref{MFvsm}, one can see
+the dynamical mass reaches a plateau as the bare mass goes to zero for the ensembles with nonzero magnetic flux. This result confirms our hypothesis regarding the generation of a dynamical mass for the fermion. We were not, however, able to obtain a clear 
 dependence of $m_F$ on the external magnetic field. For a given bare mass, $m_F$ did not display a monotonic dependence on the magnetic flux. One would expect that the dynamical mass increases with the external magnetic field, just as is 
-observed with the condensate. \textcolor{red}{need to discuss with DeTar a possible explanation for this and how to present it in order to conclude this paragraph}.
-On the other hand, in the absence of an external magnetic field, $m_F$ appears to vanish with the bare mass as one would expect in the semimetal phase.
+observed with the condensate. On the other hand, in the absence of an external magnetic field, $m_F$ appears to vanish with the bare mass as one would expect in the semimetal phase.
+
+The appearance of a pseudoscalar Nambu-Goldstone boson is expected as a consequence of the spontaneous chiral symmetry breaking. To determine this state's mass we fit the correlator in (\ref{PionTemporal}) to the following form
+\beq
+\label{PS2Point} \nn
+G^{(\tau)}_{PS}(\tau; \vec{p} = {\bf 0}) &=& A\left( e^{-m_{\pi}\tau} + e^{-m_{\pi}(N_{\tau} - \tau)} \right) \\ &+&  A'\left( e^{-m'_{\pi}\tau} + e^{-m'_{\pi}(N_{\tau} - \tau)} \right),
+\eeq
+where we have included two sets of exponentials characterizing the ground state and the first excited state respectively.
+In Fig.~\ref{MPSvsm}, we see the ground state mass in the pseudoscalar channel, $m_{\pi}$, plotted as a function of the fermion mass for the various magnetic fluxes.  
+We notice that the pseudoscalar mass shows little variation in flux. This is in contrast with QCD, where electrically charged  pions couple to the 
+external magnetic field \cite{SmilgaShushpanov}. We also have determined that the pseudoscalar mode is indeed a bound state. This can be seen by referring to Fig.~\ref{MFvsm} where the dynamical fermion mass is plotted as a function of the bare mass.  
 
 \begin{figure}
 \includegraphics[height=8cm,width=8cm]{pbp_vs_m_compare_graphene_paper.pdf} \hspace{-1cm}
-\caption{$\sigma \equiv \vev{\Bpsi \Psi}$ as a function of the bare fermion mass at zero field (black points) and at magnetic flux $\Phi_B=0.125$ (blue points), where flux is measured in units of $a^2_s$. One can note that $\sigma$ vanishes with $m$ at zero field as well as at nonzero external field. The vanishing of the condensate in the presence of the magnetic field is argued to be a thermal effect.}
+\caption{The chiral condensate $\sigma \equiv \vev{\Bpsi \Psi}$ as a function of the bare fermion mass at zero field (black points) and at magnetic flux $\Phi_B=0.125$ (blue points), where flux is measured in units of $a^2_s$. One can note that $\sigma$ vanishes with $m$ at zero field as well as at nonzero external field. The vanishing of the condensate in the presence of the magnetic field is argued to be a thermal effect. The error bars on each point are so small that they are not visible.}
 \label{PBPComparison}
 \end{figure}
 
 \begin{figure}
 \includegraphics[height=8cm,width=8cm]{pbp_vs_m_PHI0125_volcompare_3_graphene_paper.pdf} \hspace{-1cm}
-\caption{$\sigma$ as a function of fermion mass with varying spatial volume $N^2_s$ for magnetic flux $\Phi_B=0.125$. The lattice volumes are listed in the form $N_s^2\times N_z \times N_{\tau}$ where the fermions live in the $xy$-plane and the gauge field is present throughout the entire volume.}
+\caption{The chiral condensate $\sigma$ as a function of fermion mass with varying spatial volume $N^2_s$ for magnetic flux $\Phi_B=0.125$. The lattice volumes are listed in the form $N_s^2\times N_z \times N_{\tau}$ where the fermions live in the $xy$-plane and the gauge field is present throughout the entire volume.}
 \label{PBPVolume}
 \end{figure}
 
 \begin{figure}
  \includegraphics[height=8cm,width=8cm]{pbp_vs_TdivM_PHI0125_zoom_graphene_paper.pdf} \hspace{-1cm}
-\caption{$\sigma$ plotted as a function of $T/m$. One can see that at small values of $T/m$, the condensate increases and tends towards a nonzero value.}
+\caption{The chiral condensate $\sigma$ plotted as a function of $T/m$. One can see that at small values of $T/m$, the condensate increases and tends towards a nonzero value.}
 \label{PBPvsTdivM}
 \end{figure}
 
 \begin{figure}
   \includegraphics[height=8cm,width=8cm]{pbp_vs_m_zeroT_PHI0125_lin_graphene_paper.pdf} \hspace{-1cm}
-\caption{Chiral limit of $\sigma$ using the $T=0$ extrapolated points. The nonzero intercept indicates a finite value for the condensate in the chiral and zero temperature limits.}
+\caption{Chiral limit of the chiral condensate $\sigma$ using the $T=0$ extrapolated points. The nonzero intercept indicates a finite value for the condensate in the chiral and zero temperature limits.}
 \label{PBPzeroTChiral}
 \end{figure}
 
 \begin{figure}
  \includegraphics[height=8cm,width=8cm]{pbp_vs_PHI_NL_graphene_paper.pdf} \hspace{-1cm}
-\caption{The chirally extrapolated, zero temperature values of $\sigma$ plotted as a function of the magnetic flux,  $\Phi_B = eB/2\pi$.} 
+\caption{The chirally extrapolated, zero temperature values of the chiral condensate $\sigma$, plotted as a function of the magnetic flux,  $\Phi_B = eB/2\pi$. We have fit the data to a quadratic which passes through the origin. The fit has a $\chi^2$ of $\approx 36$. } 
 \label{PBPzeroTChiralvseB}
 \end{figure}
 
@@ -603,7 +584,7 @@ Through a thorough, fully non-perturbative study of the graphene EFT, we have sh
 We have characterized the ground state of the system by performing a zero temperature extrapolation of our observables. Furthermore, ours is the first lattice study to present results 
 for the Haldane mass. The evidence for a dynamically generated Dirac mass for the quasiparticle as well as the nonzero value for the chirally extrapolated, $T=0$ chiral condensate shows
 that indeed, magnetic catalysis is occuring in the graphene EFT. Further studies of magnetic catalysis in the graphene EFT could address other questions, such as how the phase diagram presented in \cite{Polikarpov} changes as one varies the temperature.
-This would nececssarily involve a scan in $\beta$ which differs from our current study which was performed at fixed $\beta=0.80$. Another direction one could pursue would be to 
+This would necessarily involve a scan in $\beta$ which differs from our current study which was performed at fixed $\beta=0.80$. Another direction one could pursue would be to 
 study the valley $\otimes$ sublattice and spin densities which are order parameters for Quantum Hall ferromagnetism (QHF). In a study of the Schwinger-Dyson gap equations, it was found that 
 the appearance of the condensates associated with magnetic catalysis and those associated with QHF shared the same dynamical origin \cite{MiranskyGraphene2}.
 
