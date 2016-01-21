@@ -388,12 +388,12 @@ The fermions have been integrated out of the partition function using the identi
 \beq
 \det \left( \Dslash + m \right) = \int \mathcal{D} \Bpsi \mathcal{D} \Psi e^{-\Bpsi \left( \Dslashexp + m \right) \Psi}.
 \eeq
-For staggered fermions in the one-component basis, the scalar density takes the form $\chib \chi$ and thus the chiral condensate becomes
+For staggered fermions in the one-component basis, the scalar density takes the form $\chib \chi$, and thus the chiral condensate becomes
 \beq
 \label{ChiralCondensateLattice}
 \vev{ \chib \chi } = \frac{1}{V} \frac{1}{Z} \int \mathcal{D}U_0  \tr \left(\Dslash_{st} + m \right)^{-1}e^{-S^{eff}_E[U_0]},
 \eeq
-where in our lattice partition function we have replaced the integration over the gauge potential $A_0$ with an integration over the link variables $U_0$. 
+where in our lattice partition function we have replaced the integration over the gauge potential $A_0$ with an integration over the link variable, $U_0$. 
 In order to determine if magnetic catalysis is present in the graphene EFT, we will be interested in taking the zero-temperature as well as massless limit for the chiral condensate.
 
 Another condensate which characterizes magnetic catalysis in the graphene EFT is the Haldane condensate. This condensate is time-reversal odd and takes the form
@@ -417,7 +417,7 @@ In order to study the dynamical mass, we calculate the quasiparticle propagator 
 \label{QuasiparticlePropagatorTemporal}
 G^{(\tau)}_F(\tau; \vec{p}) = \sum_{x,y} e^{i \vec{p} \cdot \vec{x}}\vev{\chi(x,y,\tau) \chib(0,0,0)},
 \eeq
-where $\vec{p} \equiv (p_x,p_y)$. In order to investigate effects of the finite spatial fox size, we are also interested in the quasiparticle propagator in the spatial direction 
+where $\vec{p} \equiv (p_x,p_y)$. In order to investigate effects of the finite spatial size of the box, we are also interested in the quasiparticle propagator in the spatial direction 
 \beq
 \label{QuasiparticlePropagatorSpatial}
 G^{(s)}_F(x; \omega_l, p_y) = \sum_{\tau,y} e^{i \left( \omega_l \tau + p_y y \right)} \vev{\chi(x,y,\tau) \chib(0,0,0)},
@@ -499,7 +499,7 @@ Although the propagator itself is gauge variant, the pole of the propagator is g
 \beq
 \sum_{x,y} \theta(x,y,\tau) = 0.
 \eeq
-To do determine the dynamical fermion mass, we fit the propagator in (\ref{QuasiparticlePropagatorTemporal}) to the following form
+To determine the dynamical fermion mass, we fit the propagator in (\ref{QuasiparticlePropagatorTemporal}) to the following form
 \beq
 \label{FermFitForm} \nn
 G_F(\tau, \vec{p} = {\bf 0}) &=& \frac{A_e}{2}\left(1+(-)^{\tau}\right) \left( e^{-m_F\tau} + e^{-m_F(N_{\tau} - \tau)} \right) \\ 
@@ -558,15 +558,15 @@ this quantity is UV divergent.}
 \end{figure}
 
 \begin{figure}
-  \includegraphics[height=8cm,width=8cm]{ps_mt_vs_m_2exp_graphene_paper.pdf} \hspace{-1cm}
-\caption{The mass of the pseudoscalar bound state as a function of the bare fermion mass for all four magnetic fluxes.}
-\label{MPSvsm}
-\end{figure}
-
-\begin{figure}
   \includegraphics[height=8cm,width=8cm]{ferm_mt_vs_m_graphene_paper.pdf} \hspace{-1cm}
 \caption{The fermion dynamical mass as a function of the bare fermion mass for all four magnetic fluxes as well as at zero magnetic flux.}
 \label{MFvsm}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[height=8cm,width=8cm]{ps_mt_vs_m_2exp_graphene_paper.pdf} \hspace{-1cm}
+\caption{The mass of the pseudoscalar bound state as a function of the bare fermion mass for all four magnetic fluxes.}
+\label{MPSvsm}
 \end{figure}
 
 \section{\label{sec:Conclusion}Conclusion}
