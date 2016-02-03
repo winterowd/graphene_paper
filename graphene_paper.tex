@@ -169,13 +169,20 @@ Although our lattice simulations do not take this into account, in real graphene
 \beq
 \mathcal{H}_Z = -\int d\vec{r} \mu_B \Psi^{\dagger} \sigma_3 \Psi,
 \eeq
-where $\sigma_3$ acts in spin space.
-This term breaks the $U(4)$ symmetry down to $U(2)_{\uparrow} \times U(2)_{\downarrow}$ with the generators of $U(2)_{\sigma}$ given by
+where $\mu_B$ is the Bohr magneton and $\sigma_3$ acts in spin space. Although we are dealing with Dirac fermions, this term is needed as the four-dimensional spinor structure is constructed from the sublattice and valley degrees of freedom. In the graphene EFT, the orbital and pseudospin quantum numbers determine the Landau level index while the electron's spin degree of freedom couples to the magnetic field in a nonrelativistic way. In contrast, for relativistic Dirac fermions coupled to an external magnetic field, the spin degree of freedom in the direction of the field combines with the orbital quantum number to determine the Landau level index. 
+The Zeeman term explicitly breaks the $U(4)$ symmetry down to $U(2)_{\uparrow} \times U(2)_{\downarrow}$ with the generators of $U(2)_{\sigma}$ given by
 \beq
 \label{U2Generators}
 \bm 1 \otimes P_{\sigma}, \quad \tilde{\gamma}_4 \otimes P_{\sigma}, \quad i \tilde{\gamma}_5 \otimes P_{\sigma}, \quad \tilde{\gamma}_{4,5} \otimes P_{\sigma},
 \eeq
-where we have introduced the spin projection operator, $P_{\sigma} \equiv \frac{1}{2}( 1 \pm \sigma_3 )$.  Apart from the long-range Coulomb interaction present in (\ref{ContinuumEFT}), in the complete lattice
+where we have introduced the spin projection operator, $P_{\sigma} \equiv \frac{1}{2}( 1 \pm \sigma_3 )$. Although the Zeeman term lifts the spin degeneracy of each Landau level, the size of this perturbation is very small in the presence of large magnetic fields. This is seen by considering 
+\beq
+\epsilon_{LL} &\equiv& \sqrt{\hbar v^2_F |eB|/c} = 26 \sqrt{B[\text{T}]}~\text{meV}, \\ 
+\epsilon_Z &\equiv & \mu_B B = 5.8\times 10^{-2} B[\text{T}]~\text{meV},
+\eeq
+where $\epsilon_{LL}$ is the energy separating the lowest Landau level ($n=0$) from its neighbor ($n=1$), and $\epsilon_Z$ is the Zeeman energy. For even the largest magnetic fields available in the laboratory ($B \sim 50~\text{T}$), $\epsilon_Z$ is only a small fraction of $\epsilon_{LL}$.
+
+ Apart from the long-range Coulomb interaction present in (\ref{ContinuumEFT}), in the complete lattice
 theory there are numerous short-range electron-electron interactions. These lattice-scale interaction terms are allowed by the point group symmetry of the underlying hexagonal lattice, $C_{6v}$ \cite{Aleiner}.
 As a result, these terms break the much larger $U(4)$ symmetry present in our continuum EFT. The couplings associated with these terms can vary in sign and are strongly renormalized at energies on the order of the bandwidth, $v_F/a$, where $a$ is the spacing of the hexagonal lattice \cite{Kharitonov}.
 Taking these renormalized couplings into account can have a decisive effect on the selection of the ground state in the full theory. In our lattice gauge model, we only consider a long-range Coulomb interaction mediated by a scalar potential and ignore the Zeeman interaction as well as 
