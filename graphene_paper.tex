@@ -85,7 +85,7 @@
 \begin{abstract}
 We discuss the simulation of the low energy effective field theory (EFT) for graphene in the presence of an external magnetic field. Our fully non-perturbative calculation 
 uses methods of lattice gauge theory to study the theory using a hybrid Monte Carlo approach. We investigate the phenomenon of magnetic catalysis in the context of graphene by studying
-the chiral condensate which is the order parameter characterizing the spontaneous breaking of chiral symmetry. In the EFT, the symmetry breaking pattern is given by $U(4) \to U(2) \otimes U(2)$. We also present results for a time-reversal odd condensate characterizing the ground state in the presence of a magnetic field.
+the chiral condensate which is the order parameter characterizing the spontaneous breaking of chiral symmetry. In the EFT, the symmetry breaking pattern is given by $U(4) \to U(2) \times U(2)$. We also present results for a time-reversal odd condensate characterizing the ground state in the presence of a magnetic field.
 Finally, we study the mass spectrum of the theory, in particular the Nambu-Goldstone (NG) mode as well as the Dirac quasiparticle, which is predicted to obtain a dynamical mass. 
 \end{abstract}
 
@@ -160,13 +160,14 @@ The fermionic part of the action in (\ref{ContinuumEFT}) has a $U(4)$ symmetry w
 && \tilde{\gamma}_4 \otimes \bm 1, \quad \tilde{\gamma}_4 \otimes \sigma_{\mu}, \quad i\tilde{\gamma}_5 \otimes \bm 1, \quad i\tilde{\gamma}_5 \otimes \sigma_{\mu}.
 \eeq
 These generators have the four-dimensional sublattice-valley subspace tensored with the two-dimensional spin subspace.
-The appearance of a Dirac mass term, of the form $\displaystyle m \sum_{\sigma=1,2} \Bpsi_{\sigma} \Psi_{\sigma}$ breaks the $U(4)$ symmetry down to \\ $U(2) \otimes U(2)$, whose generators are given by (\ref{unbrokenGens}).
+The appearance of a Dirac mass term, of the form $\displaystyle m \sum_{\sigma=1,2} \Bpsi_{\sigma} \Psi_{\sigma}$ breaks the $U(4)$ symmetry down to \\ $U(2) \times U(2)$, whose generators are given by (\ref{unbrokenGens}).
 Thus, the formation of a nonzero value of the condensate $\vev{\Bpsi_{\sigma} \Psi_{\sigma}}$, would signal spontaneous symmetry breaking and the appearance of eight Nambu-Goldstone (NG) bosons. In
 Appendix \ref{sec:FermionAppendix}, we provide the details of the fermion bilinears relevant to this study.
 
 As we have mentioned, the action in (\ref{ContinuumEFT}) is diagonal in spin space and has a $U(4)$ symmetry described by the generators in (\ref{unbrokenGens}) and (\ref{brokenGens}).  
 Although our lattice simulations do not take this into account, in real graphene this $U(4)$ symmetry is explicitly broken in the presence of an external magnetic field by the Zeeman term in the Hamiltonian
 \beq
+\label{ZeemanHamiltonian}
 \mathcal{H}_Z = -\mu_B B\int d\vec{r}~ \Psi^{\dagger} \sigma_3 \Psi,
 \eeq
 where $\mu_B$ is the Bohr magneton and $\sigma_3$ acts in spin space. Although we are dealing with Dirac fermions, this term is needed as the four-dimensional spinor structure is constructed from the sublattice and valley degrees of freedom. In the graphene EFT, the orbital and pseudospin quantum numbers determine the Landau level index while the electron's spin degree of freedom couples to the magnetic field in a nonrelativistic way. In contrast, for relativistic Dirac fermions coupled to an external magnetic field, the spin degree of freedom in the direction of the field combines with the orbital quantum number to determine the Landau level index. 
@@ -225,7 +226,7 @@ S_F &=& \sum_{n} \bigg[ \frac{1}{2} \hat{\chib}_n \left(U_0(n)\hat{\chi}_{n + \h
 \eeq
 In $(2+1)$ dimensions, each species of staggered fermions represents two identical four-component Dirac spinors. In lattice QCD simulations, this degree of freedom, commonly referred to as ``taste'',
 is unwanted and considerable effort goes into eliminating it. In our case, the taste degree of freedom is desirable as we are attempting to simulate two identical species of Dirac fermions representing the low energy excitations of graphene.
-The taste degree of freedom becomes more apparent once one performs a change of basis, the details of which are relegated to Appendix \ref{sec:SpinTasteAppendix}. At zero mass, the lattice action in (\ref{GrapheneFermLatticeDimensionless}) retains a $U(1) \otimes U(1)_{\epsilon}$ remnant of the continuum $U(4)$ symmetry.
+The taste degree of freedom becomes more apparent once one performs a change of basis, the details of which are relegated to Appendix \ref{sec:SpinTasteAppendix}. At zero mass, the lattice action in (\ref{GrapheneFermLatticeDimensionless}) retains a $U(1) \times U(1)_{\epsilon}$ remnant of the continuum $U(4)$ symmetry.
 The $U(1)$ symmetry corresponds to fermion number and is given by
 \beq
 \label{U1Staggered}
@@ -419,6 +420,34 @@ where the details of the transformation connecting (\ref{HaldaneCondensateContin
 As opposed to (\ref{ChiralCondensateLattice}), the fields in (\ref{HaldaneCondensateLattice}) are located at diagonally opposite corners of the cube.
 Although the appearance of a nonzero value for this condensate does not signal spontaneous symmetry breaking, it's value and dependence on the external magnetic field characterize the ground state of the graphene EFT.
 
+To measure condensates on the lattice, one must use stochastic methods even for modest lattice volumes. For example, the trace in (\ref{ChiralCondensateLattice}) involves computing the propagator from a given site back to the same lattice site for each site on the lattice. To estimate the trace, we generate an ensemble of Gaussian distributed complex vectors with support on each lattice site that satisfy
+\beq
+\label{StochasticOrthogonality}
+\vev{ \Phi^*_i \Phi_j } = \delta_{ij},
+\eeq
+where the expectation value is over the Gaussian distrubtion and $i$ and $j$ are lattice site labels. We then can obtain
+\beq
+\tr M^{-1} \approx \frac{1}{N_v} \sum^{N_v}_{k=1} \Phi^{(k) \dagger} M^{-1} \Phi^{(k)},
+\eeq
+where $N_v$ is the number of stochastic vectors. Typically, to obtain a good estimate of the chiral condensate, we need approximately $100$ stochastic vectors per configuration. 
+
+To estimate the condensate in (\ref{HaldaneCondensateLattice}), one must alter the procedure done for the chiral condensate as the fields reside at opposite corners of the cube. We first generate an ensemble of Gaussian distributed complex victors satisfying (\ref{StochasticOrthogonality}) with support only on sites with a given $\eta = (\eta_t, \eta_x, \eta_y)$ where $\eta_{\mu}$ and labels the a particular site within the cube. We then shift the source to the opposite corner of the cube using parallel transport
+\beq
+\label{ShiftedStochasticSource}
+\tilde{\Phi}^{(k)} = \frac{1}{6} \sum_{P} \hat{S}_{P_{\mu}} \hat{S}_{P_{\nu}} \hat{S}_{P_{\lambda}} \Phi^{(k)}
+\eeq
+ where we the sum is over the six permutations taking us from one corner of the cube to the opposite corner. Here $P_{\mu}, P_{\nu}, P_{\lambda}$ are permutations of $\pm t, \pm x, \pm y$ and we have introduced the shift operator
+ \beq
+\label{ShiftOperator} 
+ \left(\hat{S}_{\pm \mu} \Phi \right)_i &=& \left\{ \begin{array}{ll}  U^{\dagger}_{\mu}(x - \hat{\mu}) \Phi_{i-\hat{\mu}} &, - \\                    U_{\mu}(x) \Phi_{i+\hat{\mu}} &, +
+                   \end{array} \right. .
+ \eeq
+ Using the source in (\ref{ShiftedStochasticSource}), we can calculate the Haldane condensate as follows
+ \beq
+ \sum_{y;\eta_{\mu} \neq \eta'_{\mu}} \chib_{\eta} \chi_{\eta'} \approx \frac{1}{N_v} \sum_{\eta} \sum^{N_v}_{k=1} \Phi^{(k) \dagger}_{\eta} M^{-1} \tilde{\Phi}^{(k)}_{\eta}.
+ \eeq
+ where the sum over $\eta$ goes over all eight sites of the cube. Stochastic estimation relies on cancellations of the noise to find the signal, which decays exponentiallys with the separation between source and sink.  Therefore, for operators such as the Haldane condenstate, which are nonlocal, it can be difficult to obtain a good signal to noise ratio. \textcolor{red}{awaiting results for Haldane mass using correct computation}
+ 
 The spontaneous symmetry breaking also has observables consequences for the fermion quasiparticle, which receives a dynamical mass, $m_F$, which remains nonzero even as the bare mass vanishes.
 In order to study the dynamical mass, we calculate the quasiparticle propagator in the temporal direction
 \beq
@@ -494,11 +523,27 @@ where the electrons are subjected to a uniform magnetic field, which implies the
 this as the QHE without Landau levels. As in graphene, the points in his model where the valence and conductance bands touch inside the Brillouin zone are symmetry protected (inversion and time-reversal).
 If time-reversal invariance is broken, he found that a $\nu = \pm 1$ integer QHE state is formed, where $\nu$ is referred to as the filling factor. 
 
-Recent studies of symmetry breaking in graphene have brought up the possbility of the formation of the time-reversal odd condensate, $\Delta_H$ \cite{MiranskyGraphene2,MiranskyGraphene3}. This condensate give rise to the so-called Haldane mass in the low-energy theory.
+Recent studies of symmetry breaking in graphene have brought up the possbility of the formation of the time-reversal odd condensate, $\Delta_H$ \cite{GonzalezHaldaneMass, MiranskyGraphene2,MiranskyGraphene3}. This condensate give rise to the so-called Haldane mass in the low-energy theory.
 The reason for the interest in these symmetry breaking scenarios is as follows.
 The appearance of anomalous QHE states in graphene at previously unknown filling factors, $\nu = 0, \pm 1, \pm 2$, is due to the splitting of the degeneracy of the lowest Landau level (LLL) at large external magnetic fields ($B \sim 45 \text{T}$).
 Although there are several scenarios to explain these states, (see \cite{Yang} for a nice discussion), the authors of \cite{MiranskyGraphene2, MiranskyGraphene3} advocate the magnetic catalysis scenario whereby a Dirac mass as well as possibly a Haldane mass are generated due to the strong, weakly screened
 electron-electron interactions in graphene.
+
+In the Schwinger-Dyson approach employed in \cite{MiranskyGraphene2, MiranskyGraphene3}, where a simplified contact interaction was used, the ground state of the EFT in the presence of an external magnetic field was found to be described by
+\beq
+\label{Singlet}
+\tilde{\Delta}_{\uparrow} = \tilde{\Delta}_{\downarrow} = 0, ~\Delta_{H,\uparrow} = - \Delta_{H,\downarrow} = M,
+\eeq
+where $\tilde{\Delta}_{\sigma}$ corresponds to the Dirac mass for a given spin projection and $\Delta_{H,\sigma}$ corresponds to the Haldane mass for a given spin projection. In this expression, $M$ is the dyanmically generated mass scale which is a function of the cutoff $\Lambda$ and the dimensionful coupling constant characterizing the contact interaction, $G$. We note that the spin index in (\ref{Singlet}) directly corresponds to the taste index for staggeered fermions. 
+
+In our simulations, we have used operators which are all taste singlets and have thus not distinguished the various "spin" components. In the continuum, we have noted that the Zeeman term in (\ref{ZeemanHamiltonian}) explicitly breaks the $U(4)$ symmetry to $U(2)_{\uparrow} \times U(2)_{\downarrow}$. Noting that in (\ref{Singlet}) the Haldane masses are opposite in sign, this spin splitting induced by (\ref{ZeemanHamiltonian}) is dynamically enhanced. In the absence of a Zeeman term, the solution described by (\ref{Singlet}) signals the spontaneous breaking of the $U(4)$ symmetry. However, our lattice action only contains a remnant $U(1) \times U(1)_{\epsilon}$ symmetry and does not distinguish spin projection. Thus unlike the chiral condensate, the appearance of a nonzero value for the time-reversal odd condensate, $\vev{\Bpsi \tilde{\gamma}_{4,5} \Psi}$, does not signal spontaneous symmetry breaking.
+
+The Zeeman splitting also has a significant effect on the selection of the ground state. According to \cite{MiranskyGraphene2,MiranskyGraphene3}, in the absence of the Zeeman term, the solution (\ref{Singlet}) is degenerate with another solution which is characterized by a nonzero Dirac mass
+\beq
+\label{Triplet}
+\tilde{\Delta}_{\uparrow} = \tilde{\Delta}_{\downarrow} = M, ~\Delta_{H,\uparrow} = \Delta_{H,\downarrow}=0.
+\eeq
+ Thus if one trusts the scenario resulting from the gap equation, we could be sampling a ground state which is a superposition of (\ref{Singlet}) and (\ref{Triplet}). \textcolor{red}{Not sure how to finish this or tie it all together}
 
 %Within our lattice EFT, there is no continuum $SU(2)_{\sigma}$ symmetry under which the Haldane mass is invariant (see Appendix \ref{sec:FermionAppendix}). Thus, discretization effects are expected to be present in the lattice calculation of the corresponding Haldane condensate. In order to investigate the continuum limit, where one would restore the $SU(2)_{\sigma}$, we first fixed the ratio $eB/m^2$. This sets the mass in units of the magnetic length, $l_B$. We then extrapolated the Haldane mass to $T=0$. Finally, we investigated the behavior of the lattice spacing independent quantity $\Delta_H/eB$, in the limit of $\hat{m} = m a_t \to 0$. 
 %In Fig.~\ref{HaldanediveBvsm}, the continuum limit is shown. From the plot, one can see that a UV divergence $\sim 1/a$ is present. This makes it difficult to extract any continuum physics from this quantity. One would need a way of renormalizing this quantity in order to obtain information in the limit $a \to 0$.
@@ -660,7 +705,7 @@ Where the second derivative operator is defined as
 \eeq
 One sees from (\ref{SpinTasteAction2+1}) that the second derivative term, which is suppressed by a factor of the lattice spacing, is not invariant under a rotation in taste space.
 
-The residual symmetry of the staggered lattice action is $U(1) \otimes U(1)_{\epsilon}$. The form of these symmetries on the one-component fields is as follows
+The residual symmetry of the staggered lattice action is $U(1) \times U(1)_{\epsilon}$. The form of these symmetries on the one-component fields is as follows
 \beq
 \nn
 && \chi(x) \to \exp(i\alpha) \chi(x), \\  &&\bar{\chi}(x) \to \bar{\chi}(x) \exp(-i\alpha), \\ \nn
@@ -739,7 +784,7 @@ On the lattice, we must calculate the relevant condensates in the language of st
 \Bpsi(y)\left( \Gamma_S \otimes \Gamma_T \right) \Psi(y),
 \eeq
 where the four-component Dirac spinor $\Psi$ is defined in (\ref{DiracSpinorBasis}). From the above discussion, one can see that the four-dimensional spin space can be mapped to the 
-four-dimensional sublattice $\otimes$ valley subspace and the two-dimensional taste space can be mapped to the two-dimensional spin of the electron. 
+four-dimensional sublattice-valley subspace and the two-dimensional taste space can be mapped to the two-dimensional spin of the electron. 
 
 The Dirac mass is the usual staggered mass ($\Gamma_S = \Gamma_T = \bm 1$), and takes the form 
 \beq
@@ -756,7 +801,7 @@ The Haldane mass in the spin-taste basis takes the following form
 \beq
 \label{HaldaneSpinTaste}
 \Bpsi(y) \left( \tilde{\gamma}_{4,5} \otimes \bm 1 \right) \Psi(y) &=& \bar{u}(y) \left( \bm 1 \otimes \bm 1 \right) u(y) \\ \nn
-&-& \bar{d}(y) \left( \bm 1 \otimes \bm 1 \right) d(y) \\
+&-& \bar{d}(y) \left( \bm 1 \otimes \bm 1 \right) d(y), \\
 \label{HaldaneOneComponent}
 &=& \frac{i}{8} \sum_{\eta_{\mu} \neq \eta'_{\mu}} \bar{\chi}_{\eta}(y) \chi_{\eta'}(y),
 \eeq
@@ -1243,10 +1288,11 @@ D.~L.~Boyda, V.~V.~Braguta, S.~N.~Valgushev, M.~I.~Polikarpov, and M.~V.~Ulybysh
 \bibitem{Yang}
 K.~Yang, [arXiv:cond-mat/0703757]
 
+\bibitem{GonzalezHaldaneMass}
+J.~Gonzalez, JHEP {\bf 07}, 175 (2013), 	[arXiv:1211.3905 [cond-mat.mes-hall]]
+
 \bibitem{SmilgaShushpanov}
 I.~A.~Shushpanov and A.~V.~Smilga, Phys.\ Lett.\ B{\bf 402}, 351 (1997), [arXiv:hep-ph/9703201]
-
-
 
 \bibitem{Burkitt}
 C.~Burden and A.~N.~Burkitt, Eur.\ Phys.\ Lett.\ {\bf 3}, 545 (1987)
