@@ -444,9 +444,12 @@ To estimate the condensate in (\ref{HaldaneCondensateLattice}), one must alter t
  \eeq
  Using the source in (\ref{ShiftedStochasticSource}), we can calculate the Haldane condensate as follows
  \beq
+ \label{HaldaneStochastic}
  \sum_{y;\eta_{\mu} \neq \eta'_{\mu}} \chib_{\eta} \chi_{\eta'} \approx \frac{1}{N_v} \sum_{\eta} \sum^{N_v}_{k=1} \Phi^{(k) \dagger}_{\eta} M^{-1} \tilde{\Phi}^{(k)}_{\eta}.
  \eeq
- where the sum over $\eta$ goes over all eight sites of the cube. Stochastic estimation relies on cancellations of the noise to find the signal, which decays exponentiallys with the separation between source and sink.  Therefore, for operators such as the Haldane condenstate, which are nonlocal, it can be difficult to obtain a good signal to noise ratio. \textcolor{red}{awaiting results for Haldane mass using correct computation}
+where the sum over $\eta $ goes over all eight sites of the cube. Stochastic estimation relies on cancellations of the noise to find the signal, which decays exponentiallys with the separation between source and sink.  Therefore, for operators such as the Haldane condenstate, which are nonlocal, it can be difficult to obtain a good signal to noise ratio. In order to overcome this, we have taken $N_v \approx 1000$ in (\ref{HaldaneStochastic}). 
+
+%We have measured the time-reversal odd condesnsate on the lattice ensembles with the largest flux $\Phi_B=0.125$ for $a_{\tau} T = [0.002, 0.016]$. These values of $a_{\tau}T$ are smaller than the dynamical fermion mass, as one can see from Fig. \ref{MFvsm}, and thus one expects that if the ground state did support a Haldane condensate, these temperatures would be sufficiently small to observe it. What we have found is that our data does not support the appearance of a Haldane condensate  \textcolor{red}{awaiting results for Haldane mass using correct computation}
  
 The spontaneous symmetry breaking also has observables consequences for the fermion quasiparticle, which receives a dynamical mass, $m_F$, which remains nonzero even as the bare mass vanishes.
 In order to study the dynamical mass, we calculate the quasiparticle propagator in the temporal direction
@@ -529,12 +532,12 @@ The appearance of anomalous QHE states in graphene at previously unknown filling
 Although there are several scenarios to explain these states, (see \cite{Yang} for a nice discussion), the authors of \cite{MiranskyGraphene2, MiranskyGraphene3} advocate the magnetic catalysis scenario whereby a Dirac mass as well as possibly a Haldane mass are generated due to the strong, weakly screened
 electron-electron interactions in graphene.
 
-In the Schwinger-Dyson approach employed in \cite{MiranskyGraphene2, MiranskyGraphene3}, where a simplified contact interaction was used, the ground state of the EFT in the presence of an external magnetic field was found to be described by
+In the Schwinger-Dyson approach employed in \cite{MiranskyGraphene2}, where a simplified contact interaction was used, the ground state of the EFT in the presence of an external magnetic field was found to be described by
 \beq
 \label{Singlet}
 \tilde{\Delta}_{\uparrow} = \tilde{\Delta}_{\downarrow} = 0, ~\Delta_{H,\uparrow} = - \Delta_{H,\downarrow} = M,
 \eeq
-where $\tilde{\Delta}_{\sigma}$ corresponds to the Dirac mass for a given spin projection and $\Delta_{H,\sigma}$ corresponds to the Haldane mass for a given spin projection. In this expression, $M$ is the dyanmically generated mass scale which is a function of the cutoff $\Lambda$ and the dimensionful coupling constant characterizing the contact interaction, $G$. We note that the spin index in (\ref{Singlet}) directly corresponds to the taste index for staggeered fermions. 
+where $\tilde{\Delta}_{\sigma}$ corresponds to the Dirac mass for a given spin projection and $\Delta_{H,\sigma}$ corresponds to the Haldane mass for a given spin projection. In this expression, $M$ is the dyanmically generated mass scale which is a function of the cutoff $\Lambda$ and the dimensionful coupling constant characterizing the contact interaction, $G$. We note that the spin index in (\ref{Singlet}) directly corresponds to the taste index for staggeered fermions. In \cite{MiranskyGraphene3}, a more realistic long-range Coulomb interaction in the instantaneous approximation was used. The results were similar to that of \cite{MiranskyGraphene2}, with the qualitative difference that the gap parameters depend on the Landau level index.
 
 In our simulations, we have used operators which are all taste singlets and have thus not distinguished the various "spin" components. In the continuum, we have noted that the Zeeman term in (\ref{ZeemanHamiltonian}) explicitly breaks the $U(4)$ symmetry to $U(2)_{\uparrow} \times U(2)_{\downarrow}$. Noting that in (\ref{Singlet}) the Haldane masses are opposite in sign, this spin splitting induced by (\ref{ZeemanHamiltonian}) is dynamically enhanced. In the absence of a Zeeman term, the solution described by (\ref{Singlet}) signals the spontaneous breaking of the $U(4)$ symmetry. However, our lattice action only contains a remnant $U(1) \times U(1)_{\epsilon}$ symmetry and does not distinguish spin projection. Thus unlike the chiral condensate, the appearance of a nonzero value for the time-reversal odd condensate, $\vev{\Bpsi \tilde{\gamma}_{4,5} \Psi}$, does not signal spontaneous symmetry breaking.
 
@@ -543,7 +546,9 @@ The Zeeman splitting also has a significant effect on the selection of the groun
 \label{Triplet}
 \tilde{\Delta}_{\uparrow} = \tilde{\Delta}_{\downarrow} = M, ~\Delta_{H,\uparrow} = \Delta_{H,\downarrow}=0.
 \eeq
- Thus if one trusts the scenario resulting from the gap equation, we could be sampling a ground state which is a superposition of (\ref{Singlet}) and (\ref{Triplet}). \textcolor{red}{Not sure how to finish this or tie it all together}
+ Thus if one trusts the scenario resulting from the gap equation, we could be sampling a ground state which is a superposition of (\ref{Singlet}) and (\ref{Triplet}). 
+
+We have measured the time-reversal odd condesnsate on the lattice ensembles with the largest flux $\Phi_B=0.125$ for $a_{\tau} T = [0.002, 0.016]$. These values of $a_{\tau}T$ are smaller than the dynamical fermion mass, as one can see from Fig. \ref{MFvsm}, and thus one expects that if the ground state did support a Haldane condensate, these temperatures would be sufficiently small to observe it. What we have found is that our data does not support the appearance of a Haldane condensate  \textcolor{red}{awaiting results for Haldane mass using correct computation}
 
 %Within our lattice EFT, there is no continuum $SU(2)_{\sigma}$ symmetry under which the Haldane mass is invariant (see Appendix \ref{sec:FermionAppendix}). Thus, discretization effects are expected to be present in the lattice calculation of the corresponding Haldane condensate. In order to investigate the continuum limit, where one would restore the $SU(2)_{\sigma}$, we first fixed the ratio $eB/m^2$. This sets the mass in units of the magnetic length, $l_B$. We then extrapolated the Haldane mass to $T=0$. Finally, we investigated the behavior of the lattice spacing independent quantity $\Delta_H/eB$, in the limit of $\hat{m} = m a_t \to 0$. 
 %In Fig.~\ref{HaldanediveBvsm}, the continuum limit is shown. From the plot, one can see that a UV divergence $\sim 1/a$ is present. This makes it difficult to extract any continuum physics from this quantity. One would need a way of renormalizing this quantity in order to obtain information in the limit $a \to 0$.
