@@ -548,7 +548,7 @@ The Zeeman splitting also has a significant effect on the selection of the groun
 \eeq
  Thus if one trusts the scenario resulting from the gap equation, our lattice simulation could be sampling a ground state which is a superposition of (\ref{Singlet}) and (\ref{Triplet}). 
 
-We have measured the time-reversal odd condesnsate on the lattice ensembles with the largest flux $\Phi_B=0.125$ for $a_{\tau} T = [0.002, 0.016]$. These values of $a_{\tau}T$ are smaller than the dynamical fermion mass, as one can see from Fig. \ref{MFvsm}. Thus, one expects that if the ground state did support a Haldane condensate, these temperatures would be sufficiently small and the magnetic flux sufficiently large to observe this. What we have found is that our data does not support the appearance of a Haldane condensate. In Fig. \ref{ReHaldanevsm},  we have plotted the real part of the Haldane mass, computed with $1000$ stochastic sources on $100$ gauge configurations, versus $m$ for $N_{\tau}=480,~\Phi_B=0.125$. What we see is that our results are consistent with zero, with an upper (lower) bound being set by $\pm 2.5 \sigma$ away from the central value. We can see that there is a slight dependence of the error bars on the mass $m$. We have also checked, at the same value of the flux and bare mass, that as the temperature increases, the Haldane mass remains consistent with zero as to be expected from the solutions of the gap equations.
+We have measured the time-reversal odd condesnsate on the lattice ensembles with the largest flux $\Phi_B=0.125$ for $a_{\tau} T = [0.002, 0.016]$. These values of $a_{\tau}T$ are smaller than the dynamical fermion mass, as one can see from Fig. \ref{MFvsm}. Thus, one expects that if the ground state did support a Haldane condensate, these temperatures would be sufficiently small and the magnetic flux sufficiently large to observe this. What we have found is that our data does not support the appearance of a Haldane condensate. In Fig. \ref{ReHaldanevsm},  we have plotted the real part of the Haldane mass, computed with $1000$ stochastic sources on $100$ gauge configurations, versus $m$ for $N_{\tau}=480,~\Phi_B=0.125$. What we see is that our results are consistent with zero. We can see that there is a slight dependence of the error bars on the mass $m$. We have also checked, at the same value of the flux and bare mass, that as the temperature increases, the Haldane mass remains consistent with zero as to be expected from the solutions of the gap equations. However, when interpreting our results for the Haldane mass, one must take into account the taste-breaking terms which occur in the lattice action at $O(a)$ (see Appendix \ref{sec:SpinTasteAppendix}). The implication of this is that the spin degree of freedom in our lattice formulation is not conserved and thus interactions can flip the spin of a fermion.
 
 %Within our lattice EFT, there is no continuum $SU(2)_{\sigma}$ symmetry under which the Haldane mass is invariant (see Appendix \ref{sec:FermionAppendix}). Thus, discretization effects are expected to be present in the lattice calculation of the corresponding Haldane condensate. In order to investigate the continuum limit, where one would restore the $SU(2)_{\sigma}$, we first fixed the ratio $eB/m^2$. This sets the mass in units of the magnetic length, $l_B$. We then extrapolated the Haldane mass to $T=0$. Finally, we investigated the behavior of the lattice spacing independent quantity $\Delta_H/eB$, in the limit of $\hat{m} = m a_t \to 0$. 
 %In Fig.~\ref{HaldanediveBvsm}, the continuum limit is shown. From the plot, one can see that a UV divergence $\sim 1/a$ is present. This makes it difficult to extract any continuum physics from this quantity. One would need a way of renormalizing this quantity in order to obtain information in the limit $a \to 0$.
@@ -829,21 +829,43 @@ where we have employed the identity
 \eeq
 Thus the Haldane mass involves a bilinear with the fields residing on diagonally opposite sites within the cube. This operator is left invariant by the staggered lattice action's $U(1)_{\epsilon}$ symmetry. 
 
-The subject of time-reversal for staggered fermions in $(2+1)$ dimensions also deserves a discussion. We first note that, in the continuum, the transformation which leaves the action in (\ref{ContinuumEFT}) invariant is as follows
+The subject of time-reversal for staggered fermions in $(2+1)$ dimensions also deserves a discussion. In terms of the underlying graphene lattice, time-reversal interchanges Dirac points, reverses spin, and leaves the sublattice degree of freedom intact. Ignoring spin for the moment and using the basis defined in (\ref{DiracSpinorBasis}), the action of time-reversal in the four-dimensional sublattice-valley subspace is as follows
+\beq
+\label{TRDiracPoint}
+\left( \begin{array}{c}  \psi_{A \sigma}(\vec{K}_+ + \vec{p}) \\  \psi_{B \sigma}(\vec{K}_+ + \vec{p})  \\ \psi_{B \sigma}(\vec{K}_- + \vec{p}) \\ \psi_{A \sigma}(\vec{K}_- + \vec{p})  \end{array} \right)   &\to & \left( \begin{array}{c}  \psi_{A \sigma}(\vec{K}_- - \vec{p}) \\  \psi_{B \sigma}(\vec{K}_- - \vec{p})  \\ \psi_{B \sigma}(\vec{K}_+ - \vec{p}) \\ \psi_{A \sigma}(\vec{K}_+ - \vec{p})  \end{array} \right) \\
+&=& \gamma_1 \tilde{\gamma}_5 \Psi(-\vec{p}),
+\eeq
+where $\psi_{K_{\pm}, A/B, \sigma}(\vec{p}) \equiv \psi_{A/B, \sigma}(\vec{K}_{\pm} + \vec{p})$, and we have written the spinor in momentum space. Time-reversal acts on the spin degree of freedom in the following way
+\beq
+\label{TRSpin}
+\left( \begin{array}{c} \psi_{K_{\pm}, A/B, \uparrow} \\ \psi_{K_{\pm}, A/B, \downarrow} \end{array} \right) &\to& \left( \begin{array}{c} \psi_{K_{\pm}, A/B, \downarrow} \\ -\psi_{K_{\pm}, A/B, \uparrow} \end{array} \right), \\
+&=& i\sigma_2 \left( \begin{array}{c} \psi_{K_{\pm}, A/B, \uparrow} \\ \psi_{K_{\pm}, A/B, \downarrow} \end{array} \right). 
+\eeq
+Combining the action of time-reversal on the four-dimensional sublattice-valley space, which composes the four-dimensional spinor structure, and on the two-dimensional spin space, which composes the two-dimensional "flavor" space, we obtain the following result in momentum space
+\beq
+\Psi(\vec{p}) \to \left( \gamma_1 \tilde{\gamma}_5  \otimes i\sigma_2 \right) \Psi(-\vec{p}). 
+\eeq
+For the coordinate space spinor, time-reversal takes the following form
+\beq
+\Psi(\vec{x},  t) \to \left( \gamma_1 \tilde{\gamma}_5  \otimes i\sigma_2 \right) \Psi(\vec{x}, -t).
+\eeq
+One can then show that the continuum action in Minkowski space is left invariant by the following transformations \cite{Gusynin}
 \beq
 \label{TRPsi}
-\Psi(\vec{x},t) &\to & \tilde{\gamma}_5 \gamma_1 \gamma_2 \Psi(\vec{x}, -t), \\
+\Psi(\vec{x},t) &\to & \left( \gamma_1 \tilde{\gamma}_5 \otimes i\sigma_2 \right) \Psi(\vec{x}, -t), \\
 \label{TRBpsi}
-\Bpsi(\vec{x}, t) &\to & \Bpsi(\vec{x},-t) \gamma_2 \gamma_1 \tilde{\gamma}_5, \\
+\Bpsi(\vec{x},t) &\to & - \Bpsi(\vec{x}, -t) \left( \gamma_1 \tilde{\gamma}_5 \otimes i\sigma_2 \right) \\
+\label{TRA_0}
 A_0(\vec{x}, t) &\to & -A_0(\vec{x}, -t),
 \eeq
-which one can verify by using the relations \\ $\{ \gamma_0, \tilde{\gamma}_4 \gamma_1 \gamma_2 \} = 0$ and $\left[ \gamma_i, \tilde{\gamma}_4 \gamma_1 \gamma_2 \right] = 0, ~i=1,2$. Thus, for staggered fermions in the spin-taste basis, a similar transformation can be deduced 
+where, for a fermion bilinear of the form $\Bpsi A \Psi$, due to the fact that time-reversal, $\mathcal{T}$, is an anti-unitary operator, $\mathcal{T} A \mathcal{T}^{-1} = A^*$.
+In Euclidean space, the time-reversal transformation takes a different form. In this case, time is not distinguished from spatial coordinates by a relative minus sign in the metric. For example, in $(3+1)$ dimensions, time-reversal can be defined by the product of three successive reflection operations which reverse the sign of all the coordinates except one. In $(2+1)$ diemsnions, the time-reversal transformation on staggered fermions in the spin-taste basis is as follows
 \beq
 \nn
-\Psi(\vec{y}, y_0) &\to& \tilde{\gamma}_5 \gamma_1 \gamma_2 \Psi(\vec{y}, -y_0), \\ \nn
-&=&  \left( \begin{array}{cc} 0 & i\sigma_0 \\ -i\sigma_0 & 0 \end{array} \right) \left( \begin{array}{c} u(\vec{y}, -y_0) \\ d(\vec{y}, -y_0) \end{array} \right), \\
+\Psi(\vec{y}, y_0) &\to& -i\tilde{\gamma}_5 \ \gamma_1 \gamma_2 \Psi(\vec{y}, -y_0), \\ \nn
+&=&  \left( \begin{array}{cc} 0 & \sigma_0 \\ -\sigma_0 & 0 \end{array} \right) \left( \begin{array}{c} u(\vec{y}, -y_0) \\ d(\vec{y}, -y_0) \end{array} \right), \\
 \label{TRSpinTaste}
-&=&  \left( \begin{array}{c} i\sigma_0 d(\vec{y}, -y_0) \\ -i\sigma_0 u(\vec{y}, -y_0) \end{array} \right).
+&=&  \left( \begin{array}{c} \sigma_0  d(\vec{y}, -y_0) \\ -\sigma_0 u(\vec{y}, -y_0) \end{array} \right).
 \eeq
 To see the effect of time-reversal on the one-component basis, we note the following identity
 \beq
@@ -852,18 +874,18 @@ To see the effect of time-reversal on the one-component basis, we note the follo
 \eeq
 where we regard the spinor as a matrix with the Dirac index representing the row and the taste index representing the column. Thus to find the action of time-reversal on the one-component spinor we must evaluate the following expression
 \beq
-\tr \left\{ \left(\Gamma^{\dagger}_{\eta},~ B^{\dagger}_{\eta} \right) \left( \begin{array}{c} i\sigma_0 d(\vec{y},-y_0) \\ -i\sigma_0 u(\vec{y},-y_0) \end{array} \right) \right\},
+\tr \left\{ \left(\Gamma^{\dagger}_{\eta},~ B^{\dagger}_{\eta} \right) \left( \begin{array}{c} \sigma_0  d(\vec{y},-y_0) \\ -\sigma_0 u(\vec{y},-y_0) \end{array} \right) \right\},
 \eeq
 which represents the projection of the spin-taste basis onto the one-component basis. Using the expressions for the spinors $u$ and $d$ in (\ref{SpinTasteTransfo2+1a}) and (\ref{SpinTasteTransfo2+1b}), one must compute $\tr \left(  \Gamma^{\dagger}_{\eta} \sigma_0 B_{\eta'} - B^{\dagger}_{\eta} \sigma_0 \Gamma_{\eta'} \right)$.
 The only nonzero contribution comes when $\eta' = \tilde{\eta} \equiv \left( \eta_0 \pm 1, \eta_1, \eta_2 \right)$, where the "$+$" corresponds to $\eta_0=0$ and the "$-$" corresponds to $\eta_0=1$. The result is thus
 \beq
 \nn
-&& \sqrt{2} \tr \left\{ \left(\Gamma^{\dagger}_{\eta},~ B^{\dagger}_{\eta} \right) \left( \begin{array}{c} i\sigma_0 d(\vec{y},-y_0) \\ -i\sigma_0 u(\vec{y},-y_0) \end{array} \right) \right\} \\  && = i (-)^{\eta_0 + \eta_1 + \eta_2} \chi_{\tilde{\eta}}(\vec{y}, -y_0).
+&& \sqrt{2} \tr \left\{ \left(\Gamma^{\dagger}_{\eta},~ B^{\dagger}_{\eta} \right) \left( \begin{array}{c} \sigma_0  d(\vec{y},-y_0) \\ -\sigma_0 u(\vec{y},-y_0) \end{array} \right) \right\} \\  && = (-)^{\eta_0 + \eta_1 + \eta_2} \chi_{\tilde{\eta}}(\vec{y}, -y_0).
 \eeq
 This implies that time-reversal induces the following transformation on the one-component staggered field
 \beq
 \label{TROneComponent}
-\chi_{\eta}(\vec{y}, y_0) \to i (-)^{\eta_0 + \eta_1 +  \eta_2}\chi_{\tilde{\eta}}(\vec{y}, -y_0),
+\chi_{\eta}(\vec{y}, y_0) \to (-)^{\eta_0 + \eta_1 +  \eta_2}\chi_{\tilde{\eta}}(\vec{y}, -y_0),
 \eeq
 where an analogous expression holds for $\chib$. Using the expressions for the time-reversal transformation in the spin-taste as well as the one-compent basis, one can show that the operators in (\ref{HaldaneSpinTaste}) and (\ref{HaldaneOneComponent}) change sign and are thus, indeed, time-reversal odd.
 % This sample document demonstrates proper use of REV\TeX~4 (and
@@ -1313,6 +1335,8 @@ I.~A.~Shushpanov and A.~V.~Smilga, Phys.\ Lett.\ B{\bf 402}, 351 (1997), [arXiv:
 \bibitem{Burkitt}
 C.~Burden and A.~N.~Burkitt, Eur.\ Phys.\ Lett.\ {\bf 3}, 545 (1987)
 
+\bibitem{Gusynin}
+V.~P.~Gusynin, S.~G.~Sharapov, and J.~P.~Carbotte, Int.\ J.\ Mod.\ Phys.\ B{\bf 21}, 4611 (2008) 
 
 \end{thebibliography}
 
