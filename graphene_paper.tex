@@ -135,9 +135,9 @@ where $\epsilon$ is the dielectric constant of the substrate on which the graphe
 The four-component Dirac spinors are organized as follows
 \beq
 \label{DiracSpinorBasis}
-\Psi^{\top}_{\sigma} = \left( \psi_{\kappa A \sigma}, \psi_{\kappa B \sigma}, \psi_{\kappa' B \sigma}, \psi_{\kappa' A \sigma}\right),
+\Psi^{\top}_{\sigma} = \left( \psi_{K_+ A \sigma}, \psi_{K_+ B \sigma}, \psi_{K_- B \sigma}, \psi_{K_- A \sigma}\right),
 \eeq
-where $\kappa, \kappa'$ refer to the Dirac points, $\sigma$ refers to the electron's spin projection, and $A, B$ refer to the sublattice.
+where $K_+, K_-$ refer to the Dirac points, $\sigma$ refers to the electron's spin projection, and $A, B$ refer to the sublattice.
 Here we use a reducible representation of the gamma matrices in $(2+1)$ dimensions, constructed from two inequivalent reducible representations, which is given by
 \beq
 \label{Gammas1}
@@ -500,7 +500,7 @@ In the language of chiral symmetry breaking, the semimetal phase corresponds to 
 Various aspects of this transition were studied previously using lattice methods \cite{Drut1, Drut2, Hands1, Giedt}. The transition is believed to be of second order as indicated by the results in \cite{Drut2}. 
 
 The situation changes as one turns on the external magnetic field. Namely, the $\beta_c = (\epsilon_{cr}+1)/2e^2$ which determines the boundary between the two phases shifts to larger values. This has been shown previously in \cite{Polikarpov}, where at fixed temperature, the authors
-obtained a phase diagram in the $(B, \beta)$-plane. One would expect that the phase boundary has a temperature dependence, where at $T=0$, the authors of \cite{Miransky1,Miransky2,Miransky3,Miransky4,MiranskyGraphene1,MiranskyGraphene2,MiranskyGraphene3} predict that an infinitesimal attraction between fermions and antifermions will lead to pairing, and thus magnetic catalysis.
+obtained a phase diagram in the $(B, \beta)$-plane. One would expect that the phase boundary has a temperature dependence, where at $T=0$, the authors of \cite{Miransky1,Miransky2,Miransky3,Miransky4,MiranskyGraphene1,MiranskyGraphene2,MiranskyGraphene3} predict that an infinitesimal attraction between fermions and antifermions will lead to pairing, and thus magnetic catalysis. Another early analysis of a graphene-like theory showed that at extremely weak-coupling, a nonzero condensate was obtained in the chiral limit \cite{Cosmai}
 
 We began our calculations by identifying the semimetal phase through a scan in $\beta$ coupled with an investigation of the condensate's behavior as a function of the bare mass in the chiral limit. In the semimetal phase, one expects $\sigma \equiv \vev{\Bpsi \Psi}$ to be linear in the bare mass for small values of $m$. 
 One can compare this expectation with the behavior of $\vev{\Bpsi \Psi}$ as a function of the bare mass when the external magnetic field is turned on. This is illustrated in Fig.~\ref{PBPComparison}, where one sees an approximately linear behavior at zero field and a strongly nonlinear behavior of the condensate as a function of $m$ for the magnetic flux $\Phi_B = 0.125$.
@@ -518,7 +518,7 @@ compared with the fermion mass, one can see that the condensate tends towards ze
 by the limit $m \to 0$. Using this strategy, we have first extrapolated to zero temperature at a fixed bare fermion mass. This was done via polynomial extrapolation $\sigma(T) = c_0 + c_2T^2$, using the points which satisfied $T/m < 1$. We then use these points for our chiral extrapolation, which we performed using a linear fit. This is illustrated in Fig. \ref{PBPzeroTChiral}, where we plot the mass dependence of the $T=0$ extrapolated points.
 
 Proceeding in an analogous manner for three other fluxes, we were able to obtain the behavior of the zero-temperature, chirally extrapolated condensate as a function of the magnetic flux, $\Phi_B$. These results are shown in Fig.~\ref{PBPzeroTChiralvseB}.
-The relationship between the condensate and the magnetic flux is fit to the form $\sigma_{T=m=0} = eBc_1 + (eB)^2c_2$. The errors on the points are those calculated in the $T \to 0$ extrapolation. These results overwhelmingly support the scenario of magnetic catalysis in the graphene EFT.
+The relationship between the condensate and the magnetic flux is fit to the form $\sigma_{T=m=0} = eBc_1 + (eB)^2c_2$. The errors on the points are those calculated in the chiral extrapolation. These results overwhelmingly support the scenario of magnetic catalysis in the graphene EFT.
 
 Long before the realization of graphene in the lab, F.D.M. Haldane considered a graphene-like lattice model which he used to study the quantum Hall effect (QHE) \cite{Haldane}.
 In this model, he considered a magnetic field which was periodic in space such that the flux through the unit cell was zero. This is in stark contrast to normal realizations of the QHE 
@@ -619,7 +619,7 @@ external magnetic field \cite{SmilgaShushpanov}. We also have determined that th
 
 \begin{figure}
  \includegraphics[height=8cm,width=8cm]{haldane_real_vs_m_Nt480_PHIB0125.pdf} \hspace{-1cm}
-\caption{The real part of the Haldane mass in units of magnetic flux as a function of the fermion bare mass $m$ for $8^2\times10\times480,\beta=0.80, \Phi_B=0.125$.}
+\caption{The real part of the Haldane mass as a function of the fermion bare mass $m$ for $8^2\times10\times480,\beta=0.80, \Phi_B=0.125$.}
 \label{ReHaldanevsm} 
 \end{figure}
 
@@ -756,8 +756,8 @@ of Bloch components it can be expressed as
 \beq
 \label{DiracMassComponents}
 \nn
-&\tilde{\Delta}_{\sigma}:& \quad \psi^{\dagger}_{\kappa A \sigma} \psi_{\kappa A \sigma} - \psi^{\dagger}_{\kappa B \sigma}\psi_{\kappa B \sigma} \\
-&+& \psi^{\dagger}_{\kappa' A \sigma}\psi_{\kappa' A \sigma} - \psi^{\dagger}_{\kappa' B \sigma} \psi_{\kappa' B \sigma}.
+&\tilde{\Delta}_{\sigma}:& \quad \psi^{\dagger}_{K_+ A \sigma} \psi_{K_+ A \sigma} - \psi^{\dagger}_{K_+ B \sigma}\psi_{K_+ B \sigma} \\
+&+& \psi^{\dagger}_{K_- A \sigma}\psi_{K_- A \sigma} - \psi^{\dagger}_{K_- B \sigma} \psi_{K_- B \sigma}.
 \eeq
 One can interpret a nonzero value for this order parameter as an imbalance of charge between the two sublattices, A and B, corresponding to a charge density wave (CDW).
 
@@ -771,10 +771,10 @@ in terms of Bloch components is given by
 \beq
 \label{HaldaneMassComponents}
 \nn
-&\Delta_{\sigma}:& \quad \psi^{\dagger}_{\kappa A \sigma} \psi_{\kappa A \sigma} - \psi^{\dagger}_{\kappa' A \sigma}\psi_{\kappa' A \sigma} \\
-&-& \psi^{\dagger}_{\kappa B \sigma}\psi_{\kappa B \sigma} + \psi^{\dagger}_{\kappa' B \sigma} \psi_{\kappa' B \sigma}.
+&\Delta_{\sigma}:& \quad \psi^{\dagger}_{K_+ A \sigma} \psi_{K_+ A \sigma} - \psi^{\dagger}_{K_- A \sigma}\psi_{K_- A \sigma} \\
+&-& \psi^{\dagger}_{K_+ B \sigma}\psi_{K_+ B \sigma} + \psi^{\dagger}_{K_- B \sigma} \psi_{K_- B \sigma}.
 \eeq
-Thus, this order parameter can be seen to represent a charge imbalance between the two valleys, $\kappa$ and $\kappa'$.
+Thus, this order parameter can be seen to represent a charge imbalance between the two valleys, $K_+$ and $K_-$.
 To discuss the properties of (\ref{HaldaneMass}) under time-reversal, we introduce the Hamiltonian of the low-energy theory
 \beq
 \label{EFTHamiltonian}
@@ -784,14 +784,14 @@ where $\tau_0$ is a two-dimensional unit matrix in valley space which is tensore
 Time-reversal invariance imposes the following restriction on the states as well as the valley Hamiltonians themselves
 \beq
 \label{TReversalStates}
-T \psi_{\kappa (A,B)} &=& \psi^{*}_{\kappa (A,B)} = \psi_{\kappa' (A,B)}, \\
+T \psi_{K_+ (A,B)} &=& \psi^{*}_{K_+ (A,B)} = \psi_{K_- (A,B)}, \\
 \label{TReversalHamiltonians}
-T\mathcal{H}_{\kappa} T^{-1} &=& \mathcal{H}^{*}_{\kappa'}.
+T\mathcal{H}_{K_+} T^{-1} &=& \mathcal{H}^{*}_{K_-}.
 \eeq
 The relation in (\ref{TReversalStates}) can be shown by inspecting the explicit form of the valley Hamiltonian eigenstates
 \beq
-\psi^{\kappa}_{e.h.} = \frac{1}{\sqrt{2}} \left(\begin{array}{cc} e^{-i\phi_{\vec{k}}/2}  \\ \pm  e^{i\phi_{\vec{k}}/2} \end{array}\right), \\ 
-\psi^{\kappa'}_{e.h.} = \frac{1}{\sqrt{2}} \left(\begin{array}{cc} e^{i\phi_{\vec{k}}/2}  \\ \pm  e^{-i\phi_{\vec{k}}/2} \end{array}\right), 
+\psi^{K_+}_{e.h.} = \frac{1}{\sqrt{2}} \left(\begin{array}{cc} e^{-i\phi_{\vec{k}}/2}  \\ \pm  e^{i\phi_{\vec{k}}/2} \end{array}\right), \\ 
+\psi^{K_-}_{e.h.} = \frac{1}{\sqrt{2}} \left(\begin{array}{cc} e^{i\phi_{\vec{k}}/2}  \\ \pm  e^{-i\phi_{\vec{k}}/2} \end{array}\right), 
 \eeq
 where the $\pm$ refers to electron and hole states respectively, and $\phi_{\vec{k}} \equiv \tan^{-1}\left(\frac{k_y}{k_x}\right)$ describes the orientation of the vector $\vec{k}$ in the plane. 
 Applying the transformation in (\ref{TReversalHamiltonians}) to (\ref{HaldaneMass}), one can verify that this term is odd under time-reversal.
@@ -835,7 +835,7 @@ The subject of time-reversal for staggered fermions in $(2+1)$ dimensions also d
 \beq
 \label{TRDiracPoint}
 \left( \begin{array}{c}  \psi_{A \sigma}(\vec{K}_+ + \vec{p}) \\  \psi_{B \sigma}(\vec{K}_+ + \vec{p})  \\ \psi_{B \sigma}(\vec{K}_- + \vec{p}) \\ \psi_{A \sigma}(\vec{K}_- + \vec{p})  \end{array} \right)   &\to & \left( \begin{array}{c}  \psi_{A \sigma}(\vec{K}_- - \vec{p}) \\  \psi_{B \sigma}(\vec{K}_- - \vec{p})  \\ \psi_{B \sigma}(\vec{K}_+ - \vec{p}) \\ \psi_{A \sigma}(\vec{K}_+ - \vec{p})  \end{array} \right) \\
-&=& \gamma_1 \tilde{\gamma}_5 \Psi(-\vec{p}),
+&=& \gamma_1 \tilde{\gamma}_5 \Psi_{\sigma}(-\vec{p}),
 \eeq
 where $\psi_{K_{\pm}, A/B, \sigma}(\vec{p}) \equiv \psi_{A/B, \sigma}(\vec{K}_{\pm} + \vec{p})$, and we have written the spinor in momentum space. Time-reversal acts on the spin degree of freedom in the following way
 \beq
@@ -1324,6 +1324,9 @@ S.~Duane and J.~B.~Kogut, Phys.\ Rev.\ Lett.\ {\bf 55}, 2774 (1985)
 
 \bibitem{Polikarpov}
 D.~L.~Boyda, V.~V.~Braguta, S.~N.~Valgushev, M.~I.~Polikarpov, and M.~V.~Ulybyshev, Phys.\ Rev.\ B{\bf 89}, 245404 (2014), [arXiv:1308.2814 [hep-lat]]
+
+\bibitem{Cosmai}
+P.~Cea, L.~Cosmai, P.~Guidice, A.~Papa, Phys.\ Rev.\ D{\bf85}, 094505 (2012), [arXiv:1204.6112 [hep-lat]]
 
 \bibitem{Yang}
 K.~Yang, [arXiv:cond-mat/0703757]
