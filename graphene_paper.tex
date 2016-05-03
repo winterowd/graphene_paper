@@ -548,7 +548,7 @@ The Zeeman splitting also has a significant effect on the selection of the groun
 \eeq
  Thus if one trusts the scenario resulting from the gap equation, our lattice simulation could be sampling a ground state which is a superposition of (\ref{Singlet}) and (\ref{Triplet}). 
 
-We have measured the time-reversal odd condesnsate on the lattice ensembles with the largest flux $\Phi_B=0.125$ for $a_{\tau} T = [0.002, 0.016]$. These values of $a_{\tau}T$ are smaller than the dynamical fermion mass, as one can see from Fig. \ref{MFvsm}. Thus, one expects that if the ground state did support a Haldane condensate, these temperatures would be sufficiently small and the magnetic flux sufficiently large to observe this. Instead, we found that our data does not support a nonzero Haldane condensate. In Fig. \ref{ReHaldanevsm},  we have plotted the real part of the Haldane mass, computed with $1000$ stochastic sources on $100$ gauge configurations, versus $m$ for $N_{\tau}=480,~\Phi_B=0.125$. What we see is that our results are consistent with zero. We can see that there is a slight dependence of the error bars on the mass $m$. We have also checked, at the same value of the flux and bare mass, that as the temperature increases, the Haldane mass remains consistent with zero as to be expected from the solutions of the gap equations. 
+We have measured the time-reversal odd condesnsate on the lattice ensembles with the largest flux $\Phi_B=0.125$ for $a_{\tau} T = [0.002, 0.016]$. These values of $a_{\tau}T$ are smaller than the dynamical fermion mass, as one can see from Fig. \ref{MFvsmNonzeroB}. Thus, one expects that if the ground state did support a Haldane condensate, these temperatures would be sufficiently small and the magnetic flux sufficiently large to observe this. Instead, we found that our data does not support a nonzero Haldane condensate. In Fig. \ref{ReHaldanevsm},  we have plotted the real part of the Haldane mass, computed with $1000$ stochastic sources on $100$ gauge configurations, versus $m$ for $N_{\tau}=480,~\Phi_B=0.125$. What we see is that our results are consistent with zero. We can see that there is a slight dependence of the error bars on the mass $m$. We have also checked, at the same value of the flux and bare mass, that as the temperature increases, the Haldane mass remains consistent with zero as to be expected from the solutions of the gap equations. 
 
 However, when interpreting our results for the Haldane mass, one must keep in mind that taste-nonsinglet operators have zero expectation values. In particular, this means that $\vev{ \Bpsi \left( \tilde{\gamma}_{4,5} \otimes \sigma_3 \right) \Psi}$ is exactly zero due to taste symmetry. To address spontaneous symmetry breaking due to the appearance of a nonzero value for $\vev{ \Bpsi \left( \tilde{\gamma}_{4,5} \otimes \sigma_3 \right) \Psi}$, we would need to include a term in the action that breaks this symmetry explicitly and, in the usual way, take the infinite volume limit followed by removing the symmetry breaking term. This is what we have done for the Dirac mass but we have not done this for the taste-nonsinglet Haldane mass.
 
@@ -567,8 +567,14 @@ To determine the dynamical fermion mass, we fit the propagator in (\ref{Quasipar
 && G_F(\tau, \vec{p} = {\bf 0}) = \frac{A_e}{2}\left(1+(-)^{\tau}\right) \left( e^{-m_F\tau} + e^{-m_F(N_{\tau} - \tau)} \right) \\ 
 && \quad \quad  \quad +~ \frac{A_o}{2}\left(1-(-)^{\tau}\right) \left( e^{-m_F\tau} - e^{-m_F(N_{\tau} - \tau)} \right),
 \eeq
-where $m_F$ is the dynamical fermion mass. Due to the appearance of a nonzero value for the condensate $\vev{\Bpsi \Psi}$, one expects that $m_F$ remains finite in the limit that the bare mass vanishes. In Fig.~\ref{MFvsm}, one can see
-the dynamical mass approaches a nonzero value as the bare mass goes to zero for the ensembles with nonzero magnetic flux. This result confirms our hypothesis regarding the generation of a dynamical mass for the fermion. We were able to see an increase in the dynamical mass as a function of the magnetic field at a given bare mass as well as in the chiral limit. Furthermore, in the absence of an external magnetic field, $m_F$ appears to vanish with the bare mass as one would expect in the semimetal phase.
+where $m_F$ is the dynamical fermion mass. Due to the appearance of a nonzero value for the condensate $\vev{\Bpsi \Psi}$, one expects that $m_F$ remains finite in the limit that the bare mass vanishes. 
+
+At zero magnetic field, we expect the dynamical fermion mass to vanish in the chiral limit. In Fig.~\ref{MFvsmZeroB}, one can see our nonperturbative determination of the dynamical fermion mass plotted along with the location of the pole of the lattice fermion propagator at $O(e^2)$. The perturbative result explains the large renormalization of the mass as compared to the free theory. However, it appears that making an extrapolation to zero bare mass, based on both the perturbative and nonperturbative results, leaves us with a nonzero value for the dynamical fermion mass. Based on the arguments and results previously discussed, one expects the dynamical mass to vanish in this limit as we are firmly in the semimetal phase in the absence of the external magnetic field. Referring to Fig.~\ref{MFvsmZeroBZoom}, one can see that as one approaches the origin, the perturbative result shows large curvature and eventually vanishes. Using this result as a heuristic explanation of our results at zero magnetic field, one might expect the same to happen in the chiral limit for a nonperturbative calculation.
+
+For the case of nonzero magnetic field, we have obtained results that are encouraging regarding the determination of the dynamical fermion mass. In Fig.~\ref{MFvsmNonzeroB}, one sees that at a given bare mass, the dynamical mass increases with the magnetic flux. Furthermore, the plot suggests that all four ensembles extrapolate to nonzero values in the chiral limit. However, in light of the behavior observed in the zero field case, one might want to be cautious in predicting the behavior at bare masses smaller than those plotted. 
+
+%In Fig.~\ref{MFvsmNonzeroB}, one can see
+%the dynamical mass approaches a nonzero value as the bare mass goes to zero for the ensembles with nonzero magnetic flux. This result confirms our hypothesis regarding the generation of a dynamical mass for the fermion. We were able to see an increase in the dynamical mass as a function of the magnetic field at a given bare mass as well as in the chiral limit. Furthermore, in the absence of an external magnetic field, $m_F$ appears to vanish with the bare mass as one would expect in the semimetal phase.
 
 The appearance of a pseudoscalar Nambu-Goldstone boson is expected as a consequence of the spontaneous chiral symmetry breaking. To determine this state's mass we fit the correlator in (\ref{PionTemporal}) to the following form
 \beq
@@ -578,7 +584,7 @@ G^{(\tau)}_{PS}(\tau; \vec{p} = {\bf 0}) &=& A\left( e^{-m_{\pi}\tau} + e^{-m_{\
 where we have included two sets of exponentials characterizing the ground state and the first excited state respectively.
 In Fig.~\ref{MPSvsm}, we see the ground state mass in the pseudoscalar channel, $m_{\pi}$, plotted as a function of the fermion mass for the various magnetic fluxes.  
 We notice that the pseudoscalar mass shows little variation in flux. This is in contrast with QCD, where electrically charged  pions couple to the 
-external magnetic field \cite{SmilgaShushpanov}. We also have determined that the pseudoscalar mode is indeed a bound state. This can be seen by referring to Fig.~\ref{MFvsm} where the dynamical fermion mass is plotted as a function of the bare mass. The fermion-antifermion scattering state has energy greater than $2m_F$ which is higher than $m_{\pi}$ for low bare masses.
+external magnetic field \cite{SmilgaShushpanov}. We also have determined that the pseudoscalar mode is indeed a bound state. This can be seen by referring to Fig.~\ref{MFvsmNonzeroB} where the dynamical fermion mass is plotted as a function of the bare mass. The fermion-antifermion scattering state has energy greater than $2m_F$ which is higher than $m_{\pi}$ for low bare masses.
 
 \begin{figure}
 \includegraphics[height=8cm,width=8cm]{pbp_vs_m_compare_graphene_paper.pdf} \hspace{-1cm}
@@ -630,9 +636,21 @@ external magnetic field \cite{SmilgaShushpanov}. We also have determined that th
 %\end{figure}
 
 \begin{figure}
+  \includegraphics[height=8cm,width=8cm]{ferm_pole_vs_m.pdf} \hspace{-1cm}
+\caption{The fermion dynamical mass as a function of the bare fermion mass for zero magnetic flux. We have included the result for the pole of the fermion propagator at $O(e^2)$ along with the free fermion pole, $\log\left(m+\sqrt{m^2+1}\right)$. One can see that the perturbative result heuristically explains our nonperturbative result.}
+\label{MFvsmZeroB}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[height=8cm,width=8cm]{ferm_pole_vs_m_zoom.pdf} \hspace{-1cm}
+\caption{The pole of the fermion propagator at $O(e^2)$ along with the free fermion pole as one approaches the chiral limit, $m \to 0$. One can see that the pole at $O(e^2)$ vanishes in this limit, as expected. However, the curvature that causes this behavior can only be observed as one moves to extremely small fermion bare masses.}
+\label{MFvsmZeroBZoom}
+\end{figure}
+
+\begin{figure}
   \includegraphics[height=8cm,width=8cm]{ferm_mt_vs_m_graphene_paper.pdf} \hspace{-1cm}
-\caption{The fermion dynamical mass as a function of the bare fermion mass for all four magnetic fluxes as well as at zero magnetic flux.}
-\label{MFvsm}
+\caption{The fermion dynamical mass as a function of the bare fermion mass for all four magnetic fluxes.}
+\label{MFvsmNonzeroB}
 \end{figure}
 
 \begin{figure}
