@@ -39,7 +39,7 @@
 
 % The following information is for internal review, please remove them for submission
 \widetext
-\leftline{Version 5.0 as of \today}
+\leftline{Version 6.0 as of \today}
 
 % the following line is for submission, including submission to the arXiv!!
 %\hspace{5.2in} \mbox{Fermilab-Pub-04/xxx-E}
@@ -83,13 +83,13 @@
 
 
 \begin{abstract}
-We discuss the simulation of the low energy effective field theory (EFT) for graphene in the presence of an external magnetic field. Our fully non-perturbative calculation 
+We discuss the simulation of the low-energy effective field theory (EFT) for graphene in the presence of an external magnetic field. Our fully non-perturbative calculation 
 uses methods of lattice gauge theory to study the theory using a hybrid Monte Carlo approach. We investigate the phenomenon of magnetic catalysis in the context of graphene by studying
-the chiral condensate which is the order parameter characterizing the spontaneous breaking of chiral symmetry. In the EFT, the symmetry breaking pattern is given by $U(4) \to U(2) \times U(2)$. We also comment on the time-reversal-odd condensate characterizing the ground state in the presence of a magnetic field.
+the chiral condensate which is the order parameter characterizing the spontaneous breaking of chiral symmetry. In the EFT, the symmetry breaking pattern is given by $U(4) \to U(2) \times U(2)$. We also comment on the difficulty, in this lattice formalism, of studying the time-reversal-odd condensate characterizing the ground state in the presence of a magnetic field.
 Finally, we study the mass spectrum of the theory, in particular the Nambu-Goldstone (NG) mode as well as the Dirac quasiparticle, which is predicted to obtain a dynamical mass. 
 \end{abstract}
 
-\pacs{11.15.Ha, 73.22.Pr, 71.70.Di}
+\pacs{11.15.Ha, 71.10.Pm, 73.22.Pr, 73.43.Cd}
 \maketitle
 
 \section{\label{sec:Intro}Introduction}
@@ -105,13 +105,13 @@ to be essentially Coulombic.
 
 The strength of the interaction between the quasiparticles is affected by the substrate on which the graphene layer sits. For suspended graphene, the Coulomb interaction is unscreened
 and the analogue of the fine structure constant for graphene satisfies $\alpha_g \equiv e^2/(\epsilon_0 v_F 4\pi) > 1$. It is known that for sufficiently large coupling, the EFT undergoes a phase transition, as has been shown in 
-several previous studies \cite{Drut1, Drut2, Hands1, Hands2}. This transition is characterized by the appearance of a nonzero value of the condensate, $\vev{\Bpsi \Psi}$, as well as a dynamic mass
+several previous studies \cite{Drut1, Drut2, Hands1, Hands2}. This transition is characterized by the appearance of a nonzero value of the condensate, $\vev{\Bpsi \Psi}$, as well as a dynamical mass
 for the fermion.
 
 In the presence of an external magnetic field, many field theories are thought to undergo spontaneous symmetry breaking. This phenomenon is known as magnetic catalysis and is hypothesized to be universal. In the context of the graphene EFT, the magnetic
 catalysis scenario leads to the appearance of a dynamically generated Dirac mass and is proposed to account for several of the quantum Hall plateaus that appear at large magnetic field \cite{ZhangQHE,JiangQHE}.
 
-Magnetic catalysis has also been the focus of recent interest in lattice quantum chromodynamics (LQCD). Several studies have confirmed, that at zero temperature, the chiral condensate
+Magnetic catalysis has also been the focus of recent interest in lattice quantum chromodynamics (LQCD). Several studies have confirmed that at zero temperature, the chiral condensate
 increases with magnetic field ($m_{\pi} = 200-400 ~\text{MeV}$, $eB$ up to $1 ~\text{GeV}^2$) \cite{Buividovich,Braguta}. This confirms the idea that the background magnetic field aids chiral symmetry breaking in the vacuum.
 Moreover, it was also discovered that with $T \geq 140 ~\text{MeV}$, the opposite occurs and the chiral condensate decreases with the external magnetic field \cite{Bali1,Bali2}.
 
@@ -126,7 +126,7 @@ The interaction is introduced via a scalar potential which lives in $(3+1)$ dime
 \beq
 \label{ContinuumEFT}
 \nn
- S_E &=& \int dt d^2 x \sum_{\sigma=1,2} \Bpsi_{\sigma} \Dslash[A_0] \Psi_{\sigma} \\ &+& \frac{\epsilon + 1}{4e^2} \int dt d^3 x ~ (\partial_i A_0)^2,
+ S_E &=& \int dt d^2 x \sum_{\sigma=1,2} \Bpsi_{\sigma} \Dslash[A_0] \Psi_{\sigma} \\ &+& \frac{(\epsilon + 1)}{4e^2} \int dt d^3 x ~ (\partial_i A_0)^2,
 \eeq
 where $\epsilon$ is the dielectric constant of the substrate on which the graphene monolayer resides, and the Dirac operator is given by 
 \beq
@@ -238,7 +238,7 @@ The $U(1)_{\epsilon}$ symmetry, or the ``even-odd'' symmetry, is given by
 \chi(x) &\to& \exp \left(i\beta \epsilon(x) \right) \chi(x) \nn \\
 \chib(x) &\to& \chib(x) \exp \left(i \beta \epsilon(x) \right),
 \eeq
-where $\epsilon(x) \equiv \left( -1 \right)^{x_0 + x_1 + x_2}$. The $U(1)_{\epsilon}$ symmetry is broken with the appearance of a nonzero value of the condensate, $\vev{\chib \chi}$. Thus, on the lattice, one expects there to be a single NG boson as a result of this type of spontaneous symmetry breaking follows the appearance of a nonzero chiral condensate. For the study of the time-reversal-odd condensate, things are a bit more difficult when using staggered fermions. Namely, in order to compare with continuum results, one is interested in distinguishing the spin projections of the condensate, which in staggered language, corresponds to the taste degree of freedom. Due to taste breaking terms in the staggered action at $O(a)$ (see Appendix \ref{sec:SpinTasteAppendix}), this becomes impossible as these terms mix the various tastes, or in graphene language, spin projections. In this study we use the improved staggered fermion action, asqtad \cite{Orginos}. We outline the various improvements in the following paragraphs.
+where $\epsilon(x) \equiv \left( -1 \right)^{x_0 + x_1 + x_2}$. The $U(1)_{\epsilon}$ symmetry is broken with the appearance of a nonzero value of the condensate, $\vev{\chib \chi}$. Thus, on the lattice, one expects there to be a single NG boson and the appearance of a nonzero chiral condensate as a result of this type of spontaneous symmetry breaking. For the study of the time-reversal-odd condensate, things are a bit more difficult when using staggered fermions. Namely, in order to compare with continuum results, one is interested in distinguishing the spin projections of the condensate, which in staggered language, corresponds to the taste degree of freedom. Due to taste breaking terms in the staggered action at $O(a)$ (see Appendix \ref{sec:SpinTasteAppendix}), this becomes impossible as these terms mix the various tastes, or in graphene language, spin projections. In this study we use the improved staggered fermion action, asqtad \cite{Orginos}. We outline the various improvements in the following paragraphs.
 
 Although staggered fermions have some advantages, being cost effective in numerical simulations and retaining a remnant chiral symmetry, it is known that at finite lattice spacing the violations
 of taste symmetry can be significant. In the case of QCD, for example, simulations with unimproved staggered fermions on fine lattices ($a=0.05$ fm) obtain splittings within the pion taste-multiplet ($O(100~\text{MeV})$)
@@ -380,7 +380,7 @@ After each trajectory, the pseudofermion field $\phi$ and the gauge momenta are 
 under the name of refreshed HMC.
 
 In our simulations we have taken the trajectory length to be $1$, and varied the step size for a given ensemble in order to obtain a Metropolis acceptance rate of $70 \%$. We have discarded the first $200-250$ trajectories in order to account for the equilibration of each ensemble. For ensembles where we were interested in the mass spectrum of the theory,
-we have generated roughly $800$ independent configurations. For those where we were interested only in the condensates, we generated roughly $100$ independent configurations. To achieve statistical independence, we have kept the configuration every tenth trajectory. An analysis of the autocorrelation function for various observables confirms that these configurations are statistically independent.
+we have generated roughly $800$ independent configurations. For those where we were interested only in the condensates, we generated roughly $100$ independent configurations. To achieve statistical independence, we have kept the configuration every tenth trajectory. An analysis of the autocorrelation function for various observables confirms that these configurations are sufficiently statistically independent.
 \section{\label{sec:Observables}Observables}
 The primary observable of this study is the chiral condensate. In the massless limit, this observable serves as an order parameter for the transition between the semimetal phase, where it is zero, and the insulator phase, where it obtains a nonzero value.
 In the continuum graphene EFT, the chiral condensate is defined as follows
@@ -409,7 +409,7 @@ Another condensate which characterizes magnetic catalysis in the graphene EFT is
 \beq
 \label{HaldaneCondensateContinuum}
 \nn
-\Delta_H &\equiv& \vev{\Bpsi \tilde{\gamma}_{4,5} \Psi} \\ &=& \frac{1}{V} \frac{1}{Z} \int \mathcal{D}A_0 \int d^3x \Bpsi(x) \tilde{\gamma}_{4,5} \Psi(x) e^{-S^{eff}_E[A_0]}.
+\Delta_H &\equiv& \vev{\Bpsi \left( \tilde{\gamma}_{4,5} \otimes \bm 1 \right) \Psi} \\  \nn &=& \frac{1}{V} \frac{1}{Z} \int \mathcal{D}A_0  \times \\  && \int d^3x \Bpsi(x) \left( \tilde{\gamma}_{4,5} \otimes \bm 1 \right) \Psi(x)  e^{-S^{eff}_E[A_0]}.
 \eeq
 In the one-component basis, this takes the form
 \beq
@@ -417,10 +417,10 @@ In the one-component basis, this takes the form
 \Delta_H = \frac{1}{V} \frac{1}{Z} \int \mathcal{D}U_0 \sum_{y;\eta_{\mu} \neq \eta'_{\mu}} \chib_{\eta}(y) \chi_{\eta'}(y)e^{-S^{eff}_E[U_0]},
 \eeq
 where the details of the transformation connecting (\ref{HaldaneCondensateContinuum}) and (\ref{HaldaneCondensateLattice}) are given in Appendix \ref{sec:SpinTasteAppendix}.
-As opposed to (\ref{ChiralCondensateLattice}), the fields in (\ref{HaldaneCondensateLattice}) are located at diagonally opposite corners of the cube.
-Although the appearance of a nonzero value for this condensate does not signal spontaneous symmetry breaking, it's value and dependence on the external magnetic field characterize the ground state of the graphene EFT.
+As opposed to (\ref{ChiralCondensateLattice}), the fields in (\ref{HaldaneCondensateLattice}) are located at diagonally opposite corners of the $2^3$ cube.
+Although the appearance of a nonzero value for this condensate does not signal spontaneous symmetry breaking of the $U(1)_{\epsilon}$ symmetry, its value and dependence on the external magnetic field characterize the ground state of the graphene EFT.
 
-To measure condensates on the lattice, one must use stochastic methods even for modest lattice volumes. For example, the trace in (\ref{ChiralCondensateLattice}) involves computing the propagator from a given site back to the same lattice site for each site on the lattice. To estimate the trace, we generate an ensemble of Gaussian distributed complex vectors with support on each lattice site that satisfy
+To measure condensates on the lattice, one must use stochastic methods even for modest lattice volumes. For example, the trace in (\ref{ChiralCondensateLattice}) involves computing the propagator from a given site back to the same lattice site for each site on the lattice. To estimate the trace, we generate an ensemble of Gaussian-distributed complex vectors with support on each lattice site that satisfy
 \beq
 \label{StochasticOrthogonality}
 \vev{ \Phi^*_i \Phi_j } = \delta_{ij},
@@ -499,92 +499,14 @@ In the absence of an external magnetic field, the graphene EFT is known to exhib
 In the language of chiral symmetry breaking, the semimetal phase corresponds to the chirally symmetric phase while the insulating phase corresponds to the broken phase.
 Various aspects of this transition were studied previously using lattice methods \cite{Drut1, Drut2, Hands1, Giedt}. The transition is believed to be of second order as indicated by the results in \cite{Drut2}. 
 
-The situation changes as one turns on the external magnetic field. Namely, the $\beta_c = (\epsilon_{cr}+1)/2e^2$ which determines the boundary between the two phases shifts to larger values. This has been shown previously in \cite{Polikarpov}, where at fixed temperature, the authors
-obtained a phase diagram in the $(B, \beta)$-plane. One would expect that the phase boundary has a temperature dependence, where at $T=0$, the authors of \cite{Miransky1,Miransky2,Miransky3,Miransky4,MiranskyGraphene1,MiranskyGraphene2,MiranskyGraphene3} predict that an infinitesimal attraction between fermions and antifermions will lead to pairing, and thus magnetic catalysis. Another early analysis of a graphene-like theory showed that at extremely weak-coupling, a nonzero condensate was obtained in the chiral limit \cite{Cosmai}
+The situation changes as one turns on the external magnetic field. Namely, the critical $\beta_c = (\epsilon_{cr}+1)/2e^2$ which determines the boundary between the two phases shifts to larger values. This has been shown previously in \cite{Polikarpov}, where at fixed temperature, the authors
+obtained a phase diagram in the $(B, \beta)$-plane. One would expect that the phase boundary has a temperature dependence, where at $T=0$, the authors of \cite{Miransky1,Miransky2,Miransky3,Miransky4,MiranskyGraphene1,MiranskyGraphene2,MiranskyGraphene3} predict that an infinitesimal attraction between fermions and antifermions will lead to pairing, and thus magnetic catalysis. Another early analysis of a graphene-like theory showed that at extremely weak coupling, a nonzero condensate was obtained in the chiral limit \cite{Cosmai}
 
 We began our calculations by identifying the semimetal phase through a scan in $\beta$ coupled with an investigation of the condensate's behavior as a function of the bare mass in the chiral limit. In the semimetal phase, one expects $\sigma \equiv \vev{\Bpsi \Psi}$ to be linear in the bare mass for small values of $m$. 
 One can compare this expectation with the behavior of $\vev{\Bpsi \Psi}$ as a function of the bare mass when the external magnetic field is turned on. This is illustrated in Fig.~\ref{PBPComparison}, where one sees an approximately linear behavior at zero field and a strongly nonlinear behavior of the condensate as a function of $m$ for the magnetic flux $\Phi_B = 0.125$.
 
 Notice, however, that in both cases as the explicit symmetry breaking parameter is taken to zero, the condensate also goes to zero. Usually, this signals that the symmetry is being restored due to the finite spatial extent of the box. Referring to Fig.~\ref{PBPVolume}, one can see that this is not the
-case for the spatial extent of the box. For a broad range of spatial extents $N_s$, the condensate shows little variation. This can be explained by noting that the magnetic length, $l_B \equiv \sqrt{\hbar c/eB}$, which characterizes the quasiparticle's cyclotron orbit, satisfies $1 < l_B < L_s$, in units of $a_s$. 
-
-We have also confirmed that the independence of the results on the finite spatial size of the box by indepedently calculating the screening
-masses for the fermion quasiparticle and the pseudoscalar. The screening masses are obtained by calculating the correlation functions in (\ref{QuasiparticlePropagatorSpatial}) and (\ref{PionSpatial}) and projecting to $p_y=0$ and the lowest Matsubara frequency ($\omega_0 = \pi T$ and $\omega_0 = 0$, respectively).
-What we find from these calculations is that the masses characterizing the decay of the above correlation functions in space satisfy $M_s L_s > 1$, where $L_s = N_s a_s$ is the  lattice extent in the spatial direction. For the pseudoscalar, we found that $m_{\pi,s}L_s \approx 18-20$, for the ensembles with volume $20^2\times10\times60$ and flux $\Phi_B=0.125$. For the fermion propagator, we obtained $m_{F,s}L_s \approx 11-14$, for the same ensembles mentioned above. This is further proof that the corrections arising from the finite spatial extent of the box 
-are well under control.
- 
-Thermal effects are also known to play a role in lattice simulations due to the finite extent of the box. The temperature of the system is related to the extent of the lattice in Euclidean time, $T = 1/N_{\tau}a_t$. We have investigated the effect of finite temperature on the condensate and illustrated them in Fig.~\ref{PBPvsTdivM}, where $\sigma(T/m)$ is plotted. When the temperature is large 
-compared with the fermion mass, one can see that the condensate tends towards zero. On the other hand, when the temperature is small compared with the fermion mass, one can see that the condensate increases and tends asymptotically towards a nonzero value. The fact that magnetic catalysis is a property of the ground state of the Hamiltonian suggests that we first take the limit $T \to 0$, followed
-by the limit $m \to 0$. Using this strategy, we have first extrapolated to zero temperature at a fixed bare fermion mass. This was done via polynomial extrapolation $\sigma(T) = c_0 + c_2T^2$, using the points which satisfied $T/m < 1$. We then use these points for our chiral extrapolation, which we performed using a linear fit. This is illustrated in Fig. \ref{PBPzeroTChiral}, where we plot the mass dependence of the $T=0$ extrapolated points.
-
-Proceeding in an analogous manner for three other fluxes, we were able to obtain the behavior of the zero-temperature, chirally extrapolated condensate as a function of the magnetic flux, $\Phi_B$. These results are shown in Fig.~\ref{PBPzeroTChiralvseB}.
-The relationship between the condensate and the magnetic flux is fit to the form $\sigma_{T=m=0} = eBc_1 + (eB)^2c_2$. The errors on the points are those calculated in the chiral extrapolation. These results overwhelmingly support the scenario of magnetic catalysis in the graphene EFT.
-
-Long before the realization of graphene in the lab, F.D.M. Haldane considered a graphene-like lattice model which he used to study the quantum Hall effect (QHE) \cite{Haldane}.
-In this model, he considered a magnetic field which was periodic in space such that the flux through the unit cell was zero. This is in stark contrast to normal realizations of the QHE 
-where the electrons are subjected to a uniform magnetic field, which implies the formation of Landau levels. In Haldane's model, the electrons retain their Bloch character, and thus he referred to 
-this as the QHE without Landau levels. As in graphene, the points in his model where the valence and conductance bands touch inside the Brillouin zone are symmetry protected (inversion and time-reversal).
-If time-reversal invariance is broken, he found that a $\nu = \pm 1$ integer QHE state is formed, where $\nu$ is referred to as the filling factor. 
-
-Recent studies of symmetry breaking in graphene have brought up the possbility of the formation of the time-reversal odd condensate, $\Delta_H$ \cite{GonzalezHaldaneMass, MiranskyGraphene2,MiranskyGraphene3}. This condensate give rise to the so-called Haldane mass in the low-energy theory.
-The reason for the interest in these symmetry breaking scenarios is as follows.
-The appearance of anomalous QHE states in graphene at previously unknown filling factors, $\nu = 0, \pm 1, \pm 2$, is due to the splitting of the degeneracy of the lowest Landau level (LLL) at large external magnetic fields ($B \sim 45 \text{T}$).
-Although there are several scenarios to explain these states, (see \cite{Yang} for a nice discussion), the authors of \cite{MiranskyGraphene2, MiranskyGraphene3} advocate the magnetic catalysis scenario whereby a Dirac mass as well as possibly a Haldane mass are generated due to the strong, weakly screened
-electron-electron interactions in graphene.
-
-In the Schwinger-Dyson approach employed in \cite{MiranskyGraphene2}, where a simplified contact interaction was used, the ground state of the EFT in the presence of an external magnetic field was found to be described by
-\beq
-\label{Singlet}
-\tilde{\Delta}_{\uparrow} = \tilde{\Delta}_{\downarrow} = 0, ~\Delta_{H,\uparrow} = - \Delta_{H,\downarrow} = M,
-\eeq
-where $\tilde{\Delta}_{\sigma}$ corresponds to the Dirac mass for a given spin projection, and $\Delta_{H,\sigma}$ corresponds to the Haldane mass for a given spin projection. In this expression, $M$ is the dynamically generated mass scale which is a function of the cutoff $\Lambda$ and the dimensionful coupling constant characterizing the contact interaction, $G$. We note that the spin index in (\ref{Singlet}) directly corresponds to the taste index for staggeered fermions. In \cite{MiranskyGraphene3}, a more realistic long-range Coulomb interaction in the instantaneous approximation was used. The results were similar to that of \cite{MiranskyGraphene2}, with the qualitative difference that the gap parameters depend on the Landau level index.
-
-In our simulations, we have used operators which are all taste singlets and thus have not distinguished the various "spin" components. Taste nonsinglet operators have zero expectation value as the vacuum does not have a preferred direction in taste space. Thus, one is unable to project out the various spin components of the order parameters which makes a comparison with the continuum results much more difficult. In the continuum, we have seen that the Zeeman term in (\ref{ZeemanHamiltonian}) explicitly breaks the $U(4)$ symmetry to $U(2)_{\uparrow} \times U(2)_{\downarrow}$. Noting that in (\ref{Singlet}) the Haldane masses are opposite in sign, we see that the spin splitting induced by (\ref{ZeemanHamiltonian}) is dynamically enhanced. In the absence of a Zeeman term, the solution described by (\ref{Singlet}) signals the spontaneous breaking of the $U(4)$ symmetry and a nonzero value for $\vev{ \Bpsi \left( \tilde{\gamma}_{4,5} \otimes \sigma_3 \right) \Psi}$. However, our lattice action only contains a remnant $U(1) \times U(1)_{\epsilon}$ symmetry and does not distinguish spin projection. Thus, unlike the chiral condensate, the appearance of a nonzero value for the time-reversal odd condensate, $\vev{\Bpsi \tilde{\gamma}_{4,5} \Psi}$, does not signal spontaneous symmetry breaking. However, a zero lattice result for $\vev{\Bpsi \tilde{\gamma}_{4,5} \Psi}$ does not necessarily imply a zero continuum result due to the difficulty of distinguishing the spin degree of freedom with our stagggered lattice formulation of the graphene EFT. 
-
-The Zeeman splitting also has a significant effect on the selection of the ground state. According to \cite{MiranskyGraphene2,MiranskyGraphene3}, in the absence of the Zeeman term, the solution (\ref{Singlet}) is degenerate with another solution which is characterized by a nonzero Dirac mass
-\beq
-\label{Triplet}
-\tilde{\Delta}_{\uparrow} = \tilde{\Delta}_{\downarrow} = M, ~\Delta_{H,\uparrow} = \Delta_{H,\downarrow}=0.
-\eeq
- Thus if one trusts the scenario resulting from the gap equation, our lattice simulation could be sampling a ground state which is a superposition of (\ref{Singlet}) and (\ref{Triplet}). 
-
-We have measured the time-reversal odd condesnsate on the lattice ensembles with the largest flux $\Phi_B=0.125$ for $a_{\tau} T = [0.002, 0.016]$. These values of $a_{\tau}T$ are smaller than the dynamical fermion mass, as one can see from Fig. \ref{MFvsmNonzeroB}. Thus, one expects that if the ground state did support a Haldane condensate, these temperatures would be sufficiently small and the magnetic flux sufficiently large to observe this. Instead, we found that our data does not support a nonzero Haldane condensate. In Fig. \ref{ReHaldanevsm},  we have plotted the real part of the Haldane mass, computed with $1000$ stochastic sources on $100$ gauge configurations, versus $m$ for $N_{\tau}=480,~\Phi_B=0.125$. What we see is that our results are consistent with zero. We can see that there is a slight dependence of the error bars on the mass $m$. We have also checked, at the same value of the flux and bare mass, that as the temperature increases, the Haldane mass remains consistent with zero as to be expected from the solutions of the gap equations. 
-
-However, when interpreting our results for the Haldane mass, one must keep in mind that taste-nonsinglet operators have zero expectation values. In particular, this means that $\vev{ \Bpsi \left( \tilde{\gamma}_{4,5} \otimes \sigma_3 \right) \Psi}$ is exactly zero due to taste symmetry. To address spontaneous symmetry breaking due to the appearance of a nonzero value for $\vev{ \Bpsi \left( \tilde{\gamma}_{4,5} \otimes \sigma_3 \right) \Psi}$, we would need to include a term in the action that breaks this symmetry explicitly and, in the usual way, take the infinite volume limit followed by removing the symmetry breaking term. This is what we have done for the Dirac mass but we have not done this for the taste-nonsinglet Haldane mass.
-
-%Within our lattice EFT, there is no continuum $SU(2)_{\sigma}$ symmetry under which the Haldane mass is invariant (see Appendix \ref{sec:FermionAppendix}). Thus, discretization effects are expected to be present in the lattice calculation of the corresponding Haldane condensate. In order to investigate the continuum limit, where one would restore the $SU(2)_{\sigma}$, we first fixed the ratio $eB/m^2$. This sets the mass in units of the magnetic length, $l_B$. We then extrapolated the Haldane mass to $T=0$. Finally, we investigated the behavior of the lattice spacing independent quantity $\Delta_H/eB$, in the limit of $\hat{m} = m a_t \to 0$. 
-%In Fig.~\ref{HaldanediveBvsm}, the continuum limit is shown. From the plot, one can see that a UV divergence $\sim 1/a$ is present. This makes it difficult to extract any continuum physics from this quantity. One would need a way of renormalizing this quantity in order to obtain information in the limit $a \to 0$.
-
-The quasiparticle propagator is interesting in its own right as one can obtain information regarding the dynamically generated mass induced by the spontaneous breaking of chiral symmetry. 
-Although the propagator itself is gauge variant, the pole of the propagator in Coulomb gauge is a familiar quantity which appears in relativistic field theories. In order to extract information from the quasiparticle propragator, we apply an appropriate transformation on the temporal links. Our gauge fixing procedure involved setting the average value of the potential on a given time slice to zero, 
-\beq
-\sum_{x,y} \theta(x,y,\tau) = 0.
-\eeq
-This allows us to calculate the propagator of charged propagators as the gauge condition corresponds to a charged propagator moving in the background of a spatially uniform background charge of opposite sign.
-To determine the dynamical fermion mass, we fit the propagator in (\ref{QuasiparticlePropagatorTemporal}) to the following form
-\beq
-\label{FermFitForm} \nn
-&& G_F(\tau, \vec{p} = {\bf 0}) = \frac{A_e}{2}\left(1+(-)^{\tau}\right) \left( e^{-m_F\tau} + e^{-m_F(N_{\tau} - \tau)} \right) \\ 
-&& \quad \quad  \quad +~ \frac{A_o}{2}\left(1-(-)^{\tau}\right) \left( e^{-m_F\tau} - e^{-m_F(N_{\tau} - \tau)} \right),
-\eeq
-where $m_F$ is the dynamical fermion mass. Due to the appearance of a nonzero value for the condensate $\vev{\Bpsi \Psi}$, one expects that $m_F$ remains finite in the limit that the bare mass vanishes. 
-
-At zero magnetic field, we expect the dynamical fermion mass to vanish in the chiral limit. In Fig.~\ref{MFvsmZeroB}, one can see our nonperturbative determination of the dynamical fermion mass plotted along with the location of the pole of the lattice fermion propagator at $O(e^2)$. The perturbative result explains the large renormalization of the mass as compared to the free theory. However, it appears that making an extrapolation to zero bare mass, based on both the perturbative and nonperturbative results, leaves us with a nonzero value for the dynamical fermion mass. Based on the arguments and results previously discussed, one expects the dynamical mass to vanish in this limit as we are firmly in the semimetal phase in the absence of the external magnetic field. Referring to Fig.~\ref{MFvsmZeroBZoom}, one can see that as one approaches the origin, the perturbative result shows large curvature and eventually vanishes. Using this result as a heuristic explanation of our results at zero magnetic field, one might expect the same to happen in the chiral limit for a nonperturbative calculation.
-
-For the case of nonzero magnetic field, we have obtained results that are encouraging regarding the determination of the dynamical fermion mass. In Fig.~\ref{MFvsmNonzeroB}, one sees that at a given bare mass, the dynamical mass increases with the magnetic flux. Furthermore, the plot suggests that all four ensembles extrapolate to nonzero values in the chiral limit. However, in light of the behavior observed in the zero field case, one might want to be cautious in predicting the behavior at bare masses smaller than those plotted. 
-
-%In Fig.~\ref{MFvsmNonzeroB}, one can see
-%the dynamical mass approaches a nonzero value as the bare mass goes to zero for the ensembles with nonzero magnetic flux. This result confirms our hypothesis regarding the generation of a dynamical mass for the fermion. We were able to see an increase in the dynamical mass as a function of the magnetic field at a given bare mass as well as in the chiral limit. Furthermore, in the absence of an external magnetic field, $m_F$ appears to vanish with the bare mass as one would expect in the semimetal phase.
-
-The appearance of a pseudoscalar Nambu-Goldstone boson is expected as a consequence of the spontaneous chiral symmetry breaking. To determine this state's mass we fit the correlator in (\ref{PionTemporal}) to the following form
-\beq
-\label{PS2Point} \nn
-G^{(\tau)}_{PS}(\tau; \vec{p} = {\bf 0}) &=& A\left( e^{-m_{\pi}\tau} + e^{-m_{\pi}(N_{\tau} - \tau)} \right) \\ &+&  A'\left( e^{-m'_{\pi}\tau} + e^{-m'_{\pi}(N_{\tau} - \tau)} \right),
-\eeq
-where we have included two sets of exponentials characterizing the ground state and the first excited state respectively.
-In Fig.~\ref{MPSvsm}, we see the ground state mass in the pseudoscalar channel, $m_{\pi}$, plotted as a function of the fermion mass for the various magnetic fluxes.  
-We notice that the pseudoscalar mass shows little variation in flux. This is in contrast with QCD, where electrically charged  pions couple to the 
-external magnetic field \cite{SmilgaShushpanov}. We also have determined that the pseudoscalar mode is indeed a bound state. This can be seen by referring to Fig.~\ref{MFvsmNonzeroB} where the dynamical fermion mass is plotted as a function of the bare mass. The fermion-antifermion scattering state has energy greater than $2m_F$ which is higher than $m_{\pi}$ for low bare masses.
+case. For a broad range of spatial extents $N_s$, the condensate shows little variation. This can be explained by noting that the magnetic length, $l_B \equiv \sqrt{\hbar c/eB}$, which characterizes the quasiparticle's cyclotron orbit, satisfies $1 < l_B < L_s$, in units of $a_s$. 
 
 \begin{figure}
 \includegraphics[height=8cm,width=8cm]{pbp_vs_m_compare_graphene_paper.pdf} \hspace{-1cm}
@@ -605,23 +527,56 @@ external magnetic field \cite{SmilgaShushpanov}. We also have determined that th
 \end{figure}
 
 \begin{figure}
-  \includegraphics[height=8cm,width=8cm]{pbp_vs_m_zeroT_PHI0125_lin_graphene_paper.pdf} \hspace{-1cm}
-\caption{Chiral limit of the chiral condensate $\sigma$ using the $T=0$ extrapolated points. The errors on each point were obtained from the polynomial extrapolation to $T=0$ at fixed mass. The nonzero intercept indicates a finite value for the condensate in the chiral and zero temperature limits.}
+  \includegraphics[height=8cm,width=8cm]{pbp_vs_m_PHI0125_zeroT_lin_graphene_paper.pdf} \hspace{-1cm}
+\caption{Chiral limit of the chiral condensate $\sigma$ using the $T=0$ extrapolated points. The errors on each point were determined from statistics as well as systematics. The value for the intercept is $0.2721 ~\pm~ 7 \times 10^{-4}$, and the fit has $\chi^2/\text{d.o.f.} \approx 0.6$. The nonzero intercept indicates a finite value for the condensate in the chiral and zero-temperature limits.}
 \label{PBPzeroTChiral}
 \end{figure}
 
 \begin{figure}
- \includegraphics[height=8cm,width=8cm]{pbp_vs_PHI_NL_graphene_paper.pdf} \hspace{-1cm}
-\caption{The chirally extrapolated, zero temperature values of the chiral condensate $\sigma$, plotted as a function of the magnetic flux,  $\Phi_B = eB/2\pi$.  The points at $\Phi_B=0.125$ and $\Phi_B=0.0625$ have a spatial size of $N_s=8$ while those at $\Phi_B=0.083$ and $\Phi_B=0.056$ have a spatial size of $N_s=12$. The errors on the points were obtained from the chiral extrapolations at $T=0$. We have fit the data to a quadratic which passes through the origin. The fit has a $\chi^2/\text{d.o.f.} \approx 36/2$. } 
+ \includegraphics[height=8cm,width=8cm]{pbp_vs_PHI_graphene_paper.pdf} \hspace{-1cm}
+\caption{The chirally extrapolated, zero temperature values of the chiral condensate $\sigma$, plotted as a function of the magnetic flux,  $\Phi_B = eB/2\pi$.  The points at $\Phi_B=0.125$ and $\Phi_B=0.0625$ have a spatial size of $N_s=8$ while those at $\Phi_B=0.083$ and $\Phi_B=0.056$ have a spatial size of $N_s=12$. The errors on the points were obtained from the chiral extrapolations at $T=0$. We have fit the data to a quadratic which passes through the origin which yields $\chi^2/\text{d.o.f.} \approx 3.6/2$. } 
 \label{PBPzeroTChiralvseB}
-\end{figure}
+\end{figure} 
 
-%\begin{figure}
-% \includegraphics[height=8cm,width=8cm]{haldanediveB_vs_m_zeroT_graphene_paper.pdf} \hspace{-1cm}
-%\caption{The Haldane mass in units of magnetic flux, $\Delta_H/eB$, as a function of the lattice mass $\hat{m} = m a_t$. The behavior at small $\hat{m}$ indicates that
-%this quantity is UV divergent.}
-%\label{HaldanediveBvsm} 
-%\end{figure}
+We have also confirmed that the independence of the results on the finite spatial size of the box by indepedently calculating the screening
+masses for the fermion quasiparticle and the pseudoscalar. The screening masses are obtained by calculating the correlation functions in (\ref{QuasiparticlePropagatorSpatial}) and (\ref{PionSpatial}) and projecting to $p_y=0$ and the lowest Matsubara frequency ($\omega_0 = \pi T$ and $\omega_0 = 0$, respectively).
+We find that the masses characterizing the decay of the above correlation functions in space satisfy $M_s L_s > 1$, where $L_s = N_s a_s$ is the  lattice extent in the spatial direction. For the pseudoscalar, we found that $m_{\pi,s}L_s \approx 18-20$, for the ensembles with volume $20^2\times10\times60$ and flux $\Phi_B=0.125$. For the fermion propagator, we obtained $m_{F,s}L_s \approx 11-14$, for the same ensembles mentioned above. This is further proof that the corrections arising from the finite spatial extent of the box 
+are well under control.
+ 
+Thermal effects are also known to play a role in lattice simulations due to the finite extent of the box. The temperature of the system is related to the extent of the lattice in Euclidean time, $T = 1/N_{\tau}a_t$. We have investigated the effect of finite temperature on the condensate and illustrated it in Fig.~\ref{PBPvsTdivM}, where $\sigma(T/m)$ is plotted. When the temperature is large 
+compared with the fermion mass, one can see that the condensate tends towards zero. On the other hand, when the temperature is small compared with the fermion mass, one can see that the condensate increases and tends asymptotically towards a nonzero value. The fact that magnetic catalysis is a property of the ground state of the Hamiltonian suggests that we first take the limit $T \to 0$, followed
+by the limit $m \to 0$. Using this strategy, we have first extrapolated to zero temperature at a fixed bare fermion mass. For a given bare mass, we have extrapolated to zero-temperature using two different methods. First, we have taken points at small $T$ which form a plateau and fit them to a constant. This plateau can be seen in Fig. \ref{PBPvsTdivM}, for magnetic flux $\Phi_B=0.125$. We have then included one other point at larger $T$ and extrapolated using a quadratic (except for bare mass $m=0.01$ in Fig. \ref{PBPvsTdivM}, where the third point is too far away from $T=0$). The difference between the two results for $\sigma$ at $T=0$ then allow us to estimate a systematic uncertainty associated with this extrapolation. A similar procedure has been also carried out for the other three magnetic fluxes. We then use these points for our chiral extrapolation, which we performed using a linear fit. This is illustrated in Fig. \ref{PBPzeroTChiral}, where we plot the mass dependence of the $T=0$ extrapolated points.
+
+Proceeding in an analogous manner for three other fluxes, we were able to obtain the behavior of the zero-temperature, chirally extrapolated condensate as a function of the magnetic flux, $\Phi_B$. These results are shown in Fig.~\ref{PBPzeroTChiralvseB}.
+The relationship between the condensate and the magnetic flux is fit to the form $\sigma_{T=m=0} = eBc_1 + (eB)^2c_2$. The errors on the points are those calculated in the chiral extrapolation. These results overwhelmingly support the scenario of magnetic catalysis in the graphene EFT.
+
+Long before the realization of graphene in the lab, F.D.M. Haldane considered a graphene-like lattice model which he used to study the quantum Hall effect (QHE) \cite{Haldane}.
+In this model, he considered a magnetic field which was periodic in space such that the flux through the unit cell was zero. This is in stark contrast to normal realizations of the QHE 
+where the electrons are subjected to a uniform magnetic field, which implies the formation of Landau levels. In Haldane's model, the electrons retain their Bloch character, and thus he referred to 
+this as the QHE without Landau levels. As in graphene, the points in his model where the valence and conductance bands touch inside the Brillouin zone are symmetry-protected (inversion and time-reversal).
+If time-reversal invariance is broken, he found that a $\nu = \pm 1$ integer QHE state is formed, where $\nu$ is referred to as the filling factor. 
+
+Recent studies of symmetry breaking in graphene have brought up the possbility of the formation of the time-reversal odd condensate, $\Delta_H$ \cite{GonzalezHaldaneMass, MiranskyGraphene2,MiranskyGraphene3}. This condensate give rise to the so-called Haldane mass in the low-energy theory.
+The reason for the interest in these symmetry breaking scenarios is as follows.
+The appearance of anomalous QHE states in graphene at previously unknown filling factors, $\nu = 0, \pm 1, \pm 2$, is due to the splitting of the degeneracy of the lowest Landau level (LLL) at large external magnetic fields ($B \sim 45 \text{T}$).
+Although there are several scenarios to explain these states, (see \cite{Yang} for a nice discussion), the authors of \cite{MiranskyGraphene2, MiranskyGraphene3} advocate the magnetic catalysis scenario whereby a Dirac mass as well as possibly a Haldane mass are generated due to the strong, weakly-screened
+electron-electron interactions in graphene.
+
+In the Schwinger-Dyson approach employed in \cite{MiranskyGraphene2}, where a simplified contact interaction was used, the ground state of the EFT in the presence of an external magnetic field was found to be described by
+\beq
+\label{Singlet}
+\tilde{\Delta}_{\uparrow} = \tilde{\Delta}_{\downarrow} = 0, ~\Delta_{H,\uparrow} = - \Delta_{H,\downarrow} = M,
+\eeq
+where $\tilde{\Delta}_{\sigma}$ corresponds to the Dirac mass for a given spin projection, and $\Delta_{H,\sigma}$ corresponds to the Haldane mass for a given spin projection. In this expression, $M$ is the dynamically generated mass scale which is a function of the cutoff $\Lambda$ and the dimensionful coupling constant characterizing the contact interaction, $G$. We note that the spin index in (\ref{Singlet}) directly corresponds to the taste index for staggeered fermions. In \cite{MiranskyGraphene3}, a more realistic long-range Coulomb interaction in the instantaneous approximation was used. The results were similar to that of \cite{MiranskyGraphene2}, with the qualitative difference that the gap parameters depend on the Landau level index.
+
+In our simulations, we have used operators which are all taste singlets and thus have not distinguished the various "spin" components. Taste nonsinglet operators have zero expectation value as the vacuum does not have a preferred direction in taste space. Thus, one is unable to project out the various spin components of the order parameters which makes a comparison with the continuum results much more difficult. In the continuum, we have seen that the Zeeman term in (\ref{ZeemanHamiltonian}) explicitly breaks the $U(4)$ symmetry to $U(2)_{\uparrow} \times U(2)_{\downarrow}$. Noting that in (\ref{Singlet}) the Haldane masses are opposite in sign, we see that the spin splitting induced by (\ref{ZeemanHamiltonian}) is dynamically enhanced. In the absence of a Zeeman term, the solution described by (\ref{Singlet}) signals the spontaneous breaking of the $U(4)$ symmetry and a nonzero value for $\vev{ \Bpsi \left( \tilde{\gamma}_{4,5} \otimes \sigma_3 \right) \Psi}$. However, our lattice action only contains a remnant $U(1) \times U(1)_{\epsilon}$ symmetry and does not distinguish spin projection. Thus, unlike the chiral condensate, the appearance of a nonzero value for the time-reversal odd condensate, $\vev{\Bpsi \left( \tilde{\gamma}_{4,5} \otimes \bm 1 \right) \Psi}$, does not signal spontaneous symmetry breaking. However, a zero lattice result for $\vev{\Bpsi \left( \tilde{\gamma}_{4,5} \otimes \bm 1 \right) \Psi}$ does not necessarily imply a zero continuum result due to the difficulty of distinguishing the spin degree of freedom with our stagggered lattice formulation of the graphene EFT. 
+
+The Zeeman splitting also has a significant effect on the selection of the ground state. According to \cite{MiranskyGraphene2,MiranskyGraphene3}, in the absence of the Zeeman term, the solution (\ref{Singlet}) is degenerate with another solution which is characterized by a nonzero Dirac mass
+\beq
+\label{Triplet}
+\tilde{\Delta}_{\uparrow} = \tilde{\Delta}_{\downarrow} = M, ~\Delta_{H,\uparrow} = \Delta_{H,\downarrow}=0.
+\eeq
+When interpreting our results for the Haldane mass, one must keep in mind that taste-nonsinglet operators have zero expectation values. In particular, this means that $\vev{ \Bpsi \left( \tilde{\gamma}_{4,5} \otimes \sigma_3 \right) \Psi}$ is exactly zero due to taste symmetry. To address spontaneous symmetry breaking due to the appearance of a nonzero value for $\vev{ \Bpsi \left( \tilde{\gamma}_{4,5} \otimes \sigma_3 \right) \Psi}$, we would need to include a term in the action that breaks this symmetry explicitly and, in the usual way, take the infinite volume limit followed by removing the symmetry breaking term. This is what we have done for the Dirac mass but we have not done this for the taste-nonsinglet Haldane mass.
 
 \begin{figure}
  \includegraphics[height=8cm,width=8cm]{haldane_real_vs_m_Nt480_PHIB0125.pdf} \hspace{-1cm}
@@ -629,11 +584,30 @@ external magnetic field \cite{SmilgaShushpanov}. We also have determined that th
 \label{ReHaldanevsm} 
 \end{figure}
 
-%\begin{figure}
-% \includegraphics[height=8cm,width=8cm]{haldane_imag_vs_m_Nt480_PHIB0125.pdf} \hspace{-1cm}
-%\caption{The imaginary part of the Haldane mass in units of magnetic flux as a function of the fermion bare mass $m$ for $8^2\times10\times480,\beta=0.80, \Phi_B=0.125$.}
-%\label{ImHaldanevsm} 
-%\end{figure}
+In light of the above discussion, we have studied the taste-singlet Haldane condensate. We have measured the time-reversal odd condesnsate on the lattice ensembles with the largest flux $\Phi_B=0.125$ for $a_{\tau} T = [0.002, 0.016]$. These values of $a_{\tau}T$ are smaller than the dynamical fermion mass, as one can see from Fig. \ref{MFvsmNonzeroB}. Thus, one expects that if the ground state did support a Haldane condensate, these temperatures would be sufficiently small and the magnetic flux sufficiently large to observe this. Instead, we found that our data does not support a nonzero Haldane condensate. In Fig. \ref{ReHaldanevsm},  we have plotted the real part of the Haldane mass, computed with $1000$ stochastic sources on $100$ gauge configurations, versus $m$ for $N_{\tau}=480,~\Phi_B=0.125$. What we see is that our results are consistent with zero. We have also checked, at the same value of the flux and bare mass, that as the temperature increases, the Haldane mass remains consistent with zero as to be expected from the solutions of the gap equations. 
+
+%However, when interpreting our results for the Haldane mass, one must keep in mind that taste-nonsinglet operators have zero expectation values. In particular, this means that $\vev{ \Bpsi \left( \tilde{\gamma}_{4,5} \otimes \sigma_3 \right) \Psi}$ is exactly zero due to taste symmetry. To address spontaneous symmetry breaking due to the appearance of a nonzero value for $\vev{ \Bpsi \left( \tilde{\gamma}_{4,5} \otimes \sigma_3 \right) \Psi}$, we would need to include a term in the action that breaks this symmetry explicitly and, in the usual way, take the infinite volume limit followed by removing the symmetry breaking term. This is what we have done for the Dirac mass but we have not done this for the taste-nonsinglet Haldane mass.
+
+%Within our lattice EFT, there is no continuum $SU(2)_{\sigma}$ symmetry under which the Haldane mass is invariant (see Appendix \ref{sec:FermionAppendix}). Thus, discretization effects are expected to be present in the lattice calculation of the corresponding Haldane condensate. In order to investigate the continuum limit, where one would restore the $SU(2)_{\sigma}$, we first fixed the ratio $eB/m^2$. This sets the mass in units of the magnetic length, $l_B$. We then extrapolated the Haldane mass to $T=0$. Finally, we investigated the behavior of the lattice spacing independent quantity $\Delta_H/eB$, in the limit of $\hat{m} = m a_t \to 0$. 
+%In Fig.~\ref{HaldanediveBvsm}, the continuum limit is shown. From the plot, one can see that a UV divergence $\sim 1/a$ is present. This makes it difficult to extract any continuum physics from this quantity. One would need a way of renormalizing this quantity in order to obtain information in the limit $a \to 0$.
+
+The quasiparticle propagator is interesting in its own right as one can obtain information regarding the dynamically generated mass induced by the spontaneous breaking of chiral symmetry. 
+Although the propagator itself is gauge variant, the pole of the propagator in Coulomb gauge is a familiar quantity which appears in relativistic field theories. In order to extract information from the quasiparticle propragator, we apply an appropriate transformation on the temporal links. Our gauge fixing procedure involved setting the average value of the potential on a given time slice to zero, 
+\beq
+\sum_{x,y} \theta(x,y,\tau) = 0.
+\eeq
+This allows us to calculate the propagator of charged propagators as the gauge condition corresponds to a charged propagator moving in the background of a spatially uniform background charge of opposite sign.
+To determine the dynamical fermion mass, we fit the propagator in (\ref{QuasiparticlePropagatorTemporal}) to the following form
+\beq
+\label{FermFitForm} \nn
+&& G_F(\tau, \vec{p} = {\bf 0}) = \frac{A}{2}\left(1+(-)^{\tau}\right) \left( e^{-m_F\tau} + e^{-m_F(N_{\tau} - \tau)} \right) \\ 
+&& \quad \quad  \quad +~ \frac{A}{2}\left(1-(-)^{\tau}\right) \left( e^{-m_F\tau} - e^{-m_F(N_{\tau} - \tau)} \right),
+\eeq
+where $m_F$ is the dynamical fermion mass. Due to the appearance of a nonzero value for the condensate $\vev{\Bpsi \Psi}$, one expects that $m_F$ remains finite in the limit that the bare mass vanishes. 
+
+At zero magnetic field, we expect the dynamical fermion mass to vanish in the chiral limit. In Fig.~\ref{MFvsmZeroB}, one can see our nonperturbative determination of the dynamical fermion mass. However, it appears that making an extrapolation to zero bare mass, based on the nonperturbative results, leaves us with a nonzero value for the dynamical fermion mass. According to the arguments and results previously discussed, one expects the dynamical mass to vanish in this limit as we are firmly in the semimetal phase in the absence of the external magnetic field. To investigate this result further, we calculated the pole position of the lattice fermion propagator at $O(e^2)$ using lattice perturbation theory. In this calculation we employed a one-link staggered action with tadpole improvement determined at $O(e^2)$. As one can see in Fig.~\ref{MFvsmZeroB}, the perturbative result explains the large renormalization of the mass as compared to the free theory. Furthermore, referring to Fig.~\ref{MFvsmZeroBZoom}, one can see that as one approaches the origin, the perturbative result shows large curvature and eventually vanishes at the origin. Using this result as a heuristic explanation of our results at zero magnetic field, one might expect the same to happen in the chiral limit for a nonperturbative calculation.
+
+For the case of nonzero magnetic field, we have obtained results that are encouraging regarding the determination of the dynamical fermion mass. In Fig.~\ref{MFvsmNonzeroB}, one sees that at a given bare mass, the dynamical mass increases with the magnetic flux. Furthermore, the plot suggests that all four ensembles extrapolate to nonzero values in the chiral limit. However, in light of the behavior observed in the zero field case, one might want to be cautious in predicting the behavior at bare masses smaller than those plotted. 
 
 \begin{figure}
   \includegraphics[height=8cm,width=8cm]{ferm_pole_vs_m.pdf} \hspace{-1cm}
@@ -643,15 +617,43 @@ external magnetic field \cite{SmilgaShushpanov}. We also have determined that th
 
 \begin{figure}
   \includegraphics[height=8cm,width=8cm]{ferm_pole_vs_m_zoom.pdf} \hspace{-1cm}
-\caption{The pole of the fermion propagator at $O(e^2)$ along with the free fermion pole as one approaches the chiral limit, $m \to 0$. One can see that the pole at $O(e^2)$ vanishes in this limit, as expected. However, the curvature that causes this behavior can only be observed as one moves to extremely small fermion bare masses.}
+\caption{The pole of the fermion propagator at $O(e^2)$ along with the free fermion pole as one approaches the chiral limit, $m \to 0$. One can see that the pole at $O(e^2)$ vanishes in this limit, as expected. However, the curvature that causes this behavior can be observed only as one moves to extremely small fermion bare masses.}
 \label{MFvsmZeroBZoom}
 \end{figure}
 
 \begin{figure}
   \includegraphics[height=8cm,width=8cm]{ferm_mt_vs_m_graphene_paper.pdf} \hspace{-1cm}
-\caption{The fermion dynamical mass as a function of the bare fermion mass for all four magnetic fluxes.}
+\caption{The fermion dynamical mass as a function of the bare fermion mass for all four nonzero magnetic fluxes and zero xflux.}
 \label{MFvsmNonzeroB}
 \end{figure}
+
+
+%In Fig.~\ref{MFvsmNonzeroB}, one can see
+%the dynamical mass approaches a nonzero value as the bare mass goes to zero for the ensembles with nonzero magnetic flux. This result confirms our hypothesis regarding the generation of a dynamical mass for the fermion. We were able to see an increase in the dynamical mass as a function of the magnetic field at a given bare mass as well as in the chiral limit. Furthermore, in the absence of an external magnetic field, $m_F$ appears to vanish with the bare mass as one would expect in the semimetal phase.
+
+The appearance of a pseudoscalar Nambu-Goldstone boson is expected as a consequence of the spontaneous chiral symmetry breaking. To determine this state's mass we fit the correlator in (\ref{PionTemporal}) to the following form
+\beq
+\label{PS2Point} \nn
+G^{(\tau)}_{PS}(\tau; \vec{p} = {\bf 0}) &=& A\left( e^{-m_{\pi}\tau} + e^{-m_{\pi}(N_{\tau} - \tau)} \right) \\ &+&  A'\left( e^{-m'_{\pi}\tau} + e^{-m'_{\pi}(N_{\tau} - \tau)} \right),
+\eeq
+where we have included two sets of exponentials characterizing the ground state and the first excited state respectively.
+In Fig.~\ref{MPSvsm}, we see the ground state mass in the pseudoscalar channel, $m_{\pi}$, plotted as a function of the fermion mass for the various magnetic fluxes.  
+We notice that the pseudoscalar mass shows little variation in flux. This is in contrast with QCD, where electrically charged  pions couple to the 
+external magnetic field \cite{SmilgaShushpanov}. We also have determined that the pseudoscalar mode is indeed a bound state. This can be seen by referring to Fig.~\ref{MFvsmNonzeroB} where the dynamical fermion mass is plotted as a function of the bare mass. The fermion-antifermion scattering state has energy $2m_F$, which is higher than $m_{\pi}$ for all simulated bare masses.
+
+
+%\begin{figure}
+% \includegraphics[height=8cm,width=8cm]{haldanediveB_vs_m_zeroT_graphene_paper.pdf} \hspace{-1cm}
+%\caption{The Haldane mass in units of magnetic flux, $\Delta_H/eB$, as a function of the lattice mass $\hat{m} = m a_t$. The behavior at small $\hat{m}$ indicates that
+%this quantity is UV divergent.}
+%\label{HaldanediveBvsm} 
+%\end{figure}
+
+%\begin{figure}
+% \includegraphics[height=8cm,width=8cm]{haldane_imag_vs_m_Nt480_PHIB0125.pdf} \hspace{-1cm}
+%\caption{The imaginary part of the Haldane mass in units of magnetic flux as a function of the fermion bare mass $m$ for $8^2\times10\times480,\beta=0.80, \Phi_B=0.125$.}
+%\label{ImHaldanevsm} 
+%\end{figure}
 
 \begin{figure}
   \includegraphics[height=8cm,width=8cm]{ps_mt_vs_m_2exp_graphene_paper.pdf} \hspace{-1cm}
@@ -661,9 +663,9 @@ external magnetic field \cite{SmilgaShushpanov}. We also have determined that th
 
 \section{\label{sec:Conclusion}Conclusion}
 
-Through a thorough, fully non-perturbative study of the graphene EFT, we have shown the existence of spontaneous symmetry breaking due to an external magnetic field.
-We have characterized the ground state of the system by performing a zero temperature extrapolation of our observables. Furthermore, we have commented on the difficulties in studying 
-the Haldane mass with staggered fermions. The evidence for a dynamically generated Dirac mass for the quasiparticle as well as the nonzero value for the chirally extrapolated, $T=0$ chiral condensate shows
+Through a thorough, fully nonperturbative study of the graphene EFT, we have shown the existence of spontaneous symmetry breaking due to an external magnetic field.
+We have characterized the ground state of the system by performing a zero-temperature extrapolation of our observables. Furthermore, we have commented on the difficulties in studying 
+the Haldane mass with staggered fermions. The evidence for a dynamically generated Dirac mass for the quasiparticle, the NG boson, and the nonzero value for the chirally extrapolated, $T=0$ chiral condensate all show
 that indeed, magnetic catalysis is occuring in the graphene EFT. Further studies of magnetic catalysis in the graphene EFT could address other questions, such as how the phase diagram presented in \cite{Polikarpov} changes as one varies the temperature.
 This would necessarily involve a scan in $\beta$ which differs from our current study which was performed at fixed $\beta=0.80$. Another direction one could pursue would be to 
 study the valley-sublattice and spin densities which are order parameters for quantum Hall ferromagnetism (QHF). In a study of the Schwinger-Dyson gap equations, it was found that 
@@ -767,7 +769,7 @@ as well as their representation in terms of staggered lattice fermions.
 We first introduce the Dirac mass term
 \beq
 \label{DiracMass}
-\tilde{\Delta}_{\sigma} \Bpsi P_{\sigma} \Psi = \tilde{\Delta}_{\sigma} \Psi^{\dagger} \gamma_0 P_{\sigma} \Psi,
+\tilde{\Delta}_{\sigma} \Bpsi P_{\sigma} \Psi = \tilde{\Delta}_{\sigma} \Psi^{\dagger} \left( \gamma_0  \otimes P_{\sigma} \right) \Psi,
 \eeq
 which is a triplet with respect to spin and breaks $SU(2)_{\sigma}$ down to $U(1)_{\sigma}$ with the generator $\tilde{\gamma}_{4,5} \otimes P_{\sigma}$. The corresponding order parameter for this term is $\vev{\Bpsi P_{\sigma} \Psi}$, and, written in terms
 of Bloch components it can be expressed as
@@ -782,9 +784,9 @@ One can interpret a nonzero value for this order parameter as an imbalance of ch
 The Haldane mass term is given by
 \beq
 \label{HaldaneMass}
-\Delta_{\sigma} \Bpsi \tilde{\gamma}_{4,5} P_{\sigma} \Psi = \Delta_{\sigma} \Psi^{\dagger} \gamma_0 \tilde{\gamma}_{4,5} P_{\sigma} \Psi,
+\Delta_{\sigma} \Bpsi \left( \tilde{\gamma}_{4,5} \otimes P_{\sigma} \right) \Psi = \Delta_{\sigma} \Psi^{\dagger} \left( \gamma_0 \tilde{\gamma}_{4,5} \otimes P_{\sigma} \right) \Psi,
 \eeq
-which is a singlet with respect to spin but is odd under time-reversal. The order parameter for the Haldane mass is $\vev{\Bpsi \tilde{\gamma}_{4,5} P_{\sigma} \Psi}$, and its expression 
+which is a singlet with respect to spin but is odd under time-reversal. The order parameter for the Haldane mass is $\vev{\Bpsi \left( \tilde{\gamma}_{4,5} \otimes P_{\sigma} \right) \Psi}$, and its expression 
 in terms of Bloch components is given by
 \beq
 \label{HaldaneMassComponents}
@@ -878,8 +880,8 @@ One can then show that the continuum action in Minkowski space is left invariant
 \label{TRA_0}
 A_0(\vec{x}, t) &\to & -A_0(\vec{x}, -t),
 \eeq
-where, for a fermion bilinear of the form $\Bpsi A \Psi$, due to the fact that time-reversal, $\mathcal{T}$, is an anti-unitary operator, $\mathcal{T} A \mathcal{T}^{-1} = A^*$.
-In Euclidean space, the time-reversal transformation takes a different form. In this case, time is not distinguished from the spatial coordinates by a relative minus sign in the metric. For example, in $(3+1)$ dimensions, time-reversal can be defined by the product of three successive reflection operations which reverse the sign of all the coordinates except one and does not involve complex conjugation. In $(2+1)$ dimensions, the time-reversal transformation on staggered fermions in the spin-taste basis is as follows
+where, for a fermion bilinear of the form $\Bpsi A \Psi$, due to the fact that time-reversal, $\mathcal{T}$, is an anti-unitary operator, one has $\mathcal{T} A \mathcal{T}^{-1} = A^*$.
+In Euclidean space, the time-reversal transformation takes a different form. In this case, time is not distinguished from the spatial coordinates by a relative minus sign in the metric. In $(2+1)$ dimensions, the time-reversal transformation on staggered fermions in the spin-taste basis is as follows
 \beq
 \nn
 \Psi(\vec{y}, y_0) &\to& -i\tilde{\gamma}_5 \ \gamma_1 \gamma_2 \Psi(\vec{y}, -y_0), \\ \nn
