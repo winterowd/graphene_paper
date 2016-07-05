@@ -74,7 +74,7 @@
 \affiliation{Department of Physics and Astronomy \\ University of Utah, Salt Lake City, Utah, USA}
 \author{Savvas Zafeiropoulos}
 \affiliation{Institut f{\"u}r Theoretische Physik - Johann Wolfgang Goethe-Universit{\"a}t \\ Max-von-Laue-Str. 1, 60438 Frankfurt am Main, Germany}
-\title{Lattice Study of Magnetic Catalysis in Graphene}
+\title{Lattice Field Theory Study of Magnetic Catalysis in Graphene}
 %\input author_list.tex       % D0 authors (remove the first 3 lines
                              % of this file prior to submission, they
                              % contain a time stamp for the authorlist)
@@ -86,7 +86,7 @@
 We discuss the simulation of the low-energy effective field theory (EFT) for graphene in the presence of an external magnetic field. Our fully non-perturbative calculation 
 uses methods of lattice gauge theory to study the theory using a hybrid Monte Carlo approach. We investigate the phenomenon of magnetic catalysis in the context of graphene by studying
 the chiral condensate which is the order parameter characterizing the spontaneous breaking of chiral symmetry. In the EFT, the symmetry breaking pattern is given by $U(4) \to U(2) \times U(2)$. We also comment on the difficulty, in this lattice formalism, of studying the time-reversal-odd condensate characterizing the ground state in the presence of a magnetic field.
-Finally, we study the mass spectrum of the theory, in particular the Nambu-Goldstone (NG) mode as well as the Dirac quasiparticle, which is predicted to obtain a dynamical mass. 
+Finally, we study the mass spectrpoleiceum of the theory, in particular the Nambu-Goldstone (NG) mode as well as the Dirac quasiparticle, which is predicted to obtain a dynamical mass. 
 \end{abstract}
 
 \pacs{11.15.Ha, 71.10.Pm, 73.22.Pr, 73.43.Cd}
@@ -128,11 +128,11 @@ The interaction is introduced via a scalar potential which lives in $(3+1)$ dime
 \nn
  S_E &=& \int dt d^2 x \sum_{\sigma=1,2} \Bpsi_{\sigma} \Dslash[A_0] \Psi_{\sigma} \\ &+& \frac{(\epsilon + 1)}{4e^2} \int dt d^3 x ~ (\partial_i A_0)^2,
 \eeq
-where $\epsilon$ is the dielectric constant of the substrate on which the graphene monolayer resides, and the Dirac operator is given by 
+where $\epsilon$ is the dielectric constant of the substrate on which the graphene monolayer resides. The Dirac operator is given by 
 \beq
 \Dslash[A_0] = \gamma_0 \left( \partial_0 + i A_0 \right) + v_F \sum_{i=1,2} \gamma_i \partial_i.
 \eeq
-The four-component Dirac spinors are organized as follows
+The basis used for the four-component Dirac spinors is as follows
 \beq
 \label{DiracSpinorBasis}
 \Psi^{\top}_{\sigma} = \left( \psi_{K_+ A \sigma}, \psi_{K_+ B \sigma}, \psi_{K_- B \sigma}, \psi_{K_- A \sigma}\right),
@@ -278,7 +278,7 @@ Furthermore, the toroidal geometry demands that the total flux through the latti
 \eeq
 where $L_s = N_s a_s$, is the lattice extent in the spatial direction and $N_B$ is an integer in the range 
 \beq
-0 \leq N_B \leq \frac{N^2_s}{4},
+0 \leq N_B \leq \frac{N^2_s}{4}.
 \eeq
 We note that the spatial links, which describe the external magnetic field, are static and are not updated during the sampling of the path integral.
 \section{\label{sec:Catalysis}Magnetic Catalysis}
@@ -306,8 +306,8 @@ is completely dominated by the lowest Landau level. Furthermore, the levels at $
 An interesting consequence of an external field on Dirac fermions in $(2+1)$ dimensions is spontaneous symmetry breaking characterized by the appearance of a nonzero value for the condensate, $\vev{\Bpsi \Psi}$.
 One can calculate the free fermion propagator in the presence of an external field \cite{Schwinger}, and use the result to arrive at \cite{DittrichGies, DittrichReuter}
 \beq
-\label{PBP2+1}
-\vev{\Bpsi \Psi} = -\frac{1}{2\pi}\left(m \sqrt{2eB} \zeta \left(\frac{1}{2}, 1+\frac{m^2}{2eB}\right) + eB - 2m^2 \right),
+\label{PBP2+1} \nn
+\vev{\Bpsi \Psi} &=& -\frac{1}{2\pi}\biggl(m \sqrt{2eB} \zeta \left(\frac{1}{2}, 1+\frac{m^2}{2eB}\right) \\ &+& eB - 2m^2 \biggr),
 \eeq
 where $\zeta(s,a)$ is the Hurwitz zeta function. Taking the limit $m \to 0$ of (\ref{PBP2+1}), one obtains
 \beq
@@ -386,9 +386,9 @@ The primary observable of this study is the chiral condensate. In the massless l
 In the continuum graphene EFT, the chiral condensate is defined as follows
 \beq
 \label{ChiralCondensateContinuum} \nn
-\vev{\Bpsi \Psi} &=& \frac{1}{V}\frac{\partial \log Z}{\partial m}  \\ &=&  \frac{1}{V} \frac{1}{Z} \int \mathcal{D}A_0  \tr \left(\Dslash + m \right)^{-1}e^{-S^{eff}_E[A_0]},
+\vev{\Bpsi \Psi} &=& \frac{1}{V}\frac{\partial \log Z}{\partial m}  \\ &=&  \frac{1}{V} \frac{1}{Z} \int \mathcal{D}A_0  \tr \left(\Dslash + m \right)^{-1}e^{-S^{\text{eff}}_E[A_0]},
 \eeq
-where $S^{eff}_E\left[A_0\right] = S_G\left[A_0\right] - \tr \log\left(\Dslash + m\right)$, and the partition function is given by
+where $S^{\text{eff}}_E\left[A_0\right] = S_G\left[A_0\right] - \tr \log\left(\Dslash + m\right)$, and the partition function is given by
 \beq
 \label{PartitionFunction}
 Z = \int \mathcal{D}A_0 \mathcal{D} \Bpsi \mathcal{D} \Psi e^{-S_E\left[A_0, \Bpsi, \Psi \right]}.
@@ -400,7 +400,7 @@ The fermions have been integrated out of the partition function using the identi
 For staggered fermions in the one-component basis, the scalar density takes the form $\chib \chi$, and thus the chiral condensate becomes
 \beq
 \label{ChiralCondensateLattice}
-\vev{ \chib \chi } = \frac{1}{V} \frac{1}{Z} \int \mathcal{D}U_0  \tr \left(\Dslash_{st} + m \right)^{-1}e^{-S^{eff}_E[U_0]},
+\vev{ \chib \chi } = \frac{1}{V} \frac{1}{Z} \int \mathcal{D}U_0  \tr \left(\Dslash_{st} + m \right)^{-1}e^{-S^{\text{eff}}_E[U_0]},
 \eeq
 where in our lattice partition function we have replaced the integration over the gauge potential $A_0$ with an integration over the link variable, $U_0$. 
 In order to determine if magnetic catalysis is present in the graphene EFT, we will be interested in taking the zero-temperature as well as massless limit for the chiral condensate.
@@ -409,12 +409,12 @@ Another condensate which characterizes magnetic catalysis in the graphene EFT is
 \beq
 \label{HaldaneCondensateContinuum}
 \nn
-\Delta_H &\equiv& \vev{\Bpsi \left( \tilde{\gamma}_{4,5} \otimes \bm 1 \right) \Psi} \\  \nn &=& \frac{1}{V} \frac{1}{Z} \int \mathcal{D}A_0  \times \\  && \int d^3x \Bpsi(x) \left( \tilde{\gamma}_{4,5} \otimes \bm 1 \right) \Psi(x)  e^{-S^{eff}_E[A_0]}.
+\Delta_H &\equiv& \vev{\Bpsi \left( \tilde{\gamma}_{4,5} \otimes \bm 1 \right) \Psi} \\  \nn &=& \frac{1}{V} \frac{1}{Z} \int \mathcal{D}A_0  \times \\  && \int d^3x \Bpsi(x) \left( \tilde{\gamma}_{4,5} \otimes \bm 1 \right) \Psi(x)  e^{-S^{\text{eff}}_E[A_0]}.
 \eeq
 In the one-component basis, this takes the form
 \beq
 \label{HaldaneCondensateLattice}
-\Delta_H = \frac{1}{V} \frac{1}{Z} \int \mathcal{D}U_0 \sum_{y;\eta_{\mu} \neq \eta'_{\mu}} \chib_{\eta}(y) \chi_{\eta'}(y)e^{-S^{eff}_E[U_0]},
+\Delta_H = \frac{1}{V} \frac{1}{Z} \int \mathcal{D}U_0 \sum_{y;\eta_{\mu} \neq \eta'_{\mu}} \chib_{\eta}(y) \chi_{\eta'}(y)e^{-S^{\text{eff}}_E[U_0]},
 \eeq
 where the details of the transformation connecting (\ref{HaldaneCondensateContinuum}) and (\ref{HaldaneCondensateLattice}) are given in Appendix \ref{sec:SpinTasteAppendix}.
 As opposed to (\ref{ChiralCondensateLattice}), the fields in (\ref{HaldaneCondensateLattice}) are located at diagonally opposite corners of the $2^3$ cube.
@@ -617,6 +617,8 @@ To determine the dynamical fermion mass, we fit the propagator in (\ref{Quasipar
 \eeq
 where $m_F$ is the dynamical fermion mass. Due to the appearance of a nonzero value for the condensate $\vev{\Bpsi \Psi}$, one expects that $m_F$ remains finite in the limit that the bare mass vanishes. 
 
+The fits that we performed for the quasiparticle propagator necessitated proper care in order to accurately determine the ground state mass. To do this one must select a fit range, $[ \tau_{\text{min}}, \tau_{\text{max}}]$, where the correlator is free of excited-state contributions. We have found that the selection of $\tau_{\text{min}}$ primarily depends on the value of the external magnetic flux, $\Phi_B$. This is due to the fact that the excited state with the same oscillating behavior as the ground state consists of the fermion promoted to the next highest LL. One can also have an excited state consisting of a fermion along with a pseudoscalar particle having nonzero orbital angular momentum. Our results tell us that this contribution dies out quite quickly in Euclidean time, $\tau$.
+
 At zero magnetic field, we expect the dynamical fermion mass to vanish in the chiral limit. In Fig.~\ref{MFvsmZeroB}, one can see our nonperturbative determination of the dynamical fermion mass. However, it appears that making an extrapolation to zero bare mass, based on the nonperturbative results, leaves us with a nonzero value for the dynamical fermion mass. According to the arguments and results previously discussed, one expects the dynamical mass to vanish in this limit as we are firmly in the semimetal phase in the absence of the external magnetic field. To investigate this result further, we calculated the pole position of the lattice fermion propagator at $O(e^2)$ using lattice perturbation theory. In this calculation we employed a one-link staggered action with tadpole improvement determined at $O(e^2)$. As one can see in Fig.~\ref{MFvsmZeroB}, the perturbative result explains the large renormalization of the mass as compared to the free theory. Furthermore, referring to Fig.~\ref{MFvsmZeroBZoom}, one can see that as one approaches the origin, the perturbative result shows large curvature and eventually vanishes at the origin. Using this result as a heuristic explanation of our results at zero magnetic field, one might expect the same to happen in the chiral limit for a nonperturbative calculation.
 
 For the case of nonzero magnetic field, we have obtained results that are encouraging regarding the determination of the dynamical fermion mass. In Fig.~\ref{MFvsmNonzeroB}, one sees that at a given bare mass, the dynamical mass increases with the magnetic flux. Furthermore, the plot suggests that all four ensembles extrapolate to nonzero values in the chiral limit. However, in light of the behavior observed in the zero field case, one might want to be cautious in predicting the behavior at bare masses smaller than those plotted. 
@@ -641,10 +643,19 @@ For the case of nonzero magnetic field, we have obtained results that are encour
 \vspace{-1cm}
   \includegraphics[height=9cm,width=9cm]{ferm_mt_vs_m_graphene_paper.pdf} 
   \vspace{-1.25cm}
-\caption{The fermion dynamical mass as a function of the bare fermion mass for all four nonzero magnetic fluxes and zero xflux.}
+\caption{The fermion dynamical mass as a function of the bare fermion mass for all four nonzero magnetic fluxes and zero flux.}
 \label{MFvsmNonzeroB}
 \end{figure}
 
+As previously mentioned, perturbative approaches to magnetic catalysis predict that for $(2+1)$-dimensional field theories, the dynamical fermion mass scales lineary with $\sqrt{eB}$ \cite{Shovkovy}. In order to verify this statement, one first needs to extrapolate the dynamical mass to the chiral limit. Our results, depicted in Fig.~\ref{fig:MFvsSqrtB}, show that the chirally extrapolated dynamical mass behaves as expected. This gives further confirmation of magnetic catalysis in the graphene EFT.
+
+\begin{figure}
+\vspace{-1.2cm}
+  \includegraphics[height=8.5cm,width=8.5cm]{ferm_mt_vs_sqrtPHI_linfit_graphene_paper.pdf} 
+  \vspace{-1.25cm}
+\caption{The zero-temperature, chirally extrapolated dynamical mass a function $\sqrt{eB}$. The linear fit depicted gives an intercept which is consistent with zero. This as the dynamical mass  is predicted to vanish in the chiral limit in the absence of an external magnetic field.}
+\label{fig:MFvsSqrtB}
+\end{figure}
 
 %In Fig.~\ref{MFvsmNonzeroB}, one can see
 %the dynamical mass approaches a nonzero value as the bare mass goes to zero for the ensembles with nonzero magnetic flux. This result confirms our hypothesis regarding the generation of a dynamical mass for the fermion. We were able to see an increase in the dynamical mass as a function of the magnetic field at a given bare mass as well as in the chiral limit. Furthermore, in the absence of an external magnetic field, $m_F$ appears to vanish with the bare mass as one would expect in the semimetal phase.
