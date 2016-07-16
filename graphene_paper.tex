@@ -98,7 +98,7 @@ The discovery of graphene counts as one of the most important developments in re
 in part due to its novel many-body and electronic properties \cite{CastroNeto}. In particular, there have been many studies of graphene
 in the presence of an external magnetic field \cite{Goerbig}.
 
-Graphene, a two-dimensional hexagonal lattice of carbon atoms, has an unusual band structure consisting of a conduction and a valence band that come together at two inequivalent corners 
+Graphene, a two-dimensional hexagonal lattice of Carbon atoms, has an unusual band structure consisting of a conduction and a valence band that come together at two inequivalent corners 
 of the Brillouin zone. At these valleys, or so-called ``Dirac points'', the two bands take the shape of cones. The consequence of this band structure is that the low energy excitations are described by massless Dirac fermions, which have linear dispersion.
 These Dirac fermions have a Fermi velocity that satisfies $v_F/c \approx 1/300$, and thus one does not have Lorentz invariance. Furthermore, this small Fermi velocity renders the interaction between the Dirac quasiparticles 
 to be essentially Coulombic. 
@@ -119,7 +119,7 @@ In section \ref{sec:Catalysis} we discuss the physical mechanism behind magnetic
 Finally, in Section \ref{sec:Conclusion}, we conclude and discuss the interpretation of these results. Some preliminary results of this article first appeared in Ref.~\cite{DPF2015} and Ref.~\cite{GrapheneLetter}.
 \section{\label{sec:GrapheneEFT}Graphene EFT}
 \subsection{\label{sec:ContEFT}Continuum}
-The continuum EFT, describing the low energy properties of monolayer graphene, contains two species of four-component Dirac spinors in $(2+1)$ dimensions interacting via a Coulomb interaction \cite{DrutSon}.
+The continuum EFT, describing the low-energy properties of monolayer graphene, contains two species of four-component Dirac spinors in $(2+1)$ dimensions interacting via a Coulomb interaction \cite{DrutSon}.
 The counting of the fermionic degrees of freedom is as follows: $2$ sublattices $\times~2$ Dirac points $\times~2$ spin projections of the electrons. The sublattice degree of freedom appears due to the fact that the hexagonal lattice is bipartite, consisting of two inequivalent triangular sublattices.
 The interaction is introduced via a scalar potential which lives in $(3+1)$ dimensions. The continuum Euclidean action is given by 
 \beq
@@ -136,7 +136,7 @@ The basis used for the four-component Dirac spinors is as follows
 \label{DiracSpinorBasis}
 \Psi^{\top}_{\sigma} = \left( \psi_{K_+ A \sigma}, \psi_{K_+ B \sigma}, \psi_{K_- B \sigma}, \psi_{K_- A \sigma}\right),
 \eeq
-where $K_+, K_-$ refer to the Dirac points, $\sigma$ refers to the electron's spin projection, and $A, B$ refer to the sublattices.
+where $K_+, K_-$ refer to the Dirac points, $\sigma$ refers to the electron's spin, and $A, B$ refer to the sublattices.
 Here we use a reducible representation of the gamma matrices in $(2+1)$ dimensions, constructed from two inequivalent reducible representations, which is given by
 \beq
 \label{Gammas1}
@@ -203,7 +203,7 @@ where $\beta =(\epsilon+1)/2e^2$ and $a_s$ and $a_t$ are the lattice spacings in
 \label{NCGaugeAction2}
 S^{(NC)}_G = \xi \frac{\beta}{2} \sum_n \sum^{3}_{i=1} \left(\hat{A_0}(n) - \hat{A_0}(n+\hat{i})\right)^2,
 \eeq
-where $\xi \equiv a_s/a_t$ is known as the anisotropy parameter, which controls the ratio of the spatial lattice spacing to the temporal lattice spacing.
+where $\xi \equiv a_s/a_t$ is the anisotropy parameter, controlling the ratio of the spatial lattice spacing to the temporal lattice spacing.
 
 The discretization of the fermions has well-known complications encoded in the Nielsen-Ninomiya no-go theorem \cite{NielsenNinomiya}. Namely, one wants to remove unphysical ``doubler'' modes while still preserving some part of the continuum $U(4)$
 symmetry. The method we use in this study employs the staggered-fermion formulation \cite{KogutSusskind}, which eliminates some of the doublers while preserving a remnant of the $U(4)$ symmetry. The staggered-fermion action reads
@@ -284,7 +284,7 @@ We note that the spatial links, which describe the external magnetic field, are 
 \section{\label{sec:Catalysis}Magnetic Catalysis}
 The phenomenon of magnetic catalysis is a fascinating example of dynamical symmetry breaking \cite{Miransky1,Miransky2,Miransky3,Miransky4}. In this scenario, an external magnetic field acts as a catalyst for fermion-antifermion pairing, even if they are
 weakly coupled. First studied in the context of the Nambu-Jona-Lasinio model and quantum electrodynamics in both $(2+1)$ and $(3+1)$ dimensions, magnetic catalysis has been predicted to occur
-also for planar condensed-matter systems, including graphene \cite{Khveshchenko,MiranskyGraphene1,MiranskyGraphene2}. Although various perturbative approaches have been used to study magnetic catalysis in various settings, it is useful to apply lattice methods, as one is able to 
+also for planar condensed-matter systems, including graphene \cite{Khveshchenko,MiranskyGraphene1,MiranskyGraphene2,MiranskyGraphene3}. Although various perturbative approaches have been used to study magnetic catalysis in various settings, it is useful to apply lattice methods, as one is able to 
 take a fully nonperturbative approach.
 
 One can begin to understand the mechanism responsible for magnetic catalysis by first considering free Dirac fermions in the presence of an external magnetic field. This mechanism involves a dimensional 
@@ -382,8 +382,8 @@ under the name of refreshed HMC.
 In our simulations we have taken the trajectory length to be $1$, and varied the step size for a given ensemble in order to obtain a Metropolis acceptance rate of $70 \%$. We have discarded the first $200-250$ trajectories in order to account for the equilibration of each ensemble. For ensembles where we were interested in the mass spectrum of the theory,
 we have generated roughly $800$ independent configurations. For those where we were interested only in the condensates, we generated roughly $100$ independent configurations. To achieve statistical independence, we have saved configurations after every tenth trajectory. An analysis of the autocorrelation function for various observables confirms that these configurations are sufficiently statistically independent.
 \section{\label{sec:Observables}Observables}
-The primary observable of this study is the chiral condensate. In the massless limit, this observable serves as an order parameter for the transition between the semimetal phase, where it is zero, and the insulator phase, where it obtains a nonzero value.
-In the continuum graphene EFT, the chiral condensate is defined as follows
+The primary observable of this study is the chiral condensate. In the massless limit, this observable serves as an order parameter for the transition between the insulator phase, where it is nonzero, and the semimetal phase, where it vanishes.
+In the continuum graphene EFT, the chiral condensate is defined as
 \beq
 \label{ChiralCondensateContinuum} \nn
 \vev{\Bpsi \Psi} &=& \frac{1}{V}\frac{\partial \log Z}{\partial m}  \\ &=&  \frac{1}{V} \frac{1}{Z} \int \mathcal{D}A_0  \tr \left(\Dslash + m \right)^{-1}e^{-S^{\text{eff}}_E[A_0]},
@@ -402,7 +402,7 @@ For staggered fermions in the one-component basis, the scalar density takes the 
 \label{ChiralCondensateLattice}
 \vev{ \chib \chi } = \frac{1}{V} \frac{1}{Z} \int \mathcal{D}A_0  \tr \left(\Dslash_{st} + m \right)^{-1}e^{-S^{\text{eff}}_E[U_0]},
 \eeq
-where in our lattice partition function we have replaced the integration over the gauge potential $A_0$ with an integration over the link variable, $U_0$. 
+where in our lattice partition function we integrate over the noncompact gauge potential $A_0$.
 In order to determine if magnetic catalysis is present in the graphene EFT, we will be interested in taking the zero-temperature as well as massless limit for the chiral condensate.
 
 Another condensate which characterizes magnetic catalysis in the graphene EFT is the Haldane condensate. This condensate is time-reversal odd and takes the form
@@ -451,8 +451,8 @@ where the sum over $\eta $ goes over all eight sites of the cube. Stochastic est
 
 %We have measured the time-reversal odd condesnsate on the lattice ensembles with the largest flux $\Phi_B=0.125$ for $a_{\tau} T = [0.002, 0.016]$. These values of $a_{\tau}T$ are smaller than the dynamical fermion mass, as one can see from Fig. \ref{MFvsm}, and thus one expects that if the ground state did support a Haldane condensate, these temperatures would be sufficiently small to observe it. What we have found is that our data does not support the appearance of a Haldane condensate  \textcolor{red}{awaiting results for Haldane mass using correct computation}
  
-Spontaneous symmetry breaking also has observables consequences for the fermion quasiparticle, which receives a dynamical mass, $m_F$, which remains nonzero even as the bare mass vanishes.
-In order to study the dynamical mass, we calculate the quasiparticle propagator in the temporal direction
+The spontaneous breaking of the $U(1)_{\epsilon}$ symmetry also has observables consequences for the fermion quasiparticle, which receives a dynamical mass, $m_F$, which remains nonzero even as the bare mass vanishes.
+In order to study the dynamical fermion mass, we calculate the quasiparticle propagator in the temporal direction
 \beq
 \label{QuasiparticlePropagatorTemporal}
 G^{(\tau)}_F(\tau; \vec{p}) = \sum_{x,y} e^{i \vec{p} \cdot \vec{x}}\vev{\chi(x,y,\tau) \chib(0,0,0)},
@@ -505,7 +505,7 @@ obtained a phase diagram in the $(B, \beta)$-plane. One would expect that the ph
 We began our calculations by identifying the semimetal phase through a scan in $\beta$, coupled with an investigation of the condensate's behavior as a function of the bare mass in the chiral limit. In the semimetal phase, one expects $\sigma \equiv \vev{\Bpsi \Psi}$ to be linear in the bare mass for small values of $m$. 
 One can compare this expectation with the behavior of $\vev{\Bpsi \Psi}$ as a function of the bare mass when the external magnetic field is turned on. This is illustrated in Fig.~\ref{PBPComparison}, where one sees an approximately linear behavior at zero field and a strongly nonlinear behavior of the condensate as a function of $m$ for the magnetic flux $\Phi_B = 0.125$.
 
-Notice, however, that in both cases, as the explicit symmetry breaking parameter is taken to zero, the condensate also goes to zero. Usually, this signals that the symmetry is being restored due to the finite spatial extent of the box. Referring to Fig.~\ref{PBPVolume}, one can see that this is not the
+Notice, however, that in both cases, as the explicit symmetry breaking parameter is taken to zero, the condensate also goes to zero. Even if SSB occurs, this still may occur due to the finite spatial volume. Referring to Fig.~\ref{PBPVolume}, one can see that this is not the
 case. For a broad range of spatial extents $N_s$, the condensate shows little variation. This can be explained by observing that the magnetic length, $l_B \equiv \sqrt{\hbar c/eB}$, which characterizes the fermion's cyclotron orbit, satisfies $1 < l_B < N_s$, in units of $a_s$. 
 
 \begin{figure}
@@ -520,7 +520,7 @@ case. For a broad range of spatial extents $N_s$, the condensate shows little va
 \vspace{-1.2cm}
 \includegraphics[height=9cm,width=9cm]{pbp_vs_m_PHI0125_volcompare_3_graphene_paper.pdf} 
 \vspace{-1.25cm}
-\caption{The chiral condensate as a function of fermion mass with varying spatial volume $N^2_s$ for magnetic flux $\Phi_B=0.125$. The lattice volumes are listed in the form $N_s^2\times N_z \times N_{\tau}$ where the fermions live in the $xy$-plane and the gauge field is present throughout the entire volume.}
+\caption{The chiral condensate as a function of fermion mass for different spatial volumes $N^2_s$ at magnetic flux $\Phi_B=0.125$. The volumes are listed in the form $N_s^2\times N_z \times N_{\tau}$, where the fermions live in the $xy$-plane and the gauge field is present throughout the entire volume.}
 \label{PBPVolume}
 \end{figure}
 
@@ -552,9 +552,8 @@ We have also confirmed the independence of the results on the finite spatial siz
 masses for the fermion quasiparticle and the pseudoscalar. The screening masses are obtained by calculating the correlation functions in (\ref{QuasiparticlePropagatorSpatial}) and (\ref{PionSpatial}) and projecting to $p_y=0$ and the lowest Matsubara frequency ($\omega_0 = \pi T$ and $\omega_0 = 0$, respectively).
 We find that the masses characterizing the decay of the above correlation functions in space satisfy $M_s L_s \gg 1$, where $L_s = N_s a_s$ is the  lattice extent in the spatial direction. For the pseudoscalar, we found that $m_{\pi,s}L_s \approx 18-20$, for the ensembles with volume $20^2\times10\times60$ and flux $\Phi_B=0.125$. For the fermion propagator, we obtained $m_{F,s}L_s \approx 11-14$, for the same ensembles mentioned above. This is further proof that the corrections arising from the finite spatial extent of the box are well under control. The dependence of the condensate on $N_z$, the spatial direction perpendicular to the plane of graphene, was also checked. We found that for $N_z \geq 10$, the correction to the infinite-volume result is less than $2\%$.
  
-Thermal effects are also known to play a role in lattice simulations due to the finite extent of the box. The temperature of the system is related to the extent of the lattice in Euclidean time, $T = 1/N_{\tau}a_t$. We have investigated the effect of finite temperature on the condensate and illustrated it in Fig.~\ref{PBPvsTdivM}, where $\sigma(T/m)$ is plotted. When the temperature is large 
-compared with the fermion mass, one can see that the condensate tends towards zero. On the other hand, when the temperature is small compared with the fermion mass, one can see that the condensate increases and tends asymptotically towards a nonzero value. The fact that magnetic catalysis is a property of the ground state of the Hamiltonian suggests that we first take the limit $T \to 0$, followed
-by the limit $m \to 0$. Using this strategy, we have first extrapolated to zero temperature at a fixed bare fermion mass. We have extrapolated using two different methods. First, we have taken points at small $T$ which form a plateau and fit them to a constant. These plateaus can be seen in Fig. \ref{PBPvsTdivM}, for magnetic flux $\Phi_B=0.125$. We have then included one other point at larger $T$ and extrapolated using a quadratic (except for bare mass $m=0.01$ in Fig. \ref{PBPvsTdivM}, where the third point is too far away from $T=0$). We use the difference between the two results for $\sigma$ at $T=0$ to estimate a systematic uncertainty associated with this extrapolation. A similar procedure has been also carried out for the other three magnetic fluxes. We then use these points for our chiral extrapolation, which we performed using a linear fit. This is illustrated in Fig. \ref{PBPzeroTChiral}, where we plot the mass dependence of the $T=0$ extrapolated points.
+Thermal effects are also known to play a role in symmetry restoration The temperature of the system is related to the extent of the lattice in Euclidean time, $T = 1/N_{\tau}a_t$. We have investigated the effect of finite temperature on the condensate and illustrated it in Fig.~\ref{PBPvsTdivM}, where $\sigma(T/m)$ is plotted. When the temperature is large 
+compared with the fermion mass, one can see that the condensate tends towards zero. On the other hand, when the temperature is small compared with the fermion mass, one can see that the condensate increases and tends asymptotically towards a nonzero value. By first taking limit $T \to 0$, we are able to study magnetic catalysis in the ground state. Using this strategy, we have first extrapolated to zero temperature at a fixed bare fermion mass. We have extrapolated using two different methods. First, we have taken points at small $T$ which form a plateau and fit them to a constant. These plateaus can be seen in Fig. \ref{PBPvsTdivM}, for magnetic flux $\Phi_B=0.125$. We have then included one other point at larger $T$ and extrapolated using a quadratic (except for bare mass $m=0.01$ in Fig. \ref{PBPvsTdivM}, where the third point is too far away from $T=0$). We use the difference between the two results for $\sigma$ at $T=0$ to estimate a systematic uncertainty associated with this extrapolation. A similar procedure has been also carried out for the other three magnetic fluxes. We then use these points for our chiral extrapolation, which we performed using a linear fit. This is illustrated in Fig. \ref{PBPzeroTChiral}, where we plot the mass dependence of the $T=0$ extrapolated points.
 
 Proceeding in an analogous manner for three other fluxes, we were able to obtain the behavior of the zero-temperature, chirally extrapolated condensate as a function of the magnetic flux, $\Phi_B$. These results are shown in Fig.~\ref{PBPzeroTChiralvseB}.
 The relationship between the condensate and the magnetic flux is fit to the form $\sigma_{T=m=0} = eBc_1 + (eB)^2c_2$. The errors on the points are those calculated in the chiral extrapolation. These results overwhelmingly support the scenario of magnetic catalysis in the graphene EFT.
@@ -664,7 +663,7 @@ Fig.~\ref{MFvsmNonzeroB} shows results for the dynamical fermion mass with nonze
 \label{MFvsmNonzeroB}
 \end{figure}
 
-As previously mentioned, perturbative approaches to magnetic catalysis predict that for $(2+1)$-dimensional field theories, the dynamical fermion mass scales lineary with $\sqrt{eB}$ \cite{Shovkovy}. In order to check this, one first needs to extrapolate the dynamical mass to the chiral limit. Our results, depicted in Fig.~\ref{fig:MFvsSqrtB}, show that the chirally extrapolated dynamical mass behaves as expected. This gives further confirmation of magnetic catalysis in the graphene EFT.
+As previously mentioned, perturbative approaches to magnetic catalysis predict that for $(2+1)$-dimensional field theories, the dynamical fermion mass scales lineary with $\sqrt{eB}$ \cite{Shovkovy}. In order to check this, one first needs to extrapolate the dynamical mass to the chiral limit. Our results, depicted in Fig.~\ref{fig:MFvsSqrtB}, show that the chirally extrapolated dynamical mass behaves as expected. This provides further evidence in favor of magnetic catalysis in the graphene EFT.
 
 \begin{figure}
 \vspace{-1.2cm}
@@ -1377,14 +1376,14 @@ W.~Dittrich and H.~Gies, Phys.\ Lett.\ B{\bf 392}, 182 (1997), [arXiv:hep-th/960
 \bibitem{DittrichReuter}
 W.~Dittrich and M.~Reuter, {\it Effective Lagrangians in Quantum Electrodynamics}, Springer (1985)
 
-\bibitem{LandauLifschitzQM}
-L.~D.~Landau and E.~M.~Lifshitz, {\it Quantum Mechanics: Non-Relativistic Theory, 2nd edn.}, Pergamon (1965)
+%\bibitem{LandauLifschitzQM}
+%L.~D.~Landau and E.~M.~Lifshitz, {\it Quantum Mechanics: Non-Relativistic Theory, 2nd edn.}, Pergamon (1965)
 
-\bibitem{MerminWagner}
-N.~D.~Mermin and H.~Wagner, Phys.\ Rev.\ Lett.\ {\bf 17}, 1133 (1966)
+%\bibitem{MerminWagner}
+%N.~D.~Mermin and H.~Wagner, Phys.\ Rev.\ Lett.\ {\bf 17}, 1133 (1966)
 
-\bibitem{Coleman}
-S.~Coleman, Nucl.\ Phys.\ B{\bf 145}, 110 (1978)
+%\bibitem{Coleman}
+%S.~Coleman, Nucl.\ Phys.\ B{\bf 145}, 110 (1978)
 
 \bibitem{Haldane}
 F.~Haldane, Phys.\ Rev.\ Lett.\ {\bf  61}, 2015 (1988)
