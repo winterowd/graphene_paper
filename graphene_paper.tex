@@ -103,7 +103,7 @@ of the Brillouin zone. At these valleys, or so-called ``Dirac points'', the two 
 These Dirac fermions have a Fermi velocity that satisfies $v_F/c \approx 1/300$, and thus one does not have Lorentz invariance. Furthermore, this small Fermi velocity renders the interaction between the Dirac quasiparticles 
 to be essentially Coulombic. 
 
-The effective coupling of the theory is large, \\ $\alpha_g \equiv 2e^2/((\epsilon+1) v_F 4\pi) > 1$, and thus this is a strong-coupling problem. Here, the strength of the interaction between the quasiparticles is controled by the dielectric constant, $\epsilon$, of the substrate on which the graphene layer sits. It is known that for sufficiently large coupling, the EFT undergoes a phase transition, as has been shown in 
+The effective coupling of the theory is large, \\ $\alpha_g \equiv 2e^2/((\epsilon+1) v_F 4\pi) > 1$, and thus this is a strong-coupling problem. Here, the strength of the interaction between the quasiparticles is controled by the dielectric constant, $\epsilon$, of the substrate on which the graphene layer sits. For suspended graphene $\epsilon = 1$, while for graphene on a silicon oxide substrate $\epsilon_{\rm Si0_2} \approx 3.9$. It is known that for sufficiently large coupling, the EFT undergoes a phase transition, as has been shown in 
 several previous studies \cite{Drut1, Drut2, Hands1, Hands2}. This transition is characterized by the appearance of a nonzero value of the condensate, $\vev{\Bpsi \Psi}$, as well as a dynamical mass
 for the fermion.
 
@@ -368,9 +368,9 @@ More specifically, we can write this expression as
 where the first term represents the force coming from the gauge action, and the second term represents the force coming from the fermion action. Expressing the fermion action in terms of $\phi, \phi^{\dagger}$ one has
 \beq
 \label{FermionForce}
-F^{(f)}_n = - \frac{\partial}{\partial \theta_n} \left( \phi^{\dagger} \left( M^{\dagger} M \right)^{-1}  \phi \right), 
+F^{(f)}_n = - \frac{\partial}{\partial A_0(n)} \left( \phi^{\dagger} \left( M^{\dagger} M \right)^{-1}  \phi \right), 
 \eeq
-where the calculation of the derivative with respect to $\theta_n$ involves a significant number of terms for the asqtad action. The calculation of the fermion force also involves solving the sparse linear system $\left( M^{\dagger}M \right) X = \phi$, which is performed with an iterative solver.
+where the calculation of the derivative with respect to $A_0(n)$ involves a significant number of terms for the asqtad action. The calculation of the fermion force also involves solving the sparse linear system $\left( M^{\dagger}M \right) X = \phi$, which is performed with an iterative solver.
 The gauge force has a concise expression which can be obtained by differentiating (\ref{NCGaugeAction1}) with respect to $\theta_n$, which leads to
 \beq
 \label{GaugeForce}
@@ -613,7 +613,7 @@ In our simulations, we have used operators which are all taste singlets and thus
 \label{ReHaldaneTS} 
 \end{figure}
 
-We have measured the taste-singlet time-reversal-odd condensate on the lattice ensembles with the largest flux $\Phi_B=0.125$ for $a_t T = [0.002, 0.016]$. These values of $a_tT$ are smaller than the dynamical fermion mass, as one can see from Fig. \ref{MFvsmNonzeroB}. Thus, one expects that if the ground state did support a Haldane condensate, these temperatures would be sufficiently small and the magnetic flux sufficiently large to observe this. Instead, we find that our data do not support a nonzero taste-singlet Haldane condensate. In Fig.~\ref{ReHaldanevsm}, we have plotted the real part of the Haldane mass, computed with $1000$ stochastic sources on $100$ gauge configurations, versus $m$ for $N_{\tau}=480,~\Phi_B=0.125$. Our results are consistent with zero. We have also checked, at the same value of the flux and bare mass, that as the temperature increases, the Haldane mass remains consistent with zero as to be expected from the solutions of the gap equations. In Fig.~\ref{ReHaldaneTS}, we plot the Monte Carlo time history of the taste-singlet Haldane mass. The values are regularly distributed around the mean and do not show any indication of tunneling, which would characterize a first-order phase transition. Thus we not see any evidence for the formation of a taste-singlet Haldane condensate in our calculations. Keeping in mind the limitations of our approach, one would need to perform further simulations with an explicit taste-singlet mass in the action in order to verify if this quantity is truly nonzero or not in the graphene EFT.
+We have measured the taste-singlet time-reversal-odd condensate on the lattice ensembles with the largest flux $\Phi_B=0.125$ for $a_t T = [0.002, 0.016]$. These values of $a_tT$ are smaller than the dynamical fermion mass, as one can see from Fig. \ref{MFvsmNonzeroB}. Thus, one expects that if the ground state did support a Haldane condensate, these temperatures would be sufficiently small and the magnetic flux sufficiently large to observe this. Instead, we find that our data do not support a nonzero taste-singlet Haldane condensate. In Fig.~\ref{ReHaldanevsm}, we have plotted the real part of the Haldane mass, computed with $1000$ stochastic sources on $100$ gauge configurations, versus $m$ for $N_{\tau}=480,~\Phi_B=0.125$. Our results are consistent with zero. We have also checked, at the same value of the flux and bare mass, that as the temperature increases, the Haldane mass remains consistent with zero as to be expected from the solutions of the gap equations. In Fig.~\ref{ReHaldaneTS}, we plot the Monte Carlo time history of the taste-singlet Haldane mass. The values are regularly distributed around the mean and do not show any indication of tunneling, which would characterize a first-order phase transition. Thus we not see any evidence for the formation of a taste-singlet Haldane condensate in our calculations. Keeping in mind the limitations of our approach, one would need to perform further simulations with an explicit taste-singlet mass in the action in order to test for spontaneous breaking of the discrete symmetry.
 
 %However, when interpreting our results for the Haldane mass, one must keep in mind that taste-nonsinglet operators have zero expectation values. In particular, this means that $\vev{ \Bpsi \left( \tilde{\gamma}_{4,5} \otimes \sigma_3 \right) \Psi}$ is exactly zero due to taste symmetry. To address spontaneous symmetry breaking due to the appearance of a nonzero value for $\vev{ \Bpsi \left( \tilde{\gamma}_{4,5} \otimes \sigma_3 \right) \Psi}$, we would need to include a term in the action that breaks this symmetry explicitly and, in the usual way, take the infinite volume limit followed by removing the symmetry breaking term. This is what we have done for the Dirac mass but we have not done this for the taste-nonsinglet Haldane mass.
 
@@ -627,12 +627,11 @@ Although the propagator itself is gauge variant, the pole of the propagator in C
 \sum_{x,y} A_0(x,y,\tau) = 0.
 \eeq
 This allows us to calculate the propagator of charged propagators, as the gauge condition corresponds to a charged propagator moving in the presence of a spatially uniform background charge of opposite sign.
-To determine the dynamical fermion mass, we fit the propagator in (\ref{QuasiparticlePropagatorTemporal}) to the following form
+To determine the dynamical fermion mass, $m_F$, we fit the propagator in (\ref{QuasiparticlePropagatorTemporal}) to the following form
 \beq
 \label{FermFitForm} 
-G_F(\tau, \vec{p} = {\bf 0}) = A\left( e^{-m_F\tau} + (-)^{\tau}e^{-m_F(N_{\tau} - \tau)} \right),
+G_F(\tau, \vec{p} = {\bf 0}) = A\left( e^{-m_F\tau} + (-)^{\tau}e^{-m_F(N_{\tau} - \tau)} \right).
 \eeq
-where $m_F$ is the dynamical fermion mass. 
 
 The fits that we performed for the quasiparticle propagator necessitated proper care in order to accurately determine the ground state mass. To do this one must select a fit range, $[ \tau_{\text{min}}, \tau_{\text{max}}]$, where the correlator is free of excited-state contributions. We have found that the selection of $\tau_{\text{min}}$ primarily depends on the value of the external magnetic flux, $\Phi_B$. This is due to the fact that the excited state with the same oscillating behavior as the ground state consists of the fermion promoted to the next highest LL. One can also have an excited state consisting of a fermion along with a pseudoscalar particle having nonzero orbital angular momentum. Our result for particle masses suggest that this contribution dies out quite quickly in Euclidean time, $\tau$.
 
@@ -652,7 +651,7 @@ Fig.~\ref{MFvsmNonzeroB} shows results for the dynamical fermion mass with nonze
 \vspace{-1.2cm}
   \includegraphics[height=9cm,width=9cm]{ferm_pole_vs_m_zoom.pdf} 
   \vspace{-1.25cm}
-\caption{The pole of the fermion propagator at $O(e^2)$ for $8^2\times10\times120, \beta=0.80, N_B=0$ (upper curve) along with the free fermion pole (lower curve) as one approaches the chiral limit, $m \to 0$. One can see that the pole at $O(e^2)$ vanishes in this limit, as expected. However, the curvature that causes this behavior can be observed only as one moves to extremely small fermion bare masses.}
+\caption{The pole of the fermion propagator at $O(e^2)$ (upper curve) along with the free fermion pole (lower curve) as one approaches the chiral limit, $m \to 0$. One can see that the pole at $O(e^2)$ vanishes in this limit, as expected. However, the curvature that causes this behavior can be observed only as one moves to extremely small fermion bare masses.}
 \label{MFvsmZeroBZoom}
 \end{figure}
 
@@ -660,7 +659,7 @@ Fig.~\ref{MFvsmNonzeroB} shows results for the dynamical fermion mass with nonze
 \vspace{-1.2cm}
   \includegraphics[height=9cm,width=9cm]{ferm_mt_vs_m_graphene_paper.pdf} 
   \vspace{-1.25cm}
-\caption{The dynamical fermion mass plotted as a function of the bare mass for zero external magnetic flux and all four nonzero external magnetic fluxes. We have chosen $N_{\tau}=120,240,240,240,480$ for the bare fermion masses $m=0.05,0.02,0.015,0.01,0.005$.}
+\caption{The dynamical fermion mass plotted as a function of the bare mass for zero external magnetic flux and all four nonzero external magnetic fluxes. We have chosen $N_{\tau}=120,240,240,240,480$ for the bare fermion masses $m=0.05,0.02,0.015,0.01,0.005$, respectively.}
 \label{MFvsmNonzeroB}
 \end{figure}
 
