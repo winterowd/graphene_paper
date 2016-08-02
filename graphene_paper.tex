@@ -39,7 +39,6 @@
 
 % The following information is for internal review, please remove them for submission
 \widetext
-\leftline{Version 6.0 as of \today}
 
 % the following line is for submission, including submission to the arXiv!!
 %\hspace{5.2in} \mbox{Fermilab-Pub-04/xxx-E}
@@ -174,7 +173,12 @@ The Zeeman term explicitly breaks the $U(4)$ symmetry down to $U(2)_{\uparrow} \
 \label{U2Generators}
 \bm 1 \otimes P_{\sigma}, \quad \tilde{\gamma}_4 \otimes P_{\sigma}, \quad i \tilde{\gamma}_5 \otimes P_{\sigma}, \quad \tilde{\gamma}_{4,5} \otimes P_{\sigma},
 \eeq
-where we have introduced the spin projection operator, $P_{\sigma} \equiv \frac{1}{2}( 1 \pm \sigma_3 )$. Although the Zeeman term lifts the spin degeneracy of each Landau level, the size of this perturbation is very small even in the presence of large magnetic fields. This can be seen by considering 
+where we have introduced the spin projection operator 
+\beq
+P_{\sigma} \equiv \frac{1}{2}( 1 \pm \sigma_3 ).
+\eeq
+
+Although the Zeeman term lifts the spin degeneracy of each Landau level, the size of this perturbation is very small even in the presence of large magnetic fields. This can be seen by considering 
 \beq
 \epsilon_{LL} &\equiv& \sqrt{\hbar v^2_F |eB|/c} = 26 \sqrt{B[\text{T}]}~\text{meV}, \\ 
 \epsilon_Z &\equiv & \mu_B B = 5.8\times 10^{-2} B[\text{T}]~\text{meV},
@@ -227,13 +231,11 @@ The taste degree of freedom becomes more apparent once one performs a change of 
 The $U(1)$ symmetry corresponds to fermion number conservation and is given by
 \beq
 \label{U1Staggered}
-\chi(x) &\to& \exp \left(i\alpha \right) \chi(x) \nn \\
-\chib(x) &\to& \chib(x) \exp \left(-i \alpha \right).
+\chi(x) &\to& \exp \left(i\alpha \right) \chi(x), \\ \nn \chib(x) &\to& \chib(x) \exp \left(-i \alpha \right).
 \eeq
 The $U(1)_{\epsilon}$, or ``even-odd'' symmetry, is given by 
 \beq
-\chi(x) &\to& \exp \left(i\beta \epsilon(x) \right) \chi(x) \nn \\
-\chib(x) &\to& \chib(x) \exp \left(i \beta \epsilon(x) \right),
+\chi(x) &\to& \exp \left(i\beta \epsilon(x) \right) \chi(x), \\ \nn \chib(x) &\to& \chib(x) \exp \left(i \beta \epsilon(x) \right),
 \eeq
 where $\epsilon(x) \equiv \left( -1 \right)^{x_0 + x_1 + x_2}$. The $U(1)_{\epsilon}$ symmetry is spontaneously broken with the appearance of a nonzero value of the condensate, $\vev{\chib \chi}$. Thus, on the lattice, one expects there to be a single NG boson as a result of spontaneous symmetry breaking. For the study of the time-reversal-odd condensate, the calculation is a bit more intricate with staggered fermions. Namely, in order to compare with continuum results, one is interested in distinguishing the spin projections of the condensate, which in staggered language, corresponds to the taste degree of freedom. Due to taste-breaking terms in the staggered action at $O(a)$ (see Appendix \ref{sec:SpinTasteAppendix}), this becomes impossible as these terms mix the various tastes, or in graphene language, spin projections. 
 
