@@ -110,7 +110,7 @@ for the fermion.
 In the presence of an external magnetic field, many field theories are thought to undergo spontaneous symmetry breaking. This phenomenon is known as magnetic catalysis and is hypothesized to be universal. In the context of the graphene EFT, the magnetic
 catalysis scenario leads to the appearance of a dynamically generated Dirac mass and is proposed to account for several of the quantum-Hall plateaus that appear at large values of the magnetic field \cite{ZhangQHE,JiangQHE, Kennett}.
 
-Magnetic catalysis has also been the focus of recent interest in lattice quantum chromodynamics (LQCD). Several studies have shown the chiral condensate increases with magnetic field at zero temperature ($m_{\pi} = 200-400 ~\text{MeV}$, $eB$ up to $1 ~\text{GeV}^2$) \cite{Buividovich,Braguta,Cohen}. This confirms the idea that the background magnetic field aids chiral symmetry breaking in the vacuum.
+Magnetic catalysis has also been the focus of recent interest in lattice quantum chromodynamics (LQCD). Several studies have shown that the chiral condensate increases with magnetic field at zero temperature ($m_{\pi} = 200-400 ~\text{MeV}$, $eB$ up to $1 ~\text{GeV}^2$) \cite{Buividovich,Braguta,Cohen}. This confirms the idea that the background magnetic field aids chiral symmetry breaking in the vacuum.
 However, it was also discovered that with $T \geq 140 ~\text{MeV}$ and physical pions, the opposite occurs and the chiral condensate decreases with the external magnetic field \cite{Bali1,Bali2}.
 
 The remainder of this article is organized as follows. In section \ref{sec:GrapheneEFT} we discuss the continuum EFT, its symmetries, as well as our lattice setup.
@@ -174,12 +174,12 @@ The Zeeman term explicitly breaks the $U(4)$ symmetry down to $U(2)_{\uparrow} \
 \label{U2Generators}
 \bm 1 \otimes P_{\sigma}, \quad \tilde{\gamma}_4 \otimes P_{\sigma}, \quad i \tilde{\gamma}_5 \otimes P_{\sigma}, \quad \tilde{\gamma}_{4,5} \otimes P_{\sigma},
 \eeq
-where we have introduced the spin projection operator, $P_{\sigma} \equiv \frac{1}{2}( 1 \pm \sigma_3 )$. Although the Zeeman term lifts the spin degeneracy of each Landau-level, the size of this perturbation is very small even in the presence of large magnetic fields. This can be seen by considering 
+where we have introduced the spin projection operator, $P_{\sigma} \equiv \frac{1}{2}( 1 \pm \sigma_3 )$. Although the Zeeman term lifts the spin degeneracy of each Landau level, the size of this perturbation is very small even in the presence of large magnetic fields. This can be seen by considering 
 \beq
 \epsilon_{LL} &\equiv& \sqrt{\hbar v^2_F |eB|/c} = 26 \sqrt{B[\text{T}]}~\text{meV}, \\ 
 \epsilon_Z &\equiv & \mu_B B = 5.8\times 10^{-2} B[\text{T}]~\text{meV},
 \eeq
-where $\epsilon_{LL}$ is the energy separating the lowest Landau-level ($n=0$) from its neighbor ($n=1$), and $\epsilon_Z$ is the Zeeman energy. For even the largest magnetic fields available in the laboratory ($B \sim 50~\text{T}$), $\epsilon_Z$ is only a small fraction of $\epsilon_{LL}$.
+where $\epsilon_{LL}$ is the energy separating the lowest Landau level ($n=0$) from its neighbor ($n=1$), and $\epsilon_Z$ is the Zeeman energy. For even the largest magnetic fields available in the laboratory ($B \sim 50~\text{T}$), $\epsilon_Z$ is only a small fraction of $\epsilon_{LL}$.
 
  Apart from the long-range Coulomb interaction present in (\ref{ContinuumEFT}), in the complete lattice
 theory there are numerous short-range electron-electron interactions. These lattice-scale interaction terms are allowed by the point-group symmetry of the underlying hexagonal lattice, $C_{6v}$ \cite{Aleiner}.
@@ -250,7 +250,7 @@ can lead to UV-divergent diagrams which cancel the lattice spacing dependence of
 \beq
 u_0 = \left( \vev{U^{(p)}} \right)^{1/2},
 \eeq
-where $\vev{U^{(p)}}$ is the volume-averaged expectation value of the space-time oriented plaquette. Tadpole improvement consists of dividing each link in the temporal direction by $u_0$. Thus, each fat link
+where $\vev{U^{(p)}}$ is the volume-averaged expectation value of the space-time-oriented plaquette. Tadpole improvement consists of dividing each link in the temporal direction by $u_0$. Thus, each fat link
 receives a factor $1/u^{l_t}_0$, where $l_t$ is the number of steps the path takes in the temporal direction.
 
 One can further improve the staggered-fermion action by introducing a third-nearest-neighbor hopping. This is known as the Naik term \cite{Naik}. With an appropriate weighting of the nearest neighbor and the third-nearest neighbor terms,
@@ -325,7 +325,7 @@ m_{\rm dyn} \propto \alpha_g \sqrt{eB}.
 % contrast to the fermions and antifermions, being charged and having their motion in the plane perpendicular to the magnetic field constrained.
 
 In addition to the condensate that one normally considers when discussing spontaneous chiral symmetry breaking, there are other condensates which can describe the ground state of the graphene EFT
-in the presence of a magnetic field. In our study we also consider a time-reversal odd condensate, $\Delta_H \equiv \vev{ \Bpsi \tilde{\gamma}_{4,5} \Psi}$. While the former condensate leads to a Dirac
+in the presence of a magnetic field. In our study we also consider a time-reversal-odd condensate, $\Delta_H \equiv \vev{ \Bpsi \tilde{\gamma}_{4,5} \Psi}$. While the former condensate leads to a Dirac
 mass in the graphene EFT, the latter condensate gives rise to a Haldane mass \cite{Haldane}. The ground state at filling factor $\nu=0$, corresponding to a half-filled lowest Landau level, is posited to support a nonzero value for both condensates in the absence of Zeeman splitting. In this work,
 we study the flux dependence of both condensates in the chiral and zero-temperature limits.
 \section{\label{sec:Simulation}Simulation Details}
@@ -404,7 +404,7 @@ For staggered fermions in the one-component basis, the scalar density takes the 
 where in our lattice partition function we integrate over the noncompact gauge potential $A_0$.
 In order to determine if magnetic catalysis is present in the graphene EFT, we will be interested in taking the zero-temperature as well as massless limit for the chiral condensate.
 
-Another condensate which characterizes magnetic catalysis in the graphene EFT is the Haldane condensate. This condensate is time-reversal odd and takes the form
+Another condensate which characterizes magnetic catalysis in the graphene EFT is the Haldane condensate. This condensate is time-reversal-odd and takes the form
 \begin{widetext}[
 \beq
 \label{HaldaneCondensateContinuum}
@@ -499,7 +499,7 @@ In the absence of an external magnetic field, the graphene EFT is known to exhib
 In the language of chiral-symmetry breaking, the semimetal phase corresponds to the chirally symmetric phase while the insulating phase corresponds to the broken phase.
 Various aspects of this transition were studied previously using lattice methods \cite{Drut1, Drut2, Hands1, Giedt}. The transition is believed to be of second order as indicated by the results in \cite{Drut2}. 
 
-The situation changes as one turns on the external magnetic field. Namely, the critical $\beta_c = (\epsilon_{cr}+1)/2e^2$ which determines the boundary between the two phases shifts to larger values. This has been shown previously in \cite{Polikarpov}, where at fixed temperature, the authors
+The situation changes as one turns on the external magnetic field. Namely, the critical $\beta_c = (\epsilon_c+1)/2e^2$ which determines the boundary between the two phases shifts to larger values. This has been shown previously in \cite{Polikarpov}, where at fixed temperature, the authors
 obtained a phase diagram in the $(B, \beta)$-plane. One would expect that the phase boundary has a temperature dependence, where at $T=0$, the authors of \cite{Miransky1,Miransky2,Miransky3,Miransky4,MiranskyGraphene1,MiranskyGraphene2,MiranskyGraphene3} predict that an infinitesimal attraction between fermions and antifermions will lead to pairing, and thus magnetic catalysis. Another early analysis of a graphene-like theory showed that at extremely weak coupling, a nonzero condensate was obtained in the chiral limit \cite{Cosmai}
 
 We began our calculations by identifying the semimetal phase through a scan in $\beta$, coupled with an investigation of the condensate's behavior as a function of the bare mass in the chiral limit. In the semimetal phase, one expects $\sigma \equiv \vev{\Bpsi \Psi}$ to be linear in the bare mass for small values of $m$. 
@@ -565,7 +565,7 @@ where the electrons are subjected to a uniform magnetic field, which implies the
 as the QHE without Landau levels. As in graphene, the points in his model where the valence and conductance bands touch inside the Brillouin zone are symmetry-protected (inversion and time-reversal).
 If time-reversal invariance is broken, he found that a $\nu = \pm 1$ integer QHE state is formed, where $\nu$ is referred to as the filling factor. 
 
-Recent studies of symmetry breaking in graphene have brought up the possbility of the formation of the time-reversal odd condensate, $\Delta_H$ \cite{GonzalezHaldaneMass, MiranskyGraphene2,MiranskyGraphene3}. This condensate gives rise to the so-called Haldane mass in the low-energy theory.
+Recent studies of symmetry breaking in graphene have brought up the possbility of the formation of the time-reversal-odd condensate, $\Delta_H$ \cite{GonzalezHaldaneMass, MiranskyGraphene2,MiranskyGraphene3}. This condensate gives rise to the so-called Haldane mass in the low-energy theory.
 The reason for the interest in these symmetry breaking scenarios is as follows.
 The appearance of anomalous QHE states in graphene at previously unknown filling factors, $\nu = 0, \pm 1, \pm 2$, is due to the splitting of the degeneracy of the lowest Landau level (LLL) at large external magnetic fields ($B \sim 45 \text{T}$).
 Although there are several scenarios to explain these states, (see \cite{Yang} for a nice discussion), the authors of \cite{MiranskyGraphene2, MiranskyGraphene3} advocate the magnetic catalysis scenario whereby a Dirac mass as well as possibly a Haldane mass are generated due to the strong, weakly-screened
@@ -685,7 +685,7 @@ G^{(\tau)}_{PS}(\tau; \vec{p} = {\bf 0}) = A\left( e^{-m_{\pi}\tau} + e^{-m_{\pi
 ]\end{widetext}
 where we have included two sets of exponentials characterizing the ground state and the first excited state respectively.
 In Fig.~\ref{MPSvsm}, we see the ground state mass in the pseudoscalar channel, $m_{\pi}$, plotted as a function of the fermion mass for the various magnetic fluxes.  
-We notice that the pseudoscalar mass shows little variation with magnetic flux, which is not suurprising since the pseudoscalar carries no charge. This is in contrast with QCD, where electrically charged  pions couple to the 
+We notice that the pseudoscalar mass shows little variation with magnetic flux, which is not surprising since the pseudoscalar carries no charge. This is in contrast with QCD, where electrically charged  pions couple to the 
 external magnetic field \cite{SmilgaShushpanov}. We also have determined that the pseudoscalar mode is indeed a bound state. This can be seen by referring to Fig.~\ref{MFvsmNonzeroB} where the dynamical fermion mass is plotted as a function of the bare mass. The fermion-antifermion scattering state has energy $2m_F$, which is higher than $m_{\pi}$ for all simulated bare masses.
 
 
@@ -961,7 +961,7 @@ This implies that time-reversal induces the following transformation on the one-
 \label{TROneComponent}
 \chi_{\eta}(\vec{y}, y_0) \to (-)^{\eta_0 + \eta_1 +  \eta_2}\chi_{\tilde{\eta}}(\vec{y}, -y_0),
 \eeq
-where an analogous expression holds for $\chib$. Using the expressions for the time-reversal transformation in the spin-taste as well as the one-compent basis, one can show that the operators in (\ref{HaldaneSpinTaste}) and (\ref{HaldaneOneComponent}) change sign and are thus, indeed, time-reversal odd.
+where an analogous expression holds for $\chib$. Using the expressions for the time-reversal transformation in the spin-taste as well as the one-compent basis, one can show that the operators in (\ref{HaldaneSpinTaste}) and (\ref{HaldaneOneComponent}) change sign and are thus, indeed, time-reversal-odd.
 % This sample document demonstrates proper use of REV\TeX~4 (and
 % \LaTeXe) in mansucripts prepared for submission to APS
 % journals. Further information can be found in the REV\TeX~4
