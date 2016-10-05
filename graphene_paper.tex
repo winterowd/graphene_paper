@@ -102,9 +102,11 @@ of the Brillouin zone. At these valleys, or so-called ``Dirac points'', the two 
 These Dirac fermions have a Fermi velocity that satisfies $v_F/c \approx 1/300$, and thus one does not have Lorentz invariance. Furthermore, this small Fermi velocity renders the interaction between the Dirac quasiparticles 
 to be essentially Coulombic. 
 
-The effective coupling of the theory is particularly large, $\alpha_g \equiv 2e^2/((\epsilon+1) v_F 4\pi) > 1$, and thus this is a strong-coupling problem. Here, the strength of the interaction between the quasiparticles is controled by the dielectric constant, $\epsilon$, of the substrate on which the graphene layer sits. For suspended graphene $\epsilon = 1$, while for graphene on a silicon oxide substrate $\epsilon_{\rm Si0_2} \approx 3.9$. It is known that for sufficiently large coupling, the EFT undergoes a phase transition, as has been shown in 
+The effective coupling of the theory is particularly large, $\alpha_g \equiv 2e^2/((\epsilon+1) v_F 4\pi) > 1$, and thus this is a strong-coupling problem. Here, the strength of the interaction between the quasiparticles is controled by the dielectric constant, $\epsilon$, of the substrate on which the graphene layer sits. For suspended graphene $\epsilon = 1$, while for graphene on a silicon oxide substrate $\epsilon_{\rm Si0_2} \approx 3.9$. It is known that for sufficiently large $\alpha_g$, the EFT undergoes a phase transition from a semimetal to a state with charge density wave (CDW) order, as has been shown in 
 several previous studies \cite{Drut1, Drut2, Hands1, Hands2}. This transition is characterized by the appearance of a nonzero value of the condensate, $\vev{\Bpsi \Psi}$, as well as a dynamical mass
 for the fermion.
+
+Including short-range interactions in addition to the long-range Coulomb interactions brings forth a rich phase diagram with the existence of an antiferromagnetic (AFM) phase in addition to the semimetal and CDW phase \cite{Herbut, ITEPRealistic}. Adding an on-site Hubbard interaction and realistic nearest and next-nearest-neighbor interactions \cite{Wehling} to the model each of these phases to be accessed by varying the relevant couplings. In particular, graphene undergoes a transition to the AFM phase when the on-site interaction exceeds its critical value $U > U_{cr}$. Consistent with the results for the EFT mentioned above, for small $U$, one undergoes a transition from the semimetal phase to the CDW phase when $\alpha_g > \alpha^{cr}_g$. In this study, we perform calculations in the graphene EFT at half-filling with $U=0$, where one can construct a positive-definite, real action.  
 
 In the presence of an external magnetic field, many field theories are thought to undergo spontaneous symmetry breaking. This phenomenon is known as magnetic catalysis and is hypothesized to be universal. In the context of the graphene EFT, the magnetic
 catalysis scenario leads to the appearance of a dynamically generated Dirac mass and is proposed to account for several of the quantum-Hall plateaus that appear at large values of the magnetic field \cite{ZhangQHE,JiangQHE, Kennett}.
@@ -199,14 +201,14 @@ We represent the gauge potential, $A_0(n)$, via the variable $U_0(n) \equiv \exp
 To avoid complications arising from an unwanted bulk phase transition \cite{KogutStrouthos}, we use the so-called noncompact $U(1)$ gauge action 
 \beq
 \label{NCGaugeAction1}
-S^{(NC)}_G = a^3_s a_t \frac{\beta}{2} \sum_n \sum^{3}_{i=1} \frac{1}{a^2_s}\left(A_0(n) - A_0(n+\hat{i})\right)^2,
+S^{(NC)}_G = a^3_s a_t \frac{(\epsilon+1)}{4e^2} \sum_n \sum^{3}_{i=1} \frac{1}{a^2_s}\left(A_0(n) - A_0(n+\hat{i})\right)^2,
 \eeq
-where $\beta =(\epsilon+1)/2e^2$ and $a_s$ and $a_t$ are the lattice spacings in the spatial and temporal directions respectively. Here $n=(n_0,n_1,n_2,n_3)$ labels the lattice site and $\hat{i}$ is the unit vector in the ith direction. Using the dimensionless field $\hat{A_0}(n) = a_t A_0(n)$, we write the above action as
+where $a_s$ and $a_t$ are the lattice spacings in the spatial and temporal directions respectively. Here $n=(n_0,n_1,n_2,n_3)$ labels the lattice site and $\hat{i}$ is the unit vector in the ith direction. Using the dimensionless field $\hat{A_0}(n) = a_t A_0(n)$, we write the above action as
 \beq
 \label{NCGaugeAction2}
-S^{(NC)}_G = \xi \frac{\beta}{2} \sum_n \sum^{3}_{i=1} \left(\hat{A_0}(n) - \hat{A_0}(n+\hat{i})\right)^2,
+S^{(NC)}_G = \frac{\beta}{2} \sum_n \sum^{3}_{i=1} \left(\hat{A_0}(n) - \hat{A_0}(n+\hat{i})\right)^2,
 \eeq
-where $\xi \equiv a_s/a_t$ is the anisotropy parameter, controlling the ratio of the spatial lattice spacing to the temporal lattice spacing.
+where $\beta = \xi (\epsilon+1)/2e^2$ and $\xi \equiv a_s/a_t = 3v_F$ is the anisotropy parameter, controlling the ratio of the spatial lattice spacing to the temporal lattice spacing.
 
 The discretization of the fermions has well-known complications encoded in the Nielsen-Ninomiya no-go theorem \cite{NielsenNinomiya}. Namely, one wants to remove unphysical ``doubler'' modes while still preserving some part of the continuum $U(4)$
 symmetry. The method we use in this study employs the staggered-fermion formulation \cite{KogutSusskind}, which eliminates some of the doublers while preserving a remnant of the $U(4)$ symmetry. The staggered-fermion action reads
@@ -237,7 +239,7 @@ The $U(1)_{\epsilon}$, or ``even-odd'' symmetry, is given by
 \beq
 \chi(x) &\to& \exp \left(i\beta \epsilon(x) \right) \chi(x), \\ \nn \chib(x) &\to& \chib(x) \exp \left(i \beta \epsilon(x) \right),
 \eeq
-where $\epsilon(x) \equiv \left( -1 \right)^{x_0 + x_1 + x_2}$. The $U(1)_{\epsilon}$ symmetry is spontaneously broken with the appearance of a nonzero value of the condensate, $\vev{\chib \chi}$. Thus, on the lattice, one expects there to be a single NG boson as a result of spontaneous symmetry breaking. For the study of the time-reversal-odd condensate, the calculation is a bit more intricate with staggered fermions. Namely, in order to compare with continuum results, one is interested in distinguishing the spin projections of the condensate, which in staggered language, corresponds to the taste degree of freedom. Due to taste-breaking terms in the staggered action at $O(a)$ (see Appendix \ref{sec:SpinTasteAppendix}), this becomes impossible as these terms mix the various tastes, or in graphene language, spin projections. 
+where $\epsilon(x) \equiv \left( -1 \right)^{x_0 + x_1 + x_2}$. In the continuum limit, one expects to recover the full symmetry of the action in (\ref{ContinuumEFT}). The $U(1)_{\epsilon}$ symmetry is spontaneously broken with the appearance of a nonzero value of the condensate, $\vev{\chib \chi}$. Thus, on the lattice, one expects there to be a single NG boson as a result of spontaneous symmetry breaking. For the study of the time-reversal-odd condensate, the calculation is a bit more intricate with staggered fermions. Namely, in order to compare with continuum results, one is interested in distinguishing the spin projections of the condensate, which in staggered language, corresponds to the taste degree of freedom. Due to taste-breaking terms in the staggered action at $O(a)$ (see Appendix \ref{sec:SpinTasteAppendix}), this becomes impossible as these terms mix the various tastes, or in graphene language, spin projections. 
 
 In this study we use the improved staggered fermion action, asqtad \cite{Orginos}. We outline the various improvements in the following paragraphs.
 
@@ -260,7 +262,7 @@ one can obtain an improved free dispersion relation. Thus, using all of the abov
 This is what is known as the improved asqtad action \cite{Orginos}. 
 
 Although previous lattice studies have used various levels of improvement for staggered fermions \cite{Giedt,Drut3}, further reducing taste violations by using the asqtad action should 
-come closer to realizing the continuum theory. 
+come closer to realizing the continuum theory. We point out, however, that we are not interested in explicitly taking the continuum limit as this corresponds to sending the cutoff to infinity while the EFT is only valid for long wavelengths.
 
 The introduction of an external magnetic field on the lattice proceeds in the following manner \cite{WieseAlHashimi}. In the continuum, a homogenous magnetic field perpendicular to the sheet of graphene can be described by the Landau-gauge vector potential, $A_{\mu} = \delta_{\mu,2}Bx_1$.
 The spatial links are similarily modified, with a special prescription at the boundary of the lattice due to the periodic boundary conditions satisfied by the gauge links
@@ -501,11 +503,10 @@ In the absence of an external magnetic field, the graphene EFT is known to exhib
 In the language of chiral-symmetry breaking, the semimetal phase corresponds to the chirally symmetric phase while the insulating phase corresponds to the broken phase.
 Various aspects of this transition were studied previously using lattice methods \cite{Drut1, Drut2, Hands1, Giedt}. The transition is believed to be of second order as indicated by the results in \cite{Drut2}. 
 
-The situation changes as one turns on the external magnetic field. Namely, the critical $\beta_c = (\epsilon_c+1)/2e^2$ which determines the boundary between the two phases shifts to larger values. This has been shown previously in \cite{Polikarpov}, where at fixed temperature, the authors
+The situation changes as one turns on the external magnetic field. Namely, the critical $\beta_{cr} = \xi (\epsilon_{cr}+1)/2e^2$ which determines the boundary between the two phases shifts to larger values. This has been shown previously in \cite{Polikarpov}, where at fixed temperature, the authors
 obtained a phase diagram in the $(B, \beta)$-plane. One would expect that the phase boundary has a temperature dependence, where at $T=0$, the authors of \cite{Miransky1,Miransky2,Miransky3,Miransky4,MiranskyGraphene1,MiranskyGraphene2,MiranskyGraphene3} predict that an infinitesimal attraction between fermions and antifermions will lead to pairing, and thus magnetic catalysis. Another early analysis of a graphene-like theory showed that at extremely weak coupling, a nonzero condensate was obtained in the chiral limit \cite{Cosmai}
 
-We began our calculations by identifying the semimetal phase through a scan in $\beta$, coupled with an investigation of the condensate's behavior as a function of the bare mass in the chiral limit. In the semimetal phase, one expects $\sigma \equiv \vev{\Bpsi \Psi}$ to be linear in the bare mass for small values of $m$. 
-One can compare this expectation with the behavior of $\vev{\Bpsi \Psi}$ as a function of the bare mass when the external magnetic field is turned on. This is illustrated in Fig.~\ref{PBPComparison}, where one sees an approximately linear behavior at zero field and a strongly nonlinear behavior of the condensate as a function of $m$ for the magnetic flux $\Phi_B = 0.125$.
+We began our calculations by identifying the semimetal phase through a scan in $\beta$, coupled with an investigation of the condensate's behavior as a function of the bare mass in the chiral limit. At large values of $\beta$, which correspond to values of the graphene fine-structure constant which are less than the critical value of $\alpha^{cr}_g = 2e^2/(4\pi v_F (\epsilon_{cr} + 1)) \approx 1.1$ \cite{Drut1}, we expect to be inside the semimetal phase. In this symmetric phase, one expects $\sigma \equiv \vev{\Bpsi \Psi}$ to be linear in the bare mass for small values of $m$. One can compare this expectation with the behavior of $\vev{\Bpsi \Psi}$ as a function of the bare mass when the external magnetic field is turned on. This is illustrated in Fig.~\ref{PBPComparison}, where one sees an approximately linear behavior at zero field and a strongly nonlinear behavior of the condensate as a function of $m$ for the magnetic flux $\Phi_B = 0.125$. In our calculations we have fixed $\beta=0.80$, which corresponds to $\alpha_g \approx 0.3$. This further assures us that we are deep within the semimetal phase.
 
 Notice, however, that in both cases, as the explicit symmetry breaking parameter is taken to zero, the condensate also goes to zero. Even if SSB occurs, this still may occur due to the finite spatial volume. Referring to Fig.~\ref{PBPVolume}, one can see that this is not the
 case. For a broad range of spatial extents $N_s$, the condensate shows little variation. This can be explained by observing that the magnetic length, $l_B \equiv \sqrt{\hbar c/eB}$, which characterizes the fermion's cyclotron orbit, satisfies $1 < l_B < N_s$, in units of $a_s$. 
@@ -637,7 +638,7 @@ G_F(\tau, \vec{p} = {\bf 0}) = A\left( e^{-m_F\tau} + (-)^{\tau}e^{-m_F(N_{\tau}
 
 The fits that we performed for the quasiparticle propagator necessitated proper care in order to accurately determine the ground state mass. To do this one must select a fit range, $[ \tau_{\text{min}}, \tau_{\text{max}}]$, where the correlator is free of excited-state contributions. We have found that the selection of $\tau_{\text{min}}$ primarily depends on the value of the external magnetic flux, $\Phi_B$. This is due to the fact that the excited state with the same oscillating behavior as the ground state consists of the fermion promoted to the next highest LL. One can also have an excited state consisting of a fermion along with a pseudoscalar particle having nonzero orbital angular momentum. Our result for particle masses suggest that this contribution dies out quite quickly in Euclidean time, $\tau$.
 
-At zero magnetic field, we expect the dynamical fermion mass to vanish in the chiral limit. In Fig.~\ref{MFvsmZeroB}, one can see our nonperturbative determination of the dynamical fermion mass. However, it appears that making an extrapolation to zero bare mass, based on the nonperturbative results, leaves us with a nonzero value for the dynamical fermion mass. According to the arguments and results previously discussed, one expects the dynamical mass to vanish in this limit as we are firmly in the semimetal phase in the absence of the external magnetic field. To investigate this result further, we calculated the pole position of the lattice fermion propagator at $O(e^2)$ using lattice perturbation theory. In this calculation we employed a one-link staggered action with tadpole improvement determined at $O(e^2)$. As one can see in Fig.~\ref{MFvsmZeroB}, the perturbative result exhibits a significant renormalization of the mass compared with the free theory. Furthermore, referring to Fig.~\ref{MFvsmZeroBZoom}, one can see that as one approaches the origin, the perturbative result shows large curvature and eventually vanishes at the origin. Using this result as a heuristic explanation of our results at zero magnetic field, one might expect the same to happen in the chiral limit for a nonperturbative calculation.
+At zero magnetic field, we expect the dynamical fermion mass to vanish in the chiral limit. In Fig.~\ref{MFvsmZeroB}, one can see our nonperturbative determination of the dynamical fermion mass. However, it appears that making an extrapolation to zero bare mass, based on the nonperturbative results, leaves us with a nonzero value for the dynamical fermion mass. According to the arguments and results previously discussed, one expects the dynamical mass to vanish in this limit as we are firmly in the semimetal phase in the absence of the external magnetic field. To investigate this result further, we calculated the pole position of the lattice fermion propagator at $O(e^2)$ using lattice perturbation theory \cite{Rothe}. In this calculation we employed a one-link staggered action with tadpole improvement determined at $O(e^2)$. As one can see in Fig.~\ref{MFvsmZeroB}, the perturbative result exhibits a significant renormalization of the mass compared with the free theory. Furthermore, referring to Fig.~\ref{MFvsmZeroBZoom}, one can see that as one approaches the origin, the perturbative result shows large curvature and eventually vanishes at the origin. Using this result as a heuristic explanation of our results at zero magnetic field, one might expect the same to happen in the chiral limit for a nonperturbative calculation.
 
 Fig.~\ref{MFvsmNonzeroB} shows results for the dynamical fermion mass with nonzero and zero magnetic flux. One sees that at a given bare mass, the dynamical mass increases with the magnetic flux. Furthermore, the plot suggests that the values for all four nonzero magnetic fluxes extrapolate to nonzero values in the chiral limit. However, in light of the behavior observed in the zero field case, one might want to be cautious in predicting the behavior at bare masses smaller than those plotted. For all of the ensembles depicted in Fig.~\ref{MFvsmNonzeroB}, we have chosen an $N_{\tau}$ which corresponds to a temperature where the chiral condensate plateaus. Thus, we expect that we are effectively at $T=0$ when determining the dynamical mass.
 
@@ -724,7 +725,7 @@ the appearance of the condensates associated with magnetic catalysis and those a
 
 
 \acknowledgements
-This work was in part based on a variant of the MILC collaboration's public lattice gauge theory code. See {\bf http://physics.utah.edu/$\sim$detar/milc.html}.
+This work was in part based on a variant of the MILC collaboration's public lattice gauge theory code. See {\bf http://physics.utah.edu/$\sim$detar/milc\_qcd.html}.
 Calculations were performed at the Center for High Performance Computing at the University of Utah, Fermi National Accelerator Laboratory, and the LOEWE-CSC high performance supercomputer of Johann Wolfgang Goethe-University Frankfurt am Main. We would like to thank HPC-Hessen, funded by the State Ministry of Higher Education, Research and the Arts, for programming advice. Numerical computations have also used resources of CINES and GENCI-IDRIS as well as resources at the IN2P3 computing facility in Lyon.
 The authors would like to acknowledge discussions with Maksim Ulybyshev, Dima Pesin, and Eugene Mishchenko. SZ would like to acknowledge discussions with Wolfgang Unger.
 SZ would like to acknowledge the support of the Alexander von Humboldt foundation. CW and CD were supported by the US NSF grant PHY10-034278.
@@ -1276,6 +1277,15 @@ W.~Armour, S.~Hands, and C.~Strouthos, Phys.\ Rev.\ B{\bf 81}, 125105 (2010), [a
 \bibitem{Hands2}
 W.~Armour, S.~Hands, and C.~Strouthos, Phys.\ Rev.\ B{\bf 84}, 075123 (2011), [arXiv:1105.1043 [cond-mat.str-el]]
 
+\bibitem{Herbut}
+I.~F.~Herbut, Phys.\ Rev.\ Lett.\ {\bf 97}, 146401 (2006), [arXiv:cond-mat/0610349]
+
+\bibitem{ITEPRealistic}
+M.~V.~Ulybyshev, P.~V.~Buividovich, M.~I.~Katsnelson, and M.~I.~Polikarpov, Phy.\ Rev.\ Lett.\ {\bf 111}, 056801(2013), [arXiv:1304.3660 [cond-mat.str-el]]
+
+\bibitem{Wehling}
+T.~O.~Wehling, E.~Sasioglu, C.~Friedrich, A.~I.~Lichtenstein, M.~I.~Katsnelson, and S.~Bl\"ugel, Phys.\ Rev.\ Lett.\ {\bf 106}, 236805 (2011), [arXiv:1101.4007 [cond-mat.mes-hall]]
+
 \bibitem{ZhangQHE}
 Y.~Zhang \etal, Phys.\ Rev.\ Lett.\ {\bf 96}, 136806 (2006), [arXiv:cond-mat/0602649 [cond-mat.mes-hall]]
 
@@ -1414,11 +1424,14 @@ D.~L.~Boyda, V.~V.~Braguta, S.~N.~Valgushev, M.~I.~Polikarpov, and M.~V.~Ulybysh
 \bibitem{Cosmai}
 P.~Cea, L.~Cosmai, P.~Giudice, A.~Papa, Phys.\ Rev.\ D{\bf85}, 094505 (2012), [arXiv:1204.6112 [hep-lat]]
 
+\bibitem{GonzalezHaldaneMass}
+J.~Gonzalez, JHEP {\bf 07}, 175 (2013), 	[arXiv:1211.3905 [cond-mat.mes-hall]]
+
 \bibitem{Yang}
 K.~Yang, [arXiv:cond-mat/0703757]
 
-\bibitem{GonzalezHaldaneMass}
-J.~Gonzalez, JHEP {\bf 07}, 175 (2013), 	[arXiv:1211.3905 [cond-mat.mes-hall]]
+\bibitem{Rothe}
+H.~J.~Rothe, {\it Lattice Gauge Theories: An Introduction}. World Scientific (2005)
 
 \bibitem{SmilgaShushpanov}
 I.~A.~Shushpanov and A.~V.~Smilga, Phys.\ Lett.\ B{\bf 402}, 351 (1997), [arXiv:hep-ph/9703201]
